@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏴‍☠️ Bounty Builder: OPBR Optimization Engine
 
-## Getting Started
+**Bounty Builder** is a high-performance decision-support tool designed for **One Piece Bounty Rush (OPBR)**. It leverages Large Language Models (LLMs) to analyze character traits and medal effects, providing players with the most efficient build recommendations for competitive play.
 
-First, run the development server:
+## 🚀 The Mission
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+In the current OPBR meta, matching the right medals to a character's unique traits is the difference between winning and losing. This project automates this complex analysis by:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Extracting and categorizing complex character traits using AI.
+2. Storing unstructured game data efficiently using PostgreSQL JSONB.
+3. Calculating tag compatibility to suggest optimized medal sets.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** [Next.js 15+](https://nextjs.org/) (App Router)
+- **Language:** TypeScript
+- **Database:** PostgreSQL (via Prisma ORM)
+- **AI Integration:** Google Gemini API (Analysis Pipeline)
+- **Data Fetching:** TanStack Query v5
+- **UI Components:** Radix UI & Tailwind CSS
 
-## Learn More
+## 🧠 Key Features (Roadmap)
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] **Character Database:** Robust catalog with JSONB storage for trait flexibility.
+- [ ] **AI-Powered Trait Analysis:** Automated categorization into playstyles (Runner, Attacker, Defender).
+- [ ] **Medal Recommender:** Logic-driven engine to match medal tags based on specific character needs.
+- [ ] **Custom Seed System:** Structured scripts to populate and update game data (characters and medals) manually as new content drops.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Development Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+- Node.js (Latest LTS)
+- Docker (for PostgreSQL) or a local Postgres instance
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+
+   ```bash
+   git clone [https://github.com/JoaoLinhares/Bounty-Builder.git](https://github.com/JoaoLinhares/Bounty-Builder.git)
+   ```
