@@ -38,5 +38,5 @@ In the current OPBR meta, matching the right medals to a character's unique trai
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/JoaoLinhares/Bounty-Builder.git](https://github.com/JoaoLinhares/Bounty-Builder.git)
+   git clone https://github.com/JoaoLinhares/Bounty-Builder.git
    ```
