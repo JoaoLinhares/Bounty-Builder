@@ -5,10 +5,268 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client"
+  provider        = "prisma-client"
   previewFeatures = ["fullTextSearchPostgres"]
 }
 
 datasource db {
   provider = "postgresql"
 }
+
+// -------------------------------------------------------------------------------------
+/**
+ * Enums:
+ * - Elements
+ * - Classes
+ * - Types
+ * - Sizes
+ * - Base Grades
+ * - FourStarTypes
+ * - Rarety
+ * - Character Tags
+ * - Team Boosts
+ */
+// ------------------------------------------------------------------------------------- 
+
+enum Element {
+  RED
+  BLUE
+  GREEN
+  DARK
+  LIGHT
+}
+
+enum Classe {
+  ATTACKER
+  DEFENDER
+  RUNNER
+}
+
+enum Type {
+  TRANSFORM
+  ELEMENT_CHANGE
+  CLASS_CHANGE
+  SKILL_TRANSFORM
+  CHARACTER_SWAP
+}
+
+enum Size {
+  NORMAL
+  SMALL
+  GIANT
+}
+
+enum BaseGrade {
+  TWO_STAR
+  THREE_STAR
+  FOUR_STAR
+}
+
+enum FourStarType {
+  STEP_UP
+  BOUNTY_FEST
+  EXTREME
+  COLA
+}
+
+enum Rarety {
+  FREE
+  LIMITED
+}
+
+enum CharacterTag {
+  ATTACKER
+  DEFENDER
+  RUNNER
+  EAST_BLUE
+  NAVY
+  WARLORD
+  STRAW_HAT
+  BAROQUE_WORKS
+  WHITEBEARD
+  REVOLUTIONARY
+  DON_QUIXOTE
+  PARAMECIA
+  ZOAN
+  LOGIA
+  CAPTAIN
+  FISH_MAN
+  GRAND_LINE
+  NEW_WORLD
+  WORST_GEN
+  CHARLOTTE
+  KOZUKI_CLAN
+  ROGER
+  ANIMAL_KINGDOM
+  NAVY_ADMIRAL
+  ROYALTY
+}
+
+enum TeamBoost {
+  ATTACK
+  EX_ATTACK
+  RECOVERY
+  EX_RECOVERY
+  SPD
+  EX_SPD
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * User only avaiable information datatables
+ */
+// ------------------------------------------------------------------------------------- 
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model User
+ * Contains essencial information for login/register use cases.
+ * Also contains information for:
+ * - characters owned and their current status (current level, current grade level, skill levels and boost status)
+ * - medals owned and medal traits applied
+ * - medal sets created
+ * - party sets created
+ */
+
+// ------------------------------------------------------------------------------------- 
+
+model User {
+  id       String @id @default(cuid())
+  email    String @unique
+  username String @unique
+  password String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // TODO characters Character[]
+  // TODO medals Medal[]
+  // TODO medalSets MedalSet[]
+  // TODO partySets TeamSet[]
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Public avaiable information datatables
+ */
+// ------------------------------------------------------------------------------------- 
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model Character
+ * Contains essencial information for a one piece bounty rush character:
+ * - base element: Red, Blue, Green, Dark or Light
+ * - base class: Attacker, Defender, Runner
+ * - type: Transform, ElementChange, ClassChange, SkillTransform, CharacterSwap
+ * - base Size: Normal, Small, Giant
+ * - BaseGrade: 2Star, 3Star, 4Star
+ * - Four star type: Step up, Bounty Fest, Extreme
+ * - Rarety: Free, Limited, None
+ * - tags: Tags applied to that character
+ * - Bounty Colours: Array of images for bounty colours
+ * - gameId: Game associates an ID for each character, normaly an autoincrement integer since the first chatacter, usefull to map to its medals and images
+ * - nameId: Name, game likes to group all luffy, zoro etc
+ * - traits: all trait related information (characters, unlockable traits, size trait, and boost trait)
+ * - characterStates: all character states associated to character
+ */
+// ------------------------------------------------------------------------------------- 
+
+model Character {
+  id String @id @default(cuid())
+
+  // General Character information
+  name            String
+  charDescription String?
+  gameId          Int
+  nameId          String
+  dateAdded       DateTime
+  imageLarge      String
+  imageCard       String
+
+  // Mechanics information
+  type        Type
+  mainElement Element
+  mainClass   Classe
+  mainSize    Size    @default(NORMAL)
+
+  baseGrade    BaseGrade      @default(FOUR_STAR)
+  fourStarType FourStarType?
+  rarety       Rarety?
+  teamBoost    TeamBoost
+  tags         CharacterTag[]
+
+  // Bounty colours
+  bountyColours String[]
+
+  //traits
+  sizeTraits      Json?
+  characterTraits Json
+  traits1         Json
+  traits2         Json
+  boostTrait      Json
+
+  // character states - base and others (convert to giant, zoan version, switch character, element/class change, etc.. )
+  characterStates CharacterState[]
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model Skill
+ * Contains essencial information for a one piece bounty rush skill:
+ * - Essencials: name, descriptions and effect
+ * - Image of skill
+ * - slot: represents skill 1 or  skill 2. Open to more if devs one day decide to add more skills (unlikely)
+ * - skillTransform: false (base form of skill), true (transformed skill of corresponding slot)
+ * - cooldown: Skill cooldown in seconds
+ */
+// ------------------------------------------------------------------------------------- 
+model Skill {
+  name        String
+  id          String @id @default(cuid())
+  description Json
+  effect      Json
+  image       String
+
+  characterStateId String
+  characterState   CharacterState @relation(fields: [characterStateId], references: [id])
+
+  slot           Int
+  skillTransform Boolean
+  cooldown       Int
+
+  @@unique([characterStateId, slot, skillTransform])
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model CharacterState
+ * Contains essencial information for:
+ * - state exclusive traits
+ * - skills: Slots 1 and 2 (if chatacter SkillTransform, one/both skill slots can have transform variant)
+ * - name of state and basic information of character state like class, element and size
+ */
+// ------------------------------------------------------------------------------------- 
+model CharacterState {
+  id     String  @id @default(cuid())
+  name   String
+  isBase Boolean @default(false)
+
+  overrideBaseElement Element?
+  overrideBaseClass   Classe?
+  overrideBaseSize    Size?
+
+  stateTraits Json
+  sizeTraits  Json?
+
+  // skills
+  skills Skill[]
+
+  characterId String
+  character   Character @relation(fields: [characterId], references: [id])
+
+  @@unique([characterId, name])
+}
+
+// TODO MEDALS 
+// TODO ADD MEDAL TO CHARACTER
+// TODO Tags create table
