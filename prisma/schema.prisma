@@ -22,9 +22,9 @@ datasource db {
  * - Sizes
  * - Base Grades
  * - FourStarTypes
- * - Rarety
- * - Character Tags
+ * - Rarity
  * - Team Boosts
+ * - Medal Types
  */
 // ------------------------------------------------------------------------------------- 
 
@@ -36,7 +36,7 @@ enum Element {
   LIGHT
 }
 
-enum Classe {
+enum Class {
   ATTACKER
   DEFENDER
   RUNNER
@@ -69,37 +69,9 @@ enum FourStarType {
   COLA
 }
 
-enum Rarety {
+enum Rarity {
   FREE
   LIMITED
-}
-
-enum CharacterTag {
-  ATTACKER
-  DEFENDER
-  RUNNER
-  EAST_BLUE
-  NAVY
-  WARLORD
-  STRAW_HAT
-  BAROQUE_WORKS
-  WHITEBEARD
-  REVOLUTIONARY
-  DON_QUIXOTE
-  PARAMECIA
-  ZOAN
-  LOGIA
-  CAPTAIN
-  FISH_MAN
-  GRAND_LINE
-  NEW_WORLD
-  WORST_GEN
-  CHARLOTTE
-  KOZUKI_CLAN
-  ROGER
-  ANIMAL_KINGDOM
-  NAVY_ADMIRAL
-  ROYALTY
 }
 
 enum TeamBoost {
@@ -109,6 +81,12 @@ enum TeamBoost {
   EX_RECOVERY
   SPD
   EX_SPD
+}
+
+enum MedalType {
+  CHARACTER
+  CHARACTER_RANKING
+  EVENT
 }
 
 // -------------------------------------------------------------------------------------
@@ -131,18 +109,213 @@ enum TeamBoost {
 // ------------------------------------------------------------------------------------- 
 
 model User {
-  id       String @id @default(cuid())
-  email    String @unique
-  username String @unique
-  password String
+  id       String  @id @default(cuid())
+  email    String  @unique
+  username String  @unique
+  password String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  // TODO characters Character[]
-  // TODO medals Medal[]
-  // TODO medalSets MedalSet[]
-  // TODO partySets TeamSet[]
+  characters UserCharacter[]
+  medals     UserMedal[]
+
+  medalSets MedalSet[]
+  parties   Party[]
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model UserCharacter
+ * Contains information specific to the user about his character like:
+ * - current level
+ * - current cap level
+ * - current boost
+ * - skill 1 and skill 2 current level
+ */
+
+// ------------------------------------------------------------------------------------- 
+model UserCharacter {
+  id String @id @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  characterId String
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Restrict)
+
+  level    Int @default(1)
+  levelCap Int
+
+  currentBoost Int @default(0)
+
+  skill1Level Int @default(1)
+  skill2Level Int @default(1)
+
+  medalSets          MedalSetCharacter[]
+  parties            SupportCharacter[]
+  playableCharacters PlayableCharacter[]
+
+  isOwned Boolean @default(true)
+
+  @@unique([userId, characterId])
+  @@index([userId, isOwned])
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model Party
+ * Contains information specific to the user about his party including:
+ * - name
+ * - characters
+ * - isComplete: If set is already owned or if there are things missing in the set like a medal or a medal trait
+ */
+
+// ------------------------------------------------------------------------------------- 
+model Party {
+  id   String @id @default(uuid())
+  name String
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  support SupportCharacter[]
+
+  playableCharacters PlayableCharacter[]
+
+  isComplete Boolean @default(false)
+
+  @@index([userId, isComplete])
+}
+
+model SupportCharacter {
+  partyId     String
+  characterId String
+
+  party     Party         @relation(fields: [partyId], references: [id], onDelete: Cascade)
+  character UserCharacter @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  // 1 to 10
+  slot Int
+
+  @@id([partyId, characterId])
+  @@unique([partyId, slot])
+}
+
+model PlayableCharacter {
+  partyId     String
+  characterId String
+
+  party     Party         @relation(fields: [partyId], references: [id], onDelete: Cascade)
+  character UserCharacter @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  // 1 to 2
+  slot Int
+
+  supportPercentage Int
+
+  @@id([partyId, characterId])
+  @@unique([partyId, slot])
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model UserMedal
+ * Contains information specific to the user about his medals and its traits.
+ * isOwned determines if user already owns the medal or if it is apart of a set that he is building
+ */
+
+// ------------------------------------------------------------------------------------- 
+model UserMedal {
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  medalId String
+  medal   Medal  @relation(fields: [medalId], references: [id], onDelete: Restrict)
+
+  // TRAITS
+  traits MedalTrait[]
+
+  medalSets MedalSetSlot[]
+
+  isOwned Boolean @default(true)
+
+  @@index([userId, isOwned])
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model MedalTrait
+ * Contains information specific to the trait of a medal.
+ * isLocked determines if user already has the trait applied to the medal or if it is apart of a set that he is building
+ */
+
+// ------------------------------------------------------------------------------------- 
+model MedalTrait {
+  id         String  @id @default(cuid())
+  trait      String
+  value      Float
+  constraint String?
+  // 1 to 3
+  slot       Int
+
+  medalId String
+  medal   UserMedal @relation(fields: [medalId], references: [id], onDelete: Cascade)
+
+  isLocked Boolean @default(false)
+
+  @@unique([medalId, slot])
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model MedalSet
+ * Contains information specific to the user about his medals sets including:
+ * - name
+ * - medals
+ * - isComplete: If set is already owned or if there are things missing in the set like a medal or a medal trait
+ */
+
+// ------------------------------------------------------------------------------------- 
+model MedalSet {
+  id   String @id @default(uuid())
+  name String
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  character MedalSetCharacter[]
+
+  medals MedalSetSlot[]
+
+  isComplete Boolean @default(false)
+
+  @@index([userId, isComplete])
+}
+
+model MedalSetSlot {
+  medalId String
+  medal   UserMedal @relation(fields: [medalId], references: [id], onDelete: Cascade)
+
+  setId String
+  set   MedalSet @relation(fields: [setId], references: [id], onDelete: Cascade)
+
+  // 1 to 3
+  slot Int
+
+  @@id([medalId, setId])
+  @@unique([setId, slot])
+}
+
+model MedalSetCharacter {
+  medalSetId String
+  medalSet   MedalSet @relation(fields: [medalSetId], references: [id], onDelete: Cascade)
+
+  characterId String
+  character   UserCharacter @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@id([medalSetId, characterId])
 }
 
 // -------------------------------------------------------------------------------------
@@ -161,13 +334,15 @@ model User {
  * - base Size: Normal, Small, Giant
  * - BaseGrade: 2Star, 3Star, 4Star
  * - Four star type: Step up, Bounty Fest, Extreme
- * - Rarety: Free, Limited, None
+ * - Rarity: Free, Limited, None
  * - tags: Tags applied to that character
  * - Bounty Colours: Array of images for bounty colours
  * - gameId: Game associates an ID for each character, normaly an autoincrement integer since the first chatacter, usefull to map to its medals and images
  * - nameId: Name, game likes to group all luffy, zoro etc
  * - traits: all trait related information (characters, unlockable traits, size trait, and boost trait)
  * - characterStates: all character states associated to character
+ * - asset: name of assets images of character
+ * - Medals: all medals associated to character, normal character medal, or ranking character medal
  */
 // ------------------------------------------------------------------------------------- 
 
@@ -177,23 +352,24 @@ model Character {
   // General Character information
   name            String
   charDescription String?
-  gameId          Int
+  gameId          Int      @unique
   nameId          String
   dateAdded       DateTime
-  imageLarge      String
-  imageCard       String
+
+  assetLarge String
+  assetCard  String
 
   // Mechanics information
-  type        Type
+  type        Type[]
   mainElement Element
-  mainClass   Classe
+  mainClass   Class
   mainSize    Size    @default(NORMAL)
 
-  baseGrade    BaseGrade      @default(FOUR_STAR)
+  baseGrade    BaseGrade              @default(FOUR_STAR)
   fourStarType FourStarType?
-  rarety       Rarety?
+  rarity       Rarity?
   teamBoost    TeamBoost
-  tags         CharacterTag[]
+  tags         CharacterTagRelation[]
 
   // Bounty colours
   bountyColours String[]
@@ -207,6 +383,19 @@ model Character {
 
   // character states - base and others (convert to giant, zoan version, switch character, element/class change, etc.. )
   characterStates CharacterState[]
+
+  // medals that can be crafted using this character fragments
+  medals Medal[]
+
+  owners UserCharacter[]
+
+  medalSetEvaluation     Json?
+  partySupportEvaluation Json?
+  playStyleEvaluation    Json?
+
+  @@index([name])
+  @@index([mainClass])
+  @@index([mainElement])
 }
 
 // -------------------------------------------------------------------------------------
@@ -214,10 +403,10 @@ model Character {
  * Model Skill
  * Contains essencial information for a one piece bounty rush skill:
  * - Essencials: name, descriptions and effect
- * - Image of skill
  * - slot: represents skill 1 or  skill 2. Open to more if devs one day decide to add more skills (unlikely)
  * - skillTransform: false (base form of skill), true (transformed skill of corresponding slot)
  * - cooldown: Skill cooldown in seconds
+ * - asset: asset of skill
  */
 // ------------------------------------------------------------------------------------- 
 model Skill {
@@ -225,14 +414,18 @@ model Skill {
   id          String @id @default(cuid())
   description Json
   effect      Json
-  image       String
 
   characterStateId String
-  characterState   CharacterState @relation(fields: [characterStateId], references: [id])
+  characterState   CharacterState @relation(fields: [characterStateId], references: [id], onDelete: Cascade)
+
+  asset String
 
   slot           Int
-  skillTransform Boolean
+  skillTransform Boolean @default(false)
   cooldown       Int
+
+  isPowerGage Boolean @default(false)
+  isTimeGated Boolean @default(false)
 
   @@unique([characterStateId, slot, skillTransform])
 }
@@ -252,7 +445,7 @@ model CharacterState {
   isBase Boolean @default(false)
 
   overrideBaseElement Element?
-  overrideBaseClass   Classe?
+  overrideBaseClass   Class?
   overrideBaseSize    Size?
 
   stateTraits Json
@@ -262,11 +455,100 @@ model CharacterState {
   skills Skill[]
 
   characterId String
-  character   Character @relation(fields: [characterId], references: [id])
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
 
   @@unique([characterId, name])
 }
 
-// TODO MEDALS 
-// TODO ADD MEDAL TO CHARACTER
-// TODO Tags create table
+// -------------------------------------------------------------------------------------
+/**
+ * Model CharacterTags
+ * Contains essencial information for:
+ * - name: Tag name
+ */
+// ------------------------------------------------------------------------------------- 
+
+model CharacterTag {
+  id   String @id @default(cuid())
+  name String @unique
+
+  characters CharacterTagRelation[]
+}
+
+model CharacterTagRelation {
+  characterId String
+  tagId       String
+
+  character Character    @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  tag       CharacterTag @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([characterId, tagId])
+  @@index([tagId])
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model Medal
+ * Contains essencial information for a one piece bounty rush character:
+ * - name: Name of medal
+ * - gameId: Game associates an ID for each character, normaly an autoincrement integer since the first chatacter, usefull to map to its medals and images
+ * - uniqueTrait: entire text of the uniqueTrait
+ * - type: Character or Event  or Character Ranking medal
+ * - traitConstraint: when uniqueTrait activates
+ * - trait: Wich trait is boosted
+ * - value: by ammount, percentage (13%, 20%, etc..)
+ * - asset: name of image asset
+ */
+// ------------------------------------------------------------------------------------- 
+
+model Medal {
+  id String @id @default(cuid())
+
+  gameId Int       @unique
+  name   String
+  type   MedalType
+
+  asset String
+
+  uniqueTrait     String
+  traitConstraint String?
+  trait           String
+  value           Float
+
+  tags MedalTagRelation[]
+
+  characterId String?
+  character   Character? @relation(fields: [characterId], references: [id], onDelete: SetNull)
+
+  users UserMedal[]
+
+  @@index([type])
+  @@index([trait])
+  @@index([traitConstraint])
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model MedalTags
+ * Contains essencial information for:
+ * - name: Tag name
+ */
+// ------------------------------------------------------------------------------------- 
+
+model MedalTag {
+  id   String @id @default(cuid())
+  name String @unique
+
+  medals MedalTagRelation[]
+}
+
+model MedalTagRelation {
+  medalId String
+  tagId   String
+
+  medal Medal    @relation(fields: [medalId], references: [id], onDelete: Cascade)
+  tag   MedalTag @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([medalId, tagId])
+  @@index([tagId])
+}
