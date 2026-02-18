@@ -6,6 +6,7 @@
 
 generator client {
   provider        = "prisma-client"
+  output   = "../src/generated/prisma"
   previewFeatures = ["fullTextSearchPostgres"]
 }
 
@@ -48,6 +49,9 @@ enum Type {
   CLASS_CHANGE
   SKILL_TRANSFORM
   CHARACTER_SWAP
+  STATUS_EFFECT
+  SHIELD
+  POWER_GAGE
 }
 
 enum Size {
@@ -375,14 +379,14 @@ model Character {
   bountyColours String[]
 
   //traits
-  sizeTraits      Json?
-  characterTraits Json
-  traits1         Json
-  traits2         Json
-  boostTrait      Json
-
+  sizeTraits           Json?
+  characterTraits      Json
+  traits1              Json
+  traits2              Json
+  boostTrait           Json
+  inflictsStatusEffect String?
   // character states - base and others (convert to giant, zoan version, switch character, element/class change, etc.. )
-  characterStates CharacterState[]
+  characterStates      CharacterState[]
 
   // medals that can be crafted using this character fragments
   medals Medal[]
@@ -494,8 +498,8 @@ model CharacterTagRelation {
  * - gameId: Game associates an ID for each character, normaly an autoincrement integer since the first chatacter, usefull to map to its medals and images
  * - uniqueTrait: entire text of the uniqueTrait
  * - type: Character or Event  or Character Ranking medal
- * - traitConstraint: when uniqueTrait activates
- * - trait: Wich trait is boosted
+ * - uniqueTraitConstraints: when uniqueTrait activates, can have multiple constraints
+ * - uniqueTraits: Wich trait are boosted or applied, can have multiple
  * - value: by ammount, percentage (13%, 20%, etc..)
  * - asset: name of image asset
  */
@@ -510,10 +514,9 @@ model Medal {
 
   asset String
 
-  uniqueTrait     String
-  traitConstraint String?
-  trait           String
-  value           Float
+  uniqueTraitDescription String
+  uniqueTraitConstraints UniqueTraitConstraintRelation[]
+  uniqueTraits           UniqueTraitRelation[]
 
   tags MedalTagRelation[]
 
@@ -523,8 +526,69 @@ model Medal {
   users UserMedal[]
 
   @@index([type])
-  @@index([trait])
-  @@index([traitConstraint])
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model UniqueTraitConstraint
+ * Contains essencial information for a medal unique trait constraint:
+ * - description: Entire constraint of unique trait for print purposes exactly like game shows
+ * - constraint: What is the constraint applied
+ * - value: value associated with constraint if exists, ex: Hp > 90%
+ * - effect:
+ */
+// ------------------------------------------------------------------------------------- 
+
+model UniqueTraitConstraint {
+  description  String  @id
+  constraint   String
+  value        Float?
+  tag          String?
+  statusEffect String?
+
+  medals UniqueTraitConstraintRelation[]
+}
+
+model UniqueTraitConstraintRelation {
+  medalId      String
+  constraintId String
+
+  medal      Medal                 @relation(fields: [medalId], references: [id], onDelete: Cascade)
+  constraint UniqueTraitConstraint @relation(fields: [constraintId], references: [description], onDelete: Cascade)
+
+  @@id([medalId, constraintId])
+  @@index([constraintId])
+}
+
+// -------------------------------------------------------------------------------------
+/**
+ * Model UniqueTrait
+ * Contains essencial information for a medal unique trait:
+ * - description: Entire unique trait for print purposes exactly like game shows
+ * - trait: What is the trait applied
+ * - value: value associated with constraint if exists, ex: Skill 1 CD by 13%
+ * - time: value for how many seconds its activated
+ */
+// ------------------------------------------------------------------------------------- 
+
+model UniqueTrait {
+  description String @id
+  trait       String
+  value       Float?
+  time        Int?
+
+  medals UniqueTraitRelation[]
+}
+
+model UniqueTraitRelation {
+  medalId       String
+  uniqueTraitId String
+
+  medal       Medal       @relation(fields: [medalId], references: [id], onDelete: Cascade)
+  uniqueTrait UniqueTrait @relation(fields: [uniqueTraitId], references: [description], onDelete: Cascade)
+
+  @@id([medalId, uniqueTraitId])
+  @@index([uniqueTraitId])
 }
 
 // -------------------------------------------------------------------------------------
