@@ -6,7 +6,7 @@
 
 generator client {
   provider        = "prisma-client"
-  output   = "../src/generated/prisma"
+  output          = "../src/generated/prisma"
   previewFeatures = ["fullTextSearchPostgres"]
 }
 
@@ -345,7 +345,7 @@ model MedalSetCharacter {
  * - Rarity: Free, Limited, None
  * - tags: Tags applied to that character
  * - Bounty Colours: Array of images for bounty colours
- * - gameId: Game associates an ID for each character, normaly an autoincrement integer since the first chatacter, usefull to map to its medals and images
+ * - gameId: Game associates an ID for each character, normaly an autoincrement integer since the first chatacter, usefull to map to its medals and images. Store in String
  * - nameId: Name, game likes to group all luffy, zoro etc
  * - traits: all trait related information (characters, unlockable traits, size trait, and boost trait)
  * - characterStates: all character states associated to character
@@ -360,7 +360,7 @@ model Character {
   // General Character information
   name            String
   charDescription String?
-  gameId          Int      @unique
+  gameId          String   @unique
   nameId          String
   dateAdded       DateTime
 
@@ -388,7 +388,7 @@ model Character {
   traits1              Json
   traits2              Json
   boostTrait           Json
-  inflictsStatusEffect String?
+  inflictsStatusEffect String[]
   // character states - base and others (convert to giant, zoan version, switch character, element/class change, etc.. )
   characterStates      CharacterState[]
 
@@ -499,7 +499,7 @@ model CharacterTagRelation {
  * Model Medal
  * Contains essencial information for a one piece bounty rush character:
  * - name: Name of medal
- * - gameId: Game associates an ID for each character, normaly an autoincrement integer since the first chatacter, usefull to map to its medals and images
+ * - gameId: Game associates an ID for each character, normaly an autoincrement integer since the first chatacter, usefull to map to its medals and images. Store in string
  * - uniqueTrait: entire text of the uniqueTrait
  * - type: Character or Event  or Character Ranking medal
  * - uniqueTraitConstraints: when uniqueTrait activates, can have multiple constraints
@@ -512,7 +512,7 @@ model CharacterTagRelation {
 model Medal {
   id String @id @default(cuid())
 
-  gameId Int       @unique
+  gameId String    @unique
   name   String
   type   MedalType
 
@@ -576,10 +576,11 @@ model UniqueTraitConstraintRelation {
 // ------------------------------------------------------------------------------------- 
 
 model UniqueTrait {
-  description String @id
-  trait       String
-  value       Float?
-  time        Int?
+  description  String  @id
+  trait        String
+  value        Float?
+  time         Int?
+  statusEffect String?
 
   medals UniqueTraitRelation[]
 }

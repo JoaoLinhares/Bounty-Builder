@@ -1,52 +1,17 @@
 import { MedalTraitType } from "@/constants/medal-traits";
+import { StatusEffect, StatusEffectType } from "@/constants/status-effects";
 import { UniqueTraitExcel } from "./medal-parser";
 
-/*
-function traitSimple(description: string, trait: MedalTraittraitType): UniqueTraittraitExcel {
+function traitSimple(description: string, trait: MedalTraitType): UniqueTraitExcel {
+
     return {
         description,
         trait: trait as string,
         value: null,
-        tag: null,
+        time: null,
         statusEffect: null
     }
 }
-
-
-function traitStatusEffect(description: string, trait: MedalTraittraitType, statusEffect: string): UniqueTraittraitExcel {
-    const status: StatusEffectType = StatusEffect[statusEffect.toUpperCase().replaceAll(' ', '_').replaceAll('-', '') as StatusEffectType]
-
-    if (!status) {
-        console.error('weird effect at ' + description + ' val: ' + statusEffect)
-    }
-    return {
-        description,
-        trait: trait as string,
-        value: null,
-        tag: null,
-        statusEffect: status as string
-    }
-}
-
-
-function traitTag(description: string, trait: MedalTraittraitType, tagString: string): UniqueTraittraitExcel {
-    const tag: CharacterTagType = CharacterTag[tagString.toUpperCase().replaceAll(' ', '_').replaceAll('-', '_') as CharacterTagType]
-
-    if (!tag) {
-        console.error('weird tag at ' + description + ' val: ' + tagString)
-    }
-    return {
-        description,
-        trait: trait as string,
-        value: null,
-        tag: tag as string,
-        statusEffect: null
-    }
-
-
-
-}
-    */
 
 function traitValue(description: string, trait: MedalTraitType, val: number): UniqueTraitExcel {
     if (!val) {
@@ -57,6 +22,7 @@ function traitValue(description: string, trait: MedalTraitType, val: number): Un
         trait: trait as string,
         value: val,
         time: null,
+        statusEffect: null
     }
 }
 
@@ -69,6 +35,23 @@ function traitTime(description: string, trait: MedalTraitType, val: number, time
         trait: trait as string,
         value: val,
         time: time,
+        statusEffect: null
+    }
+}
+
+
+function traitStatusEffect(description: string, trait: MedalTraitType, val: number, statusEffect: string, time: number | null = null): UniqueTraitExcel {
+    const status: StatusEffectType = StatusEffect[statusEffect.toUpperCase().replaceAll(' ', '_').replaceAll('-', '') as StatusEffectType]
+
+    if (!status) {
+        console.error('weird effect at ' + description + ' val: ' + statusEffect)
+    }
+    return {
+        description,
+        trait: trait as string,
+        value: val,
+        time: time,
+        statusEffect: status as string
     }
 }
 
@@ -77,11 +60,11 @@ export const traitMap: Record<MedalTraitType,
 > = {
     // --- DAMAGE / REDUCTION ---
     DAMAGE_INCREASE: (trait: string) => {
-        const match = trait.match(/Increase damage dealt by (\d+)%$/i);
+        const match = trait.match(/Increase damage dealt(?: to Defenders)? by (\d+)%$/i);
         return match ? traitValue(trait, 'DAMAGE_INCREASE', Number(match[1])) : undefined;
     },
     DAMAGE_REDUCTION: (trait: string) => {
-        const match = trait.match(/Reduce damage received by (\d+)%$/i);
+        const match = trait.match(/Reduce damage recieved by (\d+)%$/i);
         return match ? traitValue(trait, 'DAMAGE_REDUCTION', Number(match[1])) : undefined;
     },
     NORMAL_ATK_DAMAGE: (trait: string) => {
@@ -130,9 +113,8 @@ export const traitMap: Record<MedalTraitType,
         const match = trait.match(/Increase CRIT by (\d+)%$/i);
         return match ? traitValue(trait, 'CRIT_PERCENTAGE', Number(match[1])) : undefined;
     },
-    SPD_PERCENTAGE: (trait: string) => {
-        const match = trait.match(/SPD Boosted by (\d+)% for (\d+) second\(s\)$/i);
-        return match ? traitTime(trait, 'SPD_PERCENTAGE', Number(match[1]), Number(match[2])) : undefined;
+    SPD_PERCENTAGE: () => {
+        return undefined
     },
 
     // --- STATS POINTS ---
@@ -155,16 +137,16 @@ export const traitMap: Record<MedalTraitType,
         return match ? traitValue(trait, 'CAPTURE_SPEED', Number(match[1])) : undefined;
     },
     HP_RECOVERY: (trait: string) => {
-        const match = trait.match(/(.*): Recover HP by (\d+)%$/i);
-        return match ? traitValue(trait, 'HP_RECOVERY', Number(match[2])) : undefined;
+        const match = trait.match(/Recover HP by (\d+)%$/i);
+        return match ? traitValue(trait, 'HP_RECOVERY', Number(match[1])) : undefined;
     },
     INCREASE_TREASURE_GAUGE_RECOVERY: (trait: string) => {
-        const match = trait.match(/(.*): Increase Treasure Gauge recovery amount by (\d+)%$/i);
-        return match ? traitValue(trait, 'INCREASE_TREASURE_GAUGE_RECOVERY', Number(match[2])) : undefined;
+        const match = trait.match(/Increase Treasure Gauge recovery amount$/i);
+        return match ? traitSimple(trait, 'INCREASE_TREASURE_GAUGE_RECOVERY') : undefined;
     },
     INCREASE_TREASURE_GAUGE_AMMOUNT_WHEN_CAPTURE: (trait: string) => {
-        const match = trait.match(/(.*): When capturing Treasure, increase Treasure Gauge recovery amount by (\d+)%$/i);
-        return match ? traitValue(trait, 'INCREASE_TREASURE_GAUGE_AMMOUNT_WHEN_CAPTURE', Number(match[2])) : undefined;
+        const match = trait.match(/Increase Treasure Gauge amount when you capture the Treasure$/i);
+        return match ? traitSimple(trait, 'INCREASE_TREASURE_GAUGE_AMMOUNT_WHEN_CAPTURE') : undefined;
     },
 
     // --- BOOSTS (TIMED) ---
@@ -174,46 +156,26 @@ export const traitMap: Record<MedalTraitType,
     },
     BOOST_SPEED: (trait: string) => {
         const match = trait.match(/SPD Boosted by (\d+)% for (\d+) second\(s\)$/i);
-        return match ? traitTime(trait, 'SPD_PERCENTAGE', Number(match[1]), Number(match[2])) : undefined;
+        return match ? traitTime(trait, 'BOOST_SPEED', Number(match[1]), Number(match[2])) : undefined;
     },
 
     // --- NULLIFY ---
-    NULLIFY_STUN: (trait: string) => {
-        const match = trait.match(/(.*): Nullify Stun$/i);
-        return match ? traitSimple(trait, 'NULLIFY_STUN') : undefined;
+    CHANCE_NULLIFY_STATUS_EFFECT: (trait: string) => {
+        const match = trait.match(/(\d+)% chance to, Nullify ([^"]+)$/i);
+        return match ? traitStatusEffect(trait, 'CHANCE_NULLIFY_STATUS_EFFECT', Number(match[1]), match[2]) : undefined;
     },
-    NULLIFY_SHOCK: (trait: string) => {
-        const match = trait.match(/(.*): Nullify Shock$/i);
-        return match ? traitSimple(trait, 'NULLIFY_SHOCK') : undefined;
-    },
-    NULLIFY_TREMOR: (trait: string) => {
-        const match = trait.match(/(.*): Nullify Tremor$/i);
-        return match ? traitSimple(trait, 'NULLIFY_TREMOR') : undefined;
-    },
-    NULLIFY_FREEZE: (trait: string) => {
-        const match = trait.match(/(.*): Nullify Freeze$/i);
-        return match ? traitSimple(trait, 'NULLIFY_FREEZE') : undefined;
-    },
-    NULLIFY_AFLAME: (trait: string) => {
-        const match = trait.match(/(.*): Nullify Aflame$/i);
-        return match ? traitSimple(trait, 'NULLIFY_AFLAME') : undefined;
-    },
+
 
     // --- INFLICT ---
-    INFLICT_POISON: (trait: string) => {
-        const match = trait.match(/(.*): (\d+)% chance to inflict Poison$/i);
-        return match ? traitValue(trait, 'INFLICT_POISON', Number(match[2])) : undefined;
-    },
-    INFLICT_SHOCK: (trait: string) => {
-        const match = trait.match(/(.*): (\d+)% chance to inflict Shock$/i);
-        return match ? traitValue(trait, 'INFLICT_SHOCK', Number(match[2])) : undefined;
+    CHANCE_INFLICT_STATUS_EFFECT: (trait: string) => {
+        const match = trait.match(/(\d+)% chance to, Inflict ([^"]+) for (\d+) second\(s\)/i);
+        return match ? traitStatusEffect(trait, 'CHANCE_INFLICT_STATUS_EFFECT', Number(match[1]), match[2], Number(match[3])) : undefined;
     },
 
+
     // --- REDUCTION (STATUS) ---
-    STATUS_EFFECT_REDUCTION: (trait: string) => {
-        const match = trait.match(/(.*): Reduce time spent inflicted with (.*) by (\d+)%$/i);
-        // Usando o valor da porcentagem (match[3])
-        return match ? traitValue(trait, 'STATUS_EFFECT_REDUCTION', Number(match[3])) : undefined;
+    STATUS_EFFECT_REDUCTION: () => {
+        return undefined
     },
 };
 export function getUniqueTrait(trait: string): UniqueTraitExcel | undefined {

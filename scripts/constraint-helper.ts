@@ -96,6 +96,10 @@ export const constraintMap: Record<MedalTraitConstraintType,
         const match = constraint.match(/When there are (\d+) seconds or less remaining$/i);
         return match ? constraintValue(constraint, 'SECONDS_OR_LESS_REMAINING', Number(match[1])) : undefined;
     },
+    SECONDS_OR_MORE_REMAINING: (constraint: string) => {
+        const match = constraint.match(/When there are (\d+) seconds or more remaining$/i);
+        return match ? constraintValue(constraint, 'SECONDS_OR_MORE_REMAINING', Number(match[1])) : undefined;
+    },
     SECONDS_AFTER_GAME_START: (constraint: string) => {
         const match = constraint.match(/For (\d+) seconds after the battle has started$/i);
         return match ? constraintValue(constraint, 'SECONDS_AFTER_GAME_START', Number(match[1])) : undefined;
@@ -129,7 +133,7 @@ export const constraintMap: Record<MedalTraitConstraintType,
         return match ? constraintSimple(constraint, 'AROUND_ENEMY_TREASURE') : undefined;
     },
     AROUND_TEAM_TREASURE: (constraint: string) => {
-        const match = constraint.match(/When (?:in|attacking an enemy in) the area around your captured Treasure$/i);
+        const match = constraint.match(/(?:When (?:in|attacking an enemy in) the area around your captured Treasure|When you are in your team`s Treasure Area)$/i);
         return match ? constraintSimple(constraint, 'AROUND_TEAM_TREASURE') : undefined;
     },
     ANY_TREASURE: (constraint: string) => {
@@ -176,6 +180,10 @@ export const constraintMap: Record<MedalTraitConstraintType,
         const match = constraint.match(/When you are Downed$/i);
         return match ? constraintSimple(constraint, 'WHEN_DOWNED') : undefined;
     },
+    DOWN_ENEMY: (constraint: string) => {
+        const match = constraint.match(/When you Down an enemy$/i);
+        return match ? constraintSimple(constraint, 'DOWN_ENEMY') : undefined;
+    },
     ATTACKING_CHARACTER_BY_TYPE: (constraint: string) => {
         const match = constraint.match(/When attacked by a character type \"([^"]+)\" enemy$/i);
         return match ? constraintTag(constraint, 'ATTACKING_CHARACTER_BY_TYPE', match[1]) : undefined;
@@ -196,6 +204,10 @@ export const constraintMap: Record<MedalTraitConstraintType,
         const match = constraint.match(/When enemies are inflicted with ([^"]+)$/i);
         return match ? constraintStatusEffect(constraint, 'INFLICT_STATUS_EFFECT', match[1]) : undefined;
     },
+    NULLIFIED: (constraint: string) => {
+        const match = constraint.match(/When a damage-dealing ([^"]+) infliction has been nullifed$/i);
+        return match ? constraintStatusEffect(constraint, 'NULLIFIED', match[1]) : undefined;
+    },
     ATTACKING_ENEMY_SAME_ELEMENT: (constraint: string) => {
         const match = constraint.match(/When attacking an enemy with the same Element$/i);
         return match ? constraintSimple(constraint, 'ATTACKING_ENEMY_SAME_ELEMENT') : undefined;
@@ -209,7 +221,7 @@ export const constraintMap: Record<MedalTraitConstraintType,
         return match ? constraintSimple(constraint, 'ATTACKING_ENEMY_BOOSTED_DEF') : undefined;
     },
     ATTACKING_ENEMY_BOOSTED_ATK: (constraint: string) => {
-        const match = constraint.match(/When attacking an enemy whose ATK are boostedI$/i);
+        const match = constraint.match(/When attacking an enemy whose ATK are boosted$/i);
         return match ? constraintSimple(constraint, 'ATTACKING_ENEMY_BOOSTED_ATK') : undefined;
     },
     ATTACKED_BY_ENEMY_BOOSTED_ATK: (constraint: string) => {
@@ -225,7 +237,7 @@ export const constraintMap: Record<MedalTraitConstraintType,
         return match ? constraintValue(constraint, 'WHEN_TREASURE_GAUGE_IS_RECOVERED_TO', Number(match[1])) : undefined;
     },
     TREASURE_GAUGE_OR_MORE: (constraint: string) => {
-        const match = constraint.match(/Treasure Gauge is (\d+)% or more$/i);
+        const match = constraint.match(/Tr(?:e)?asure Gauge is (\d+)% or more$/i);
         return match ? constraintValue(constraint, 'TREASURE_GAUGE_OR_MORE', Number(match[1])) : undefined;
     },
     TREASURE_GAUGE_OR_LESS: (constraint: string) => {

@@ -46,7 +46,7 @@ const resize = async (inputDir: string, outputDir: string, height: number, width
 const [, , input, output, height, width] = process.argv;
 
 if (!input || !output) {
-    console.error('Use: npx ts-node scripts/image-resizer.ts <src> <dest> <height> <width> (default 128 each)');
+    console.error('Use: npx tsx scripts/image-resizer.ts <src> <dest> <height> <width> (default 128 each)');
     process.exit(1);
 }
 

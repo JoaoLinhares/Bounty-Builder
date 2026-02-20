@@ -20,7 +20,13 @@
     "dev": "npm run docker:up && npm run docker:wait && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "clean:medal": "rimraf prisma/data/medals_event.json prisma/data/medals_rank.json prisma/data/medals.json scripts/characterID.json",
+    "clean:char": "rimraf prisma/data/characters.json",
+    "clean:calc": "rimraf scripts/paths.json",
+    "data:medal": "npx tsx scripts/medal-parser",
+    "data:char": "npx tsx scripts/character-parser",
+    "calc:path": "npx tsx scripts/calculate-character-img-path"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.4.0",

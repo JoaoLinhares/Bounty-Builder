@@ -37,7 +37,7 @@ const convertPngToWebp = async (inputDir: string, outputDir: string) => {
 const [, , input, output] = process.argv;
 
 if (!input || !output) {
-    console.error('Use: npx ts-node scripts/png-to-webp-converter.ts <src> <dest>');
+    console.error('Use: npx tsx scripts/png-to-webp-converter.ts <src> <dest>');
     process.exit(1);
 }
 
