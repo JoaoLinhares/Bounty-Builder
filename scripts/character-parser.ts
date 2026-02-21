@@ -1,3 +1,4 @@
+import path from 'path';
 
 /*
     Script used to parse data from an Excel Medal Data Set and store them in the correct folder with the types defined by the Prisma Schema at prisma/schema.prisma
@@ -7,7 +8,6 @@ import ExcelJS from 'exceljs';
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'fs';
 import { stdin, stdout } from 'node:process';
 import readline from 'node:readline/promises';
-import path from 'path';
 import { BaseGrade, Character, CharacterState, CharacterTag, Class, Element, FourStarType, Rarity, Skill, Type } from './../src/generated/prisma/client';
 
 export type CharacterTagExcel = Omit<CharacterTag, 'id'>
@@ -24,207 +24,6 @@ export type CharacterExcel = {
 }
     & Omit<Character, 'id'>
 
-/*
-export type UniqueTraitConstraintExcel = Omit<UniqueTraitConstraint, 'id'>
-export type UniqueTraitExcel = Omit<UniqueTrait, 'id'>
-type MedalTagExcel = Omit<MedalTag, 'id'>
-
-export type MedalExcel = {
-    tags: MedalTagExcel[],
-    uniqueConstraints: UniqueTraitConstraintExcel[],
-    uniqueTraits: UniqueTraitExcel[],
-
-} & Omit<Medal, 'id'>
-function stringFormatter(cell: ExcelJS.Cell): string {
-    return (cell.value as string).replaceAll('_', '-').replaceAll('``', '"');
-}
-
-
-function getTags(cell: ExcelJS.Cell): MedalTagExcel[] {
-    const tagValues = stringFormatter(cell).trim().split('\n');
-
-
-    return tagValues.map(tag => {
-        const formatedTag = tag.replaceAll(/["/]+/g, '').replaceAll(/[- `]+/g, '_').replace('2', 'two').toUpperCase();
-        const tagEnum = EnumMedalTag[formatedTag as MedalTagType];
-        if (formatedTag === 'BAROQUE_WORKS') {
-            return {
-                name: EnumMedalTag.BAROQUE_WORKS_FORMER_BAROQUE_WORKS
-            }
-        }
-        if (!tagEnum) {
-            console.error('Didnt find: ' + formatedTag + ' original: ' + tag + ' values: ' + tagValues + 'cell: ' + cell.value + ' ' + cell.$col$row)
-        }
-        return {
-            name: tagEnum
-        }
-    })
-}
-
-function getUniqueTraitConstraints(constraint: string): UniqueTraitConstraintExcel[] {
-    if (!constraint) {
-        return [];
-    }
-
-    const constraints = constraint.split(' and ');
-
-    const res: UniqueTraitConstraintExcel[] = []
-
-    constraints.forEach(c => {
-        const uniqueConstraint = getUniqueTraitConstraint(c.trim());
-        if (uniqueConstraint) {
-            res.push(uniqueConstraint);
-        }
-
-    })
-
-    return res
-}
-
-function getUniqueTraits(trait: string): UniqueTraitExcel[] {
-    if (!trait) {
-        return [];
-    }
-
-    const traits = trait.replaceAll('.', ' ').split(' and ');
-
-    const res: UniqueTraitExcel[] = []
-
-    traits.forEach(t => {
-        const uniqueTrait = getUniqueTrait(t.trim());
-        if (uniqueTrait) {
-            res.push(uniqueTrait);
-        }
-
-    })
-
-    return res
-}
-
-// Medal data objects
-const mainMedals: Record<number, MedalExcel> = {};
-const mainRankedMedals: Record<number, MedalExcel> = {};
-const eventMedals: Record<number, MedalExcel> = {};
-
-function mainMedalRow(row: ExcelJS.Row): MedalExcel {
-    const uniqueTrait = stringFormatter(row.getCell(5))
-    const constraitParser = uniqueTrait.split(':');
-
-    const contraint = constraitParser.length > 1 ? constraitParser[0] : '';
-    const traits = constraitParser.length > 1 ? constraitParser[1] : constraitParser[0];
-
-    const medal: MedalExcel = {
-        gameId: '',
-        asset: '',
-        characterId: null,
-        name: stringFormatter(row.getCell(3)).replaceAll('\n', ' '),
-        type: MedalType.CHARACTER,
-        tags: getTags(row.getCell(6)),
-        uniqueTraitDescription: uniqueTrait,
-        uniqueConstraints: getUniqueTraitConstraints(contraint),
-        uniqueTraits: getUniqueTraits(traits),
-
-    }
-
-    return medal
-}
-
-function idString(id: number): string {
-
-    return id.toString().padStart(3, '0')
-}
-
-function eventMedalRow(row: ExcelJS.Row, medalID: number): MedalExcel {
-    const uniqueTrait = stringFormatter(row.getCell(12))
-    const constraitParser = uniqueTrait.split(':');
-
-    const contraint = constraitParser.length > 1 ? constraitParser[0] : '';
-    const traits = constraitParser.length > 1 ? constraitParser[1] : constraitParser[0];
-
-    const medal: MedalExcel = {
-        gameId: '310200' + idString(medalID),
-        asset: 'img_icon_medal_310200' + idString(medalID) + '.webp',
-        characterId: null,
-        name: stringFormatter(row.getCell(10)).replaceAll('\n', ' '),
-        type: MedalType.EVENT,
-        tags: getTags(row.getCell(13)),
-        uniqueTraitDescription: uniqueTrait,
-        uniqueConstraints: getUniqueTraitConstraints(contraint),
-        uniqueTraits: getUniqueTraits(traits),
-
-    }
-
-    return medal
-}
-
-
-function save(output: string) {
-
-    if (!existsSync(output)) {
-        mkdirSync(output, { recursive: true });
-    }
-
-    try {
-        writeFileSync(
-            path.join(output, 'medals.json'),
-            JSON.stringify(Object.values(mainMedals), null, 2),
-            'utf-8'
-        );
-        console.log('File medals_event.json saved successfully!');
-
-        writeFileSync(
-            path.join(output, 'medals_rank.json'),
-            JSON.stringify(Object.values(mainRankedMedals), null, 2),
-            'utf-8'
-        );
-        console.log('File medals_ranked.json saved successfully!');
-
-        writeFileSync(
-            path.join(output, 'medals_event.json'),
-            JSON.stringify(Object.values(eventMedals), null, 2),
-            'utf-8'
-        );
-        console.log('File medals_ranked.json saved successfully!');
-    } catch (error) {
-        console.error('Error saving files:', error);
-    }
-}
-const getImageMainMedal = async (workbook: ExcelJS.Workbook) => {
-
-    const imagePage = workbook.getWorksheet(3);
-
-
-    imagePage?.eachRow((row, rowNumber) => {
-        if (rowNumber >= 2 && rowNumber <= 342) {
-            if (row) {
-                const id = Number(row.getCell(3).result)
-                const image = row.getCell(2).value as string
-
-                const match = image?.match(/img_icon_medal_310110(\d+)$/i)
-                const gameId = match ? match[1] : null
-
-
-                if (!gameId) {
-                    console.error('Error at: ' + rowNumber)
-                }
-                mainMedals[id].asset = 'img_icon_medal_310100' + gameId + '.webp'
-                mainMedals[id].gameId = '310100' + gameId
-                mainMedals[id].characterId = gameId ?? null
-
-                mainRankedMedals[id].asset = 'img_icon_medal_310110' + gameId + '.webp'
-                mainRankedMedals[id].gameId = '310110' + gameId
-                mainRankedMedals[id].characterId = gameId ?? null
-
-            }
-
-        }
-    })
-
-
-
-}
-
-*/
 function stringFormatter(cell: ExcelJS.Cell): string {
 
     const value = cell.result as string ?? cell.value as string;
@@ -279,13 +78,13 @@ function getDate(cell: ExcelJS.Cell): string {
 
 }
 
-function defaultSkill(slot: number): SkillExcell {
+function defaultSkill(slot: number, calcPath: string): SkillExcell {
 
     return {
         name: '',
         description: {},
         effect: {},
-        asset: '',
+        asset: 'img_icon_' + calcPath + '_skill_' + (slot === 1 ? 'a' : 'b') + '.webp',
         slot,
         skillTransform: false,
         cooldown: 0,
@@ -295,7 +94,7 @@ function defaultSkill(slot: number): SkillExcell {
     }
 }
 
-function defaultCharacterState(name: string, isBase: boolean, overrideClass: Class): CharacterStateExcel {
+function defaultCharacterState(name: string, isBase: boolean, overrideClass: Class, calcPath: string): CharacterStateExcel {
 
 
     return {
@@ -306,11 +105,11 @@ function defaultCharacterState(name: string, isBase: boolean, overrideClass: Cla
         overrideBaseElement: null,
         overrideBaseSize: null,
         stateTraits: {},
-        skills: isBase ? [defaultSkill(1), defaultSkill(2)] : []
+        skills: isBase ? [defaultSkill(1, calcPath), defaultSkill(2, calcPath)] : []
     }
 }
 
-function getElementClass(cell: ExcelJS.Cell): {
+function getElementClass(cell: ExcelJS.Cell, calcPath: string): {
     type: Type[]
     mainElement: Element,
     mainClass: Class,
@@ -344,7 +143,7 @@ function getElementClass(cell: ExcelJS.Cell): {
         mainClass: Class[classes[0].toUpperCase() as keyof typeof Class],
         characterStates: classes.map((c, index) => {
             const isBase = index === 0
-            return defaultCharacterState(c.charAt(0) + c.toLowerCase().slice(1), isBase, Class[c.toUpperCase() as keyof typeof Class])
+            return defaultCharacterState(c.charAt(0) + c.toLowerCase().slice(1), isBase, Class[c.toUpperCase() as keyof typeof Class], calcPath)
         })
     }
 
@@ -501,7 +300,7 @@ async function characterRow(row: ExcelJS.Row, findGameId: Record<string, string>
     const gameId = getGameId(row.getCell(2), findGameId)
 
 
-    const path = knownPaths[gameId] ?? await determinePath(fullName, name, possiblePaths)
+    const calcPath = knownPaths[gameId] ?? await determinePath(fullName, name, possiblePaths)
 
     const character: CharacterExcel = {
         name: name,
@@ -509,9 +308,9 @@ async function characterRow(row: ExcelJS.Row, findGameId: Record<string, string>
         gameId: gameId,
         nameId: name,
         dateAdded: new Date(getDate(row.getCell(10))),
-        assetLarge: path + '.webp',
-        assetCard: '', //TODO Maybe Manual Change
-        ...getElementClass(row.getCell(8)),
+        assetLarge: 'img_chara_' + calcPath + '_l.webp',
+        assetCard: 'img_chara_' + calcPath + '_m.webp',
+        ...getElementClass(row.getCell(8), calcPath),
         mainSize: 'NORMAL', //Manual Change
         ...getRarityDetails(row.getCell(6)),
         teamBoost: 'ATTACK', //Manual Change

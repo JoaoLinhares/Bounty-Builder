@@ -130,7 +130,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by an enemy",
-        "constraint": "WHEN_ATTACKED",
+        "constraint": "ON_ATTACKED",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -139,7 +139,7 @@
     "uniqueTraits": [
       {
         "description": "3% chance to, Inflict Shock for 5 second(s) (Excludes some attacks)",
-        "trait": "CHANCE_INFLICT_STATUS_EFFECT",
+        "trait": "STATUS_INFLICT_CHANCE",
         "value": 3,
         "time": 5,
         "statusEffect": "SHOCK"
@@ -170,7 +170,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -207,7 +207,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 15% or less",
-        "constraint": "HP_OR_LESS_THAN",
+        "constraint": "HP_LT",
         "value": 15,
         "tag": null,
         "statusEffect": null
@@ -216,7 +216,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 6%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -241,7 +241,7 @@
     "uniqueConstraints": [
       {
         "description": "When there are 45 seconds or less remaining",
-        "constraint": "SECONDS_OR_LESS_REMAINING",
+        "constraint": "TIME_LT",
         "value": 45,
         "tag": null,
         "statusEffect": null
@@ -275,7 +275,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -284,7 +284,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -315,7 +315,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -324,7 +324,7 @@
     "uniqueTraits": [
       {
         "description": "SPD Boosted by 4% for 20 second(s)",
-        "trait": "BOOST_SPEED",
+        "trait": "BUFF_SPD_TIMED",
         "value": 4,
         "time": 20,
         "statusEffect": null
@@ -352,7 +352,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team loses the Treasure",
-        "constraint": "TEAM_LOSES_TREASURE",
+        "constraint": "ON_FLAG_LOST",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -361,7 +361,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 9%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 9,
         "time": null,
         "statusEffect": null
@@ -392,7 +392,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -401,7 +401,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -429,7 +429,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -438,7 +438,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 6%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -469,7 +469,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -478,7 +478,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -509,7 +509,7 @@
     "uniqueConstraints": [
       {
         "description": "When using Skill 2",
-        "constraint": "AFTER_SKILL_2",
+        "constraint": "ON_S2_USE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -518,7 +518,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -546,7 +546,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -555,7 +555,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -583,7 +583,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 90% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 90,
         "tag": null,
         "statusEffect": null
@@ -592,7 +592,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -623,7 +623,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -632,7 +632,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 5%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -660,7 +660,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -669,7 +669,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 5%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -694,7 +694,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -703,7 +703,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 13%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -728,7 +728,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are near the Treasure area where you are at",
-        "constraint": "ALLIES_NEAR_TREASURE",
+        "constraint": "ALLY_NEAR",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -737,7 +737,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -765,7 +765,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -774,7 +774,7 @@
     "uniqueTraits": [
       {
         "description": "CRIT Boosted by 80% for 6 second(s)",
-        "trait": "BOOST_CRIT",
+        "trait": "BUFF_CRIT_TIMED",
         "value": 80,
         "time": 6,
         "statusEffect": null
@@ -802,7 +802,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -842,7 +842,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has less Treasure secured",
-        "constraint": "TEAM_LESS_TREASURE",
+        "constraint": "TREASURE_LESS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -851,7 +851,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 13%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -879,7 +879,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -916,7 +916,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 30% or less",
-        "constraint": "HP_OR_LESS_THAN",
+        "constraint": "HP_LT",
         "value": 30,
         "tag": null,
         "statusEffect": null
@@ -925,7 +925,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of dodge by 13%",
-        "trait": "BOOST_CD_DODGE",
+        "trait": "DODGE_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -950,7 +950,7 @@
     "uniqueConstraints": [
       {
         "description": "When using Skill 1",
-        "constraint": "AFTER_SKILL_1",
+        "constraint": "ON_S1_USE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -959,7 +959,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -990,7 +990,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are near the Treasure area where you are at",
-        "constraint": "ALLIES_NEAR_TREASURE",
+        "constraint": "ALLY_NEAR",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -999,7 +999,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 5%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -1030,7 +1030,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1039,7 +1039,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -1067,7 +1067,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1076,7 +1076,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -1104,7 +1104,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1113,7 +1113,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -1141,7 +1141,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by an enemy",
-        "constraint": "WHEN_ATTACKED",
+        "constraint": "ON_ATTACKED",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1150,7 +1150,7 @@
     "uniqueTraits": [
       {
         "description": "30% chance to, Nullify Tremor",
-        "trait": "CHANCE_NULLIFY_STATUS_EFFECT",
+        "trait": "STATUS_NULLIFY_CHANCE",
         "value": 30,
         "time": null,
         "statusEffect": "TREMOR"
@@ -1172,7 +1172,7 @@
     "uniqueConstraints": [
       {
         "description": "When Respawned",
-        "constraint": "RESPAWNED",
+        "constraint": "ON_RESPAWN",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1181,7 +1181,7 @@
     "uniqueTraits": [
       {
         "description": "CRIT Boosted by 80% for 20 second(s)",
-        "trait": "BOOST_CRIT",
+        "trait": "BUFF_CRIT_TIMED",
         "value": 80,
         "time": 20,
         "statusEffect": null
@@ -1209,7 +1209,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 30% or less",
-        "constraint": "HP_OR_LESS_THAN",
+        "constraint": "HP_LT",
         "value": 30,
         "tag": null,
         "statusEffect": null
@@ -1218,7 +1218,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -1243,7 +1243,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1277,7 +1277,7 @@
     "uniqueConstraints": [
       {
         "description": "When there are 90 seconds or more remaining",
-        "constraint": "SECONDS_OR_MORE_REMAINING",
+        "constraint": "TIME_GT",
         "value": 90,
         "tag": null,
         "statusEffect": null
@@ -1286,7 +1286,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -1314,7 +1314,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1323,7 +1323,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -1348,7 +1348,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -1357,7 +1357,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -1385,7 +1385,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1394,7 +1394,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 6%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -1422,7 +1422,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1431,7 +1431,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of dodge by 13%",
-        "trait": "BOOST_CD_DODGE",
+        "trait": "DODGE_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -1465,7 +1465,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1474,7 +1474,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -1508,7 +1508,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 30% or less",
-        "constraint": "HP_OR_LESS_THAN",
+        "constraint": "HP_LT",
         "value": 30,
         "tag": null,
         "statusEffect": null
@@ -1517,7 +1517,7 @@
     "uniqueTraits": [
       {
         "description": "CRIT Boosted by 60% for 20 second(s)",
-        "trait": "BOOST_CRIT",
+        "trait": "BUFF_CRIT_TIMED",
         "value": 60,
         "time": 20,
         "statusEffect": null
@@ -1545,7 +1545,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1582,7 +1582,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1591,7 +1591,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -1619,7 +1619,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1628,7 +1628,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -1659,7 +1659,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1668,7 +1668,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -1699,7 +1699,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1708,7 +1708,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -1736,7 +1736,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has more Treasure secured",
-        "constraint": "TEAM_MORE_TREASURE",
+        "constraint": "TREASURE_MORE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1745,7 +1745,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -1773,7 +1773,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1782,7 +1782,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 5%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -1807,7 +1807,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1816,7 +1816,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -1847,7 +1847,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -1856,7 +1856,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 13%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -1890,7 +1890,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -1899,7 +1899,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -1924,7 +1924,7 @@
     "uniqueConstraints": [
       {
         "description": "When inflicted with Freeze by enemies",
-        "constraint": "INFLICTED_WITH_STATUS_EFFECT",
+        "constraint": "ON_STATUS_GET",
         "value": null,
         "tag": null,
         "statusEffect": "FREEZE"
@@ -1961,7 +1961,7 @@
     "uniqueConstraints": [
       {
         "description": "When inflicted with Aflame by enemies",
-        "constraint": "INFLICTED_WITH_STATUS_EFFECT",
+        "constraint": "ON_STATUS_GET",
         "value": null,
         "tag": null,
         "statusEffect": "AFLAME"
@@ -1970,7 +1970,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -1995,7 +1995,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2004,7 +2004,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 5%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -2029,7 +2029,7 @@
     "uniqueConstraints": [
       {
         "description": "When there are 60 seconds or less remaining",
-        "constraint": "SECONDS_OR_LESS_REMAINING",
+        "constraint": "TIME_LT",
         "value": 60,
         "tag": null,
         "statusEffect": null
@@ -2038,7 +2038,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 5%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -2069,7 +2069,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 30% or less",
-        "constraint": "HP_OR_LESS_THAN",
+        "constraint": "HP_LT",
         "value": 30,
         "tag": null,
         "statusEffect": null
@@ -2078,7 +2078,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -2106,7 +2106,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has less Treasure secured",
-        "constraint": "TEAM_LESS_TREASURE",
+        "constraint": "TREASURE_LESS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2115,7 +2115,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -2149,7 +2149,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2192,7 +2192,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2201,7 +2201,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -2229,7 +2229,7 @@
     "uniqueConstraints": [
       {
         "description": "When there are 60 seconds or less remaining",
-        "constraint": "SECONDS_OR_LESS_REMAINING",
+        "constraint": "TIME_LT",
         "value": 60,
         "tag": null,
         "statusEffect": null
@@ -2272,7 +2272,7 @@
     "uniqueConstraints": [
       {
         "description": "When inflicted with Tremor by enemies",
-        "constraint": "INFLICTED_WITH_STATUS_EFFECT",
+        "constraint": "ON_STATUS_GET",
         "value": null,
         "tag": null,
         "statusEffect": "TREMOR"
@@ -2281,7 +2281,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 6%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -2309,7 +2309,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has more Treasure secured",
-        "constraint": "TEAM_MORE_TREASURE",
+        "constraint": "TREASURE_MORE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2318,7 +2318,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -2346,7 +2346,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by an enemy",
-        "constraint": "WHEN_ATTACKED",
+        "constraint": "ON_ATTACKED",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2355,7 +2355,7 @@
     "uniqueTraits": [
       {
         "description": "30% chance to, Nullify Shock",
-        "trait": "CHANCE_NULLIFY_STATUS_EFFECT",
+        "trait": "STATUS_NULLIFY_CHANCE",
         "value": 30,
         "time": null,
         "statusEffect": "SHOCK"
@@ -2383,7 +2383,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by an enemy",
-        "constraint": "WHEN_ATTACKED",
+        "constraint": "ON_ATTACKED",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2392,7 +2392,7 @@
     "uniqueTraits": [
       {
         "description": "30% chance to, Nullify Aflame",
-        "trait": "CHANCE_NULLIFY_STATUS_EFFECT",
+        "trait": "STATUS_NULLIFY_CHANCE",
         "value": 30,
         "time": null,
         "statusEffect": "AFLAME"
@@ -2420,7 +2420,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has more Treasure secured",
-        "constraint": "TEAM_MORE_TREASURE",
+        "constraint": "TREASURE_MORE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2429,7 +2429,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -2460,7 +2460,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2469,7 +2469,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -2503,7 +2503,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 30% or less",
-        "constraint": "HP_OR_LESS_THAN",
+        "constraint": "HP_LT",
         "value": 30,
         "tag": null,
         "statusEffect": null
@@ -2512,7 +2512,7 @@
     "uniqueTraits": [
       {
         "description": "CRIT Boosted by 60% for 20 second(s)",
-        "trait": "BOOST_CRIT",
+        "trait": "BUFF_CRIT_TIMED",
         "value": 60,
         "time": 20,
         "statusEffect": null
@@ -2543,7 +2543,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -2583,7 +2583,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2592,7 +2592,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -2623,7 +2623,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has less Treasure secured",
-        "constraint": "TEAM_LESS_TREASURE",
+        "constraint": "TREASURE_LESS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2632,7 +2632,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -2660,7 +2660,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -2669,7 +2669,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -2697,7 +2697,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2706,7 +2706,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -2734,7 +2734,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -2743,7 +2743,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -2774,7 +2774,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2783,7 +2783,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -2811,7 +2811,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2820,7 +2820,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 5%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -2845,7 +2845,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2854,7 +2854,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -2879,7 +2879,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2888,7 +2888,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -2919,7 +2919,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2928,7 +2928,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -2959,7 +2959,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -2968,7 +2968,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -3002,7 +3002,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3011,7 +3011,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 13%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -3042,7 +3042,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3079,7 +3079,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3088,7 +3088,7 @@
     "uniqueTraits": [
       {
         "description": "CRIT Boosted by 80% for 20 second(s)",
-        "trait": "BOOST_CRIT",
+        "trait": "BUFF_CRIT_TIMED",
         "value": 80,
         "time": 20,
         "statusEffect": null
@@ -3116,7 +3116,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3125,7 +3125,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -3150,14 +3150,14 @@
     "uniqueConstraints": [
       {
         "description": "When you are in your Enemy`s Treasure Area",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
       },
       {
         "description": "the Treasure Gauge is 50% or less",
-        "constraint": "TREASURE_GAUGE_OR_LESS",
+        "constraint": "GAUGE_LT",
         "value": 50,
         "tag": null,
         "statusEffect": null
@@ -3191,7 +3191,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3200,7 +3200,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 5%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -3231,7 +3231,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3240,7 +3240,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -3268,7 +3268,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3277,7 +3277,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -3305,7 +3305,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has less Treasure secured",
-        "constraint": "TEAM_LESS_TREASURE",
+        "constraint": "TREASURE_LESS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3314,7 +3314,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -3342,7 +3342,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3351,7 +3351,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -3379,7 +3379,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3388,7 +3388,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -3422,7 +3422,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3431,7 +3431,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of dodge by 13%",
-        "trait": "BOOST_CD_DODGE",
+        "trait": "DODGE_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -3456,7 +3456,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3465,7 +3465,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 5%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -3502,7 +3502,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3542,7 +3542,7 @@
     "uniqueConstraints": [
       {
         "description": "When there are 60 seconds or less remaining",
-        "constraint": "SECONDS_OR_LESS_REMAINING",
+        "constraint": "TIME_LT",
         "value": 60,
         "tag": null,
         "statusEffect": null
@@ -3551,7 +3551,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -3579,7 +3579,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy inflicted With Shock",
-        "constraint": "ATTACKING_CHARACTER_INFLICTED_WITH_STATUS_EFFECT",
+        "constraint": "ON_ATTACK_STATUS",
         "value": null,
         "tag": null,
         "statusEffect": "SHOCK"
@@ -3588,7 +3588,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -3619,7 +3619,7 @@
     "uniqueConstraints": [
       {
         "description": "When enemies are inflicted with Shock",
-        "constraint": "INFLICT_STATUS_EFFECT",
+        "constraint": "ON_STATUS_SET",
         "value": null,
         "tag": null,
         "statusEffect": "SHOCK"
@@ -3628,7 +3628,7 @@
     "uniqueTraits": [
       {
         "description": "SPD Boosted by 6% for 20 second(s)",
-        "trait": "BOOST_SPEED",
+        "trait": "BUFF_SPD_TIMED",
         "value": 6,
         "time": 20,
         "statusEffect": null
@@ -3659,7 +3659,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -3668,7 +3668,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -3699,7 +3699,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -3708,7 +3708,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -3739,7 +3739,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -3748,7 +3748,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 5%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -3779,7 +3779,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3788,7 +3788,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 6%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -3819,7 +3819,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has more Treasure secured",
-        "constraint": "TEAM_MORE_TREASURE",
+        "constraint": "TREASURE_MORE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3828,7 +3828,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 13%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -3859,7 +3859,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has less Treasure secured",
-        "constraint": "TEAM_LESS_TREASURE",
+        "constraint": "TREASURE_LESS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3868,7 +3868,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -3902,7 +3902,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3911,7 +3911,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -3942,14 +3942,14 @@
     "uniqueConstraints": [
       {
         "description": "When you are in your Enemy`s Treasure Area",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
       },
       {
         "description": "the Treasure Gauge is 50% or less",
-        "constraint": "TREASURE_GAUGE_OR_LESS",
+        "constraint": "GAUGE_LT",
         "value": 50,
         "tag": null,
         "statusEffect": null
@@ -3986,7 +3986,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -3995,7 +3995,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -4023,7 +4023,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4032,7 +4032,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 2%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 2,
         "time": null,
         "statusEffect": null
@@ -4060,7 +4060,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4100,7 +4100,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4109,7 +4109,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 4%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 4,
         "time": null,
         "statusEffect": null
@@ -4134,7 +4134,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4143,7 +4143,7 @@
     "uniqueTraits": [
       {
         "description": "CRIT Boosted by 120% for 20 second(s)",
-        "trait": "BOOST_CRIT",
+        "trait": "BUFF_CRIT_TIMED",
         "value": 120,
         "time": 20,
         "statusEffect": null
@@ -4168,7 +4168,7 @@
     "uniqueConstraints": [
       {
         "description": "When Respawned",
-        "constraint": "RESPAWNED",
+        "constraint": "ON_RESPAWN",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4177,7 +4177,7 @@
     "uniqueTraits": [
       {
         "description": "SPD Boosted by 4% for 20 second(s)",
-        "trait": "BOOST_SPEED",
+        "trait": "BUFF_SPD_TIMED",
         "value": 4,
         "time": 20,
         "statusEffect": null
@@ -4208,7 +4208,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4217,7 +4217,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -4248,7 +4248,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4257,7 +4257,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -4288,7 +4288,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4297,7 +4297,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -4325,7 +4325,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team loses the Treasure",
-        "constraint": "TEAM_LOSES_TREASURE",
+        "constraint": "ON_FLAG_LOST",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4334,7 +4334,7 @@
     "uniqueTraits": [
       {
         "description": "CRIT Boosted by 90% for 20 second(s)",
-        "trait": "BOOST_CRIT",
+        "trait": "BUFF_CRIT_TIMED",
         "value": 90,
         "time": 20,
         "statusEffect": null
@@ -4371,7 +4371,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4380,7 +4380,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -4405,7 +4405,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has more Treasure secured",
-        "constraint": "TEAM_MORE_TREASURE",
+        "constraint": "TREASURE_MORE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4414,7 +4414,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -4445,7 +4445,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4479,7 +4479,7 @@
     "uniqueConstraints": [
       {
         "description": "When inflicted with Shock by enemies",
-        "constraint": "INFLICTED_WITH_STATUS_EFFECT",
+        "constraint": "ON_STATUS_GET",
         "value": null,
         "tag": null,
         "statusEffect": "SHOCK"
@@ -4488,7 +4488,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 4%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 4,
         "time": null,
         "statusEffect": null
@@ -4516,16 +4516,16 @@
     "uniqueConstraints": [
       {
         "description": "When attacking a character type \"Power users\" enemy",
-        "constraint": "ATTACKING_ENEMY_TYPE",
+        "constraint": "ON_ATTACK_TAG",
         "value": null,
-        "tag": null,
+        "tag": "POWER_USERS",
         "statusEffect": null
       }
     ],
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -4553,7 +4553,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by a character type \"Power users\" enemy",
-        "constraint": "ATTACKING_CHARACTER_BY_TYPE",
+        "constraint": "ON_ATTACKED_TAG",
         "value": null,
         "tag": "POWER_USERS",
         "statusEffect": null
@@ -4562,7 +4562,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -4587,7 +4587,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4596,7 +4596,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 5%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -4624,7 +4624,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4633,7 +4633,7 @@
     "uniqueTraits": [
       {
         "description": "CRIT Boosted by 90% for 20 second(s)",
-        "trait": "BOOST_CRIT",
+        "trait": "BUFF_CRIT_TIMED",
         "value": 90,
         "time": 20,
         "statusEffect": null
@@ -4661,7 +4661,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4670,7 +4670,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -4698,7 +4698,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4738,7 +4738,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 50% or less",
-        "constraint": "HP_OR_LESS_THAN",
+        "constraint": "HP_LT",
         "value": 50,
         "tag": null,
         "statusEffect": null
@@ -4747,7 +4747,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -4772,7 +4772,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4812,7 +4812,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4821,7 +4821,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 5%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -4852,7 +4852,7 @@
     "uniqueConstraints": [
       {
         "description": "When Treasure Gauge is recovered to 100%",
-        "constraint": "WHEN_TREASURE_GAUGE_IS_RECOVERED_TO",
+        "constraint": "GAUGE_SET",
         "value": 100,
         "tag": null,
         "statusEffect": null
@@ -4861,7 +4861,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -4892,7 +4892,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by an enemy",
-        "constraint": "WHEN_ATTACKED",
+        "constraint": "ON_ATTACKED",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4901,7 +4901,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 2%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 2,
         "time": null,
         "statusEffect": null
@@ -4932,7 +4932,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4941,7 +4941,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -4969,7 +4969,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team loses the Treasure",
-        "constraint": "TEAM_LOSES_TREASURE",
+        "constraint": "ON_FLAG_LOST",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -4978,7 +4978,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 8%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -5003,14 +5003,14 @@
     "uniqueConstraints": [
       {
         "description": "When you are in your Enemy`s Treasure Area",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
       },
       {
         "description": "the Treasure Gauge is 50% or less",
-        "constraint": "TREASURE_GAUGE_OR_LESS",
+        "constraint": "GAUGE_LT",
         "value": 50,
         "tag": null,
         "statusEffect": null
@@ -5047,7 +5047,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has less Treasure secured",
-        "constraint": "TEAM_LESS_TREASURE",
+        "constraint": "TREASURE_LESS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5084,7 +5084,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -5093,7 +5093,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -5121,7 +5121,7 @@
     "uniqueConstraints": [
       {
         "description": "When there are 60 seconds or less remaining",
-        "constraint": "SECONDS_OR_LESS_REMAINING",
+        "constraint": "TIME_LT",
         "value": 60,
         "tag": null,
         "statusEffect": null
@@ -5130,7 +5130,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -5158,7 +5158,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5167,7 +5167,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -5201,7 +5201,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -5210,7 +5210,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 13%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -5238,7 +5238,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5275,7 +5275,7 @@
     "uniqueConstraints": [
       {
         "description": "When the equipped character is character type \"Long-Range Normal Attacks\"",
-        "constraint": "USED_CHARACTER_HAS_TAG",
+        "constraint": "SELF_TAG",
         "value": null,
         "tag": "LONG_RANGE_NORMAL_ATTACKS",
         "statusEffect": null
@@ -5315,7 +5315,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5324,7 +5324,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 5%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -5346,7 +5346,7 @@
     "uniqueConstraints": [
       {
         "description": "When inflicted with Shock by enemies",
-        "constraint": "INFLICTED_WITH_STATUS_EFFECT",
+        "constraint": "ON_STATUS_GET",
         "value": null,
         "tag": null,
         "statusEffect": "SHOCK"
@@ -5377,7 +5377,7 @@
     "uniqueConstraints": [
       {
         "description": "When inflicted with Shock by enemies",
-        "constraint": "INFLICTED_WITH_STATUS_EFFECT",
+        "constraint": "ON_STATUS_GET",
         "value": null,
         "tag": null,
         "statusEffect": "SHOCK"
@@ -5386,7 +5386,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -5417,7 +5417,7 @@
     "uniqueConstraints": [
       {
         "description": "When using Skill 1",
-        "constraint": "AFTER_SKILL_1",
+        "constraint": "ON_S1_USE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5426,7 +5426,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 5%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -5457,7 +5457,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5466,7 +5466,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 4%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 4,
         "time": null,
         "statusEffect": null
@@ -5497,7 +5497,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Down an enemy",
-        "constraint": "DOWN_ENEMY",
+        "constraint": "ON_DOWN_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5506,7 +5506,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 4%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 4,
         "time": null,
         "statusEffect": null
@@ -5534,7 +5534,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -5543,7 +5543,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -5580,7 +5580,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5589,7 +5589,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -5617,7 +5617,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5626,7 +5626,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -5654,7 +5654,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5663,7 +5663,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -5691,7 +5691,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy that is capturing Treasure",
-        "constraint": "ATTACKING_ENEMY_CAP_TREASURE",
+        "constraint": "ON_ATTACK_CAP",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5700,7 +5700,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -5731,7 +5731,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5740,7 +5740,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 5%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -5771,7 +5771,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5780,7 +5780,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -5814,7 +5814,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5823,7 +5823,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -5854,7 +5854,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -5863,7 +5863,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -5888,7 +5888,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5922,7 +5922,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5931,7 +5931,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -5959,7 +5959,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are near the Treasure area where you are at",
-        "constraint": "ALLIES_NEAR_TREASURE",
+        "constraint": "ALLY_NEAR",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -5968,7 +5968,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 5%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -5999,7 +5999,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are near the Treasure area where you are at",
-        "constraint": "ALLIES_NEAR_TREASURE",
+        "constraint": "ALLY_NEAR",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6008,7 +6008,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -6030,7 +6030,7 @@
     "uniqueConstraints": [
       {
         "description": "When the equipped character is character type \"Straw Hat Pirates\"",
-        "constraint": "USED_CHARACTER_HAS_TAG",
+        "constraint": "SELF_TAG",
         "value": null,
         "tag": "STRAW_HAT_PIRATES",
         "statusEffect": null
@@ -6064,7 +6064,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6073,7 +6073,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 4%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 4,
         "time": null,
         "statusEffect": null
@@ -6104,7 +6104,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team loses the Treasure",
-        "constraint": "TEAM_LOSES_TREASURE",
+        "constraint": "ON_FLAG_LOST",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6113,7 +6113,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 8%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -6144,7 +6144,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has more Treasure secured",
-        "constraint": "TEAM_MORE_TREASURE",
+        "constraint": "TREASURE_MORE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6153,7 +6153,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -6184,7 +6184,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by an enemy whose ATK is boosted",
-        "constraint": "ATTACKED_BY_ENEMY_BOOSTED_ATK",
+        "constraint": "ON_ATTACKED_BUFF_ATK",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6193,7 +6193,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 5%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -6224,7 +6224,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy whose ATK are boosted",
-        "constraint": "ATTACKING_ENEMY_BOOSTED_ATK",
+        "constraint": "ON_ATTACK_BUFF_ATK",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6233,7 +6233,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -6258,7 +6258,7 @@
     "uniqueConstraints": [
       {
         "description": "When you or an ally captures Treasure",
-        "constraint": "AFTER_CAPTURE_INCLUDE_ALLY",
+        "constraint": "ON_CAP_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6292,7 +6292,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are near the Treasure area where you are at",
-        "constraint": "ALLIES_NEAR_TREASURE",
+        "constraint": "ALLY_NEAR",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6301,7 +6301,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -6329,7 +6329,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Down an enemy",
-        "constraint": "DOWN_ENEMY",
+        "constraint": "ON_DOWN_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6338,7 +6338,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 4%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 4,
         "time": null,
         "statusEffect": null
@@ -6363,7 +6363,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6372,7 +6372,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -6394,7 +6394,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy with a Normal Attack",
-        "constraint": "ATTACKING_ENEMY_WITH_NORMALS",
+        "constraint": "ON_NORMALS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6403,7 +6403,7 @@
     "uniqueTraits": [
       {
         "description": "30% chance to, Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -6425,7 +6425,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 50% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 50,
         "tag": null,
         "statusEffect": null
@@ -6468,7 +6468,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6508,7 +6508,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6517,7 +6517,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -6551,7 +6551,7 @@
     "uniqueConstraints": [
       {
         "description": "When enemies are inflicted with Aflame",
-        "constraint": "INFLICT_STATUS_EFFECT",
+        "constraint": "ON_STATUS_SET",
         "value": null,
         "tag": null,
         "statusEffect": "AFLAME"
@@ -6591,14 +6591,14 @@
     "uniqueConstraints": [
       {
         "description": "When you are in your team`s Treasure Area",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
       },
       {
         "description": "the Trasure Gauge is 80% or more",
-        "constraint": "TREASURE_GAUGE_OR_MORE",
+        "constraint": "GAUGE_GT",
         "value": 80,
         "tag": null,
         "statusEffect": null
@@ -6607,14 +6607,14 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
       },
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -6651,7 +6651,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy with the Element you are strong against",
-        "constraint": "ATTACKING_ENEMY_WITH_WEAKER_ELEMENT",
+        "constraint": "ON_ATTACK_ELEM_WEAKER",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6660,7 +6660,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -6688,7 +6688,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 50% or less",
-        "constraint": "HP_OR_LESS_THAN",
+        "constraint": "HP_LT",
         "value": 50,
         "tag": null,
         "statusEffect": null
@@ -6697,7 +6697,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -6725,7 +6725,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are near the Treasure area where you are at",
-        "constraint": "ALLIES_NEAR_TREASURE",
+        "constraint": "ALLY_NEAR",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6734,7 +6734,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -6765,7 +6765,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6774,7 +6774,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -6808,7 +6808,7 @@
     "uniqueConstraints": [
       {
         "description": "When using Skill 2",
-        "constraint": "AFTER_SKILL_2",
+        "constraint": "ON_S2_USE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6817,7 +6817,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 5%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -6848,14 +6848,14 @@
     "uniqueConstraints": [
       {
         "description": "When you are in your team`s Treasure Area",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
       },
       {
         "description": "the Trasure Gauge is 80% or more",
-        "constraint": "TREASURE_GAUGE_OR_MORE",
+        "constraint": "GAUGE_GT",
         "value": 80,
         "tag": null,
         "statusEffect": null
@@ -6864,14 +6864,14 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
       },
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -6902,7 +6902,7 @@
     "uniqueConstraints": [
       {
         "description": "When enemies are inflicted with Shock",
-        "constraint": "INFLICT_STATUS_EFFECT",
+        "constraint": "ON_STATUS_SET",
         "value": null,
         "tag": null,
         "statusEffect": "SHOCK"
@@ -6911,7 +6911,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -6945,7 +6945,7 @@
     "uniqueConstraints": [
       {
         "description": "When a damage-dealing Shock infliction has been nullifed",
-        "constraint": "NULLIFIED",
+        "constraint": "ON_STATUS_NULL",
         "value": null,
         "tag": null,
         "statusEffect": "SHOCK"
@@ -6954,7 +6954,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -6988,7 +6988,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -6997,7 +6997,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 6%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -7025,7 +7025,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7034,7 +7034,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -7062,7 +7062,7 @@
     "uniqueConstraints": [
       {
         "description": "After reciving damage from an enemy which is more than 30% of your max HP",
-        "constraint": "RECEIVING_DAMAGE_FROM_ENEMY_WHICH_IS_MORE_OF_YOUR_MAX_HP",
+        "constraint": "ON_BIG_HIT",
         "value": 30,
         "tag": null,
         "statusEffect": null
@@ -7102,7 +7102,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy that is capturing Treasure",
-        "constraint": "ATTACKING_ENEMY_CAP_TREASURE",
+        "constraint": "ON_ATTACK_CAP",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7111,7 +7111,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -7142,14 +7142,14 @@
     "uniqueConstraints": [
       {
         "description": "When you are in your Enemy`s Treasure Area",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
       },
       {
         "description": "the Treasure Gauge is 50% or more",
-        "constraint": "TREASURE_GAUGE_OR_MORE",
+        "constraint": "GAUGE_GT",
         "value": 50,
         "tag": null,
         "statusEffect": null
@@ -7189,7 +7189,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -7198,7 +7198,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -7226,7 +7226,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -7260,7 +7260,7 @@
     "uniqueConstraints": [
       {
         "description": "When enemies are inflicted with Shock",
-        "constraint": "INFLICT_STATUS_EFFECT",
+        "constraint": "ON_STATUS_SET",
         "value": null,
         "tag": null,
         "statusEffect": "SHOCK"
@@ -7291,7 +7291,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7300,7 +7300,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 4%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 4,
         "time": null,
         "statusEffect": null
@@ -7328,7 +7328,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy inflicted With Stun",
-        "constraint": "ATTACKING_CHARACTER_INFLICTED_WITH_STATUS_EFFECT",
+        "constraint": "ON_ATTACK_STATUS",
         "value": null,
         "tag": null,
         "statusEffect": "STUN"
@@ -7337,7 +7337,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -7362,7 +7362,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7371,7 +7371,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -7399,7 +7399,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by an enemy whose ATK is boosted",
-        "constraint": "ATTACKED_BY_ENEMY_BOOSTED_ATK",
+        "constraint": "ON_ATTACKED_BUFF_ATK",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7408,7 +7408,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 5%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -7433,7 +7433,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by a character type \"Power users\" enemy",
-        "constraint": "ATTACKING_CHARACTER_BY_TYPE",
+        "constraint": "ON_ATTACKED_TAG",
         "value": null,
         "tag": "POWER_USERS",
         "statusEffect": null
@@ -7442,7 +7442,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -7470,14 +7470,14 @@
     "uniqueConstraints": [
       {
         "description": "When you are in your team`s Treasure Area",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
       },
       {
         "description": "the Trasure Gauge is 80% or more",
-        "constraint": "TREASURE_GAUGE_OR_MORE",
+        "constraint": "GAUGE_GT",
         "value": 80,
         "tag": null,
         "statusEffect": null
@@ -7486,14 +7486,14 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
       },
       {
         "description": "Reduce damage recieved by 5%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -7521,7 +7521,7 @@
     "uniqueConstraints": [
       {
         "description": "When enemies are inflicted with Aflame",
-        "constraint": "INFLICT_STATUS_EFFECT",
+        "constraint": "ON_STATUS_SET",
         "value": null,
         "tag": null,
         "statusEffect": "AFLAME"
@@ -7567,7 +7567,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7607,7 +7607,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7616,7 +7616,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 2%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 2,
         "time": null,
         "statusEffect": null
@@ -7650,7 +7650,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7659,7 +7659,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 5%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -7681,7 +7681,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7690,7 +7690,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -7727,7 +7727,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the Treasure Area",
-        "constraint": "ANY_TREASURE",
+        "constraint": "AREA_ANY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7736,7 +7736,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -7770,7 +7770,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7813,7 +7813,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7822,7 +7822,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 8%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -7844,7 +7844,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy with a Normal Attack",
-        "constraint": "ATTACKING_ENEMY_WITH_NORMALS",
+        "constraint": "ON_NORMALS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7853,7 +7853,7 @@
     "uniqueTraits": [
       {
         "description": "30% chance to, Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -7875,16 +7875,16 @@
     "uniqueConstraints": [
       {
         "description": "When attacking a character type \"Power users\" enemy",
-        "constraint": "ATTACKING_ENEMY_TYPE",
+        "constraint": "ON_ATTACK_TAG",
         "value": null,
-        "tag": null,
+        "tag": "POWER_USERS",
         "statusEffect": null
       }
     ],
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -7921,7 +7921,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -7930,7 +7930,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 8%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -7964,7 +7964,7 @@
     "uniqueConstraints": [
       {
         "description": "When there are 60 seconds or less remaining",
-        "constraint": "SECONDS_OR_LESS_REMAINING",
+        "constraint": "TIME_LT",
         "value": 60,
         "tag": null,
         "statusEffect": null
@@ -8001,7 +8001,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8010,7 +8010,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 5%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -8041,7 +8041,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -8050,7 +8050,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -8081,7 +8081,7 @@
     "uniqueConstraints": [
       {
         "description": "When you or an ally KOs an enemy",
-        "constraint": "AFTER_KO_INCLUDING_ALLY",
+        "constraint": "ON_KO_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8090,7 +8090,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -8121,7 +8121,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -8130,7 +8130,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -8161,7 +8161,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8170,7 +8170,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 13%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -8201,7 +8201,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8210,7 +8210,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -8244,7 +8244,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -8253,7 +8253,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -8284,7 +8284,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8293,7 +8293,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -8324,7 +8324,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team loses the Treasure",
-        "constraint": "TEAM_LOSES_TREASURE",
+        "constraint": "ON_FLAG_LOST",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8333,7 +8333,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 8%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -8364,7 +8364,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has more Treasure secured",
-        "constraint": "TEAM_MORE_TREASURE",
+        "constraint": "TREASURE_MORE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8373,7 +8373,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -8398,7 +8398,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has more Treasure secured",
-        "constraint": "TEAM_MORE_TREASURE",
+        "constraint": "TREASURE_MORE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8407,7 +8407,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -8432,7 +8432,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8478,7 +8478,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the Treasure Area",
-        "constraint": "ANY_TREASURE",
+        "constraint": "AREA_ANY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8487,7 +8487,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -8512,7 +8512,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8521,7 +8521,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 4%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 4,
         "time": null,
         "statusEffect": null
@@ -8546,7 +8546,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8555,7 +8555,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -8577,7 +8577,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8586,7 +8586,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -8611,7 +8611,7 @@
     "uniqueConstraints": [
       {
         "description": "When enemies are inflicted with Shock",
-        "constraint": "INFLICT_STATUS_EFFECT",
+        "constraint": "ON_STATUS_SET",
         "value": null,
         "tag": null,
         "statusEffect": "SHOCK"
@@ -8645,7 +8645,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8654,7 +8654,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -8685,7 +8685,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8694,7 +8694,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 13%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -8719,7 +8719,7 @@
     "uniqueConstraints": [
       {
         "description": "When performing a Perfect Dodge",
-        "constraint": "AFTER_PERFECT_DODGE",
+        "constraint": "ON_PDODGE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8728,7 +8728,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 4%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 4,
         "time": null,
         "statusEffect": null
@@ -8756,7 +8756,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8790,7 +8790,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8799,7 +8799,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 10%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -8821,7 +8821,7 @@
     "uniqueConstraints": [
       {
         "description": "When an enemy begins capturing one of your team`s Treasure Areas",
-        "constraint": "WHEN_ENEMY_STARTS_CAPTURING",
+        "constraint": "ON_ENEMY_CAP",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8830,7 +8830,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -8852,7 +8852,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy with the Element you are strong against",
-        "constraint": "ATTACKING_ENEMY_WITH_WEAKER_ELEMENT",
+        "constraint": "ON_ATTACK_ELEM_WEAKER",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8861,7 +8861,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -8883,7 +8883,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy with a Normal Attack",
-        "constraint": "ATTACKING_ENEMY_WITH_NORMALS",
+        "constraint": "ON_NORMALS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8892,7 +8892,7 @@
     "uniqueTraits": [
       {
         "description": "30% chance to, Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -8923,7 +8923,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8932,7 +8932,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -8954,7 +8954,7 @@
     "uniqueConstraints": [
       {
         "description": "When you or an ally KOs an enemy",
-        "constraint": "AFTER_KO_INCLUDING_ALLY",
+        "constraint": "ON_KO_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -8997,7 +8997,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9006,7 +9006,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 13%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -9031,7 +9031,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9040,7 +9040,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -9071,7 +9071,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9108,7 +9108,7 @@
     "uniqueConstraints": [
       {
         "description": "When using Skill 2",
-        "constraint": "AFTER_SKILL_2",
+        "constraint": "ON_S2_USE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9117,7 +9117,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 5%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -9139,7 +9139,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy with a Normal Attack",
-        "constraint": "ATTACKING_ENEMY_WITH_NORMALS",
+        "constraint": "ON_NORMALS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9148,7 +9148,7 @@
     "uniqueTraits": [
       {
         "description": "30% chance to, Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -9170,7 +9170,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy with a Normal Attack",
-        "constraint": "ATTACKING_ENEMY_WITH_NORMALS",
+        "constraint": "ON_NORMALS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9179,7 +9179,7 @@
     "uniqueTraits": [
       {
         "description": "30% chance to, Reduce the cooldown time of Skill 2 by 2%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 2,
         "time": null,
         "statusEffect": null
@@ -9210,14 +9210,14 @@
     "uniqueConstraints": [
       {
         "description": "When you are in your Enemy`s Treasure Area",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
       },
       {
         "description": "the Treasure Gauge is 50% or less",
-        "constraint": "TREASURE_GAUGE_OR_LESS",
+        "constraint": "GAUGE_LT",
         "value": 50,
         "tag": null,
         "statusEffect": null
@@ -9251,7 +9251,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Down an enemy",
-        "constraint": "DOWN_ENEMY",
+        "constraint": "ON_DOWN_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9260,7 +9260,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -9297,7 +9297,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has less Treasure secured",
-        "constraint": "TEAM_LESS_TREASURE",
+        "constraint": "TREASURE_LESS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9306,7 +9306,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 13%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -9337,7 +9337,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9346,7 +9346,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -9377,7 +9377,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -9386,7 +9386,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -9411,7 +9411,7 @@
     "uniqueConstraints": [
       {
         "description": "When the equipped character is character type \"Cipher Pol\"",
-        "constraint": "USED_CHARACTER_HAS_TAG",
+        "constraint": "SELF_TAG",
         "value": null,
         "tag": "CIPHER_POL",
         "statusEffect": null
@@ -9445,7 +9445,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by an enemy",
-        "constraint": "WHEN_ATTACKED",
+        "constraint": "ON_ATTACKED",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9454,7 +9454,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 2%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 2,
         "time": null,
         "statusEffect": null
@@ -9479,7 +9479,7 @@
     "uniqueConstraints": [
       {
         "description": "When hit with Knockback by enemy",
-        "constraint": "KNOCKBACK_BY_ENEMY",
+        "constraint": "ON_KB_TAKEN",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9488,7 +9488,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -9513,7 +9513,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -9522,7 +9522,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -9544,7 +9544,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the Treasure Area",
-        "constraint": "ANY_TREASURE",
+        "constraint": "AREA_ANY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9553,7 +9553,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of dodge by 13%",
-        "trait": "BOOST_CD_DODGE",
+        "trait": "DODGE_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -9581,7 +9581,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9590,7 +9590,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 6%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -9615,7 +9615,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -9624,7 +9624,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -9652,7 +9652,7 @@
     "uniqueConstraints": [
       {
         "description": "When using Skill 1",
-        "constraint": "AFTER_SKILL_1",
+        "constraint": "ON_S1_USE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9661,7 +9661,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 5%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -9689,7 +9689,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9723,7 +9723,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy that is capturing Treasure",
-        "constraint": "ATTACKING_ENEMY_CAP_TREASURE",
+        "constraint": "ON_ATTACK_CAP",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9732,7 +9732,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -9757,7 +9757,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9766,7 +9766,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 10%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -9806,7 +9806,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9815,7 +9815,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -9843,7 +9843,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9852,7 +9852,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -9883,7 +9883,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9892,7 +9892,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -9923,7 +9923,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Down an enemy",
-        "constraint": "DOWN_ENEMY",
+        "constraint": "ON_DOWN_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9932,7 +9932,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -9963,7 +9963,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -9972,7 +9972,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 6%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -10000,7 +10000,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10009,7 +10009,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -10037,7 +10037,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10046,7 +10046,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 5%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -10074,7 +10074,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -10083,7 +10083,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -10111,7 +10111,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10120,7 +10120,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 8%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -10148,7 +10148,7 @@
     "uniqueConstraints": [
       {
         "description": "When using Skill 2",
-        "constraint": "AFTER_SKILL_2",
+        "constraint": "ON_S2_USE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10157,7 +10157,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -10185,7 +10185,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10194,7 +10194,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -10222,7 +10222,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10231,7 +10231,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 4%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 4,
         "time": null,
         "statusEffect": null
@@ -10262,7 +10262,7 @@
     "uniqueConstraints": [
       {
         "description": "When hit with Knockback by enemy",
-        "constraint": "KNOCKBACK_BY_ENEMY",
+        "constraint": "ON_KB_TAKEN",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10271,7 +10271,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 5%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -10296,7 +10296,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 50% or less",
-        "constraint": "HP_OR_LESS_THAN",
+        "constraint": "HP_LT",
         "value": 50,
         "tag": null,
         "statusEffect": null
@@ -10305,7 +10305,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -10333,7 +10333,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10342,7 +10342,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -10373,7 +10373,7 @@
     "uniqueConstraints": [
       {
         "description": "When your team has less Treasure secured",
-        "constraint": "TEAM_LESS_TREASURE",
+        "constraint": "TREASURE_LESS",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10382,7 +10382,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 2 by 13%",
-        "trait": "BOOST_CD_SKILL_2",
+        "trait": "SKILL_2_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -10407,7 +10407,7 @@
     "uniqueConstraints": [
       {
         "description": "When you or an ally KOs an enemy",
-        "constraint": "AFTER_KO_INCLUDING_ALLY",
+        "constraint": "ON_KO_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10416,7 +10416,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -10453,7 +10453,7 @@
     "uniqueConstraints": [
       {
         "description": "When your allies are not near the Treasure area where you are at",
-        "constraint": "ALLIES_NOT_NEAR_TREASURE",
+        "constraint": "ALLY_AWAY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10462,7 +10462,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of Skill 1 by 13%",
-        "trait": "BOOST_CD_SKILL_1",
+        "trait": "SKILL_1_CD_SPEED",
         "value": 13,
         "time": null,
         "statusEffect": null
@@ -10496,7 +10496,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10505,7 +10505,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -10536,7 +10536,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10545,7 +10545,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -10579,7 +10579,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy that is capturing Treasure",
-        "constraint": "ATTACKING_ENEMY_CAP_TREASURE",
+        "constraint": "ON_ATTACK_CAP",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10588,7 +10588,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 2%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 2,
         "time": null,
         "statusEffect": null
@@ -10616,7 +10616,7 @@
     "uniqueConstraints": [
       {
         "description": "After KOing an enemy",
-        "constraint": "AFTER_KO",
+        "constraint": "ON_KO_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10625,7 +10625,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -10653,7 +10653,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the Treasure Area",
-        "constraint": "ANY_TREASURE",
+        "constraint": "AREA_ANY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10662,7 +10662,7 @@
     "uniqueTraits": [
       {
         "description": "Boost the cooldown reduction speed of dodge by 10%",
-        "trait": "BOOST_CD_DODGE",
+        "trait": "DODGE_CD_SPEED",
         "value": 10,
         "time": null,
         "statusEffect": null
@@ -10693,7 +10693,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10702,7 +10702,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -10730,7 +10730,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10739,7 +10739,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -10767,7 +10767,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10776,7 +10776,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 5%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -10807,7 +10807,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy with the Element you are strong against",
-        "constraint": "ATTACKING_ENEMY_WITH_WEAKER_ELEMENT",
+        "constraint": "ON_ATTACK_ELEM_WEAKER",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10816,7 +10816,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -10841,7 +10841,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10878,7 +10878,7 @@
     "uniqueConstraints": [
       {
         "description": "When in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10887,7 +10887,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -10915,7 +10915,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -10924,7 +10924,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 5%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -10952,7 +10952,7 @@
     "uniqueConstraints": [
       {
         "description": "When your HP is 70% or more",
-        "constraint": "HP_OR_MORE_THAN",
+        "constraint": "HP_GT",
         "value": 70,
         "tag": null,
         "statusEffect": null
@@ -10961,7 +10961,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -10998,7 +10998,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11007,7 +11007,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 8%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -11035,7 +11035,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11044,7 +11044,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 3%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -11072,7 +11072,7 @@
     "uniqueConstraints": [
       {
         "description": "When you or an ally KOs an enemy",
-        "constraint": "AFTER_KO_INCLUDING_ALLY",
+        "constraint": "ON_KO_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11081,7 +11081,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 3%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -11109,7 +11109,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by an enemy whose ATK is boosted",
-        "constraint": "ATTACKED_BY_ENEMY_BOOSTED_ATK",
+        "constraint": "ON_ATTACKED_BUFF_ATK",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11118,7 +11118,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -11155,7 +11155,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy in the area around your captured Treasure",
-        "constraint": "AROUND_TEAM_TREASURE",
+        "constraint": "AREA_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11164,7 +11164,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -11201,7 +11201,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy in the area around your enemy`s Treasure",
-        "constraint": "AROUND_ENEMY_TREASURE",
+        "constraint": "AREA_ENEMY",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11210,7 +11210,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -11238,7 +11238,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Knockback an enemy",
-        "constraint": "KNOCKBACK_ENEMY",
+        "constraint": "ON_KB_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11275,7 +11275,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy that is capturing Treasure",
-        "constraint": "ATTACKING_ENEMY_CAP_TREASURE",
+        "constraint": "ON_ATTACK_CAP",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11284,7 +11284,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 2%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 2,
         "time": null,
         "statusEffect": null
@@ -11315,7 +11315,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacked by a character type \"Power users\" enemy",
-        "constraint": "ATTACKING_CHARACTER_BY_TYPE",
+        "constraint": "ON_ATTACKED_TAG",
         "value": null,
         "tag": "POWER_USERS",
         "statusEffect": null
@@ -11324,7 +11324,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce damage recieved by 3%",
-        "trait": "DAMAGE_REDUCTION",
+        "trait": "DMG_REDUCTION",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -11355,7 +11355,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11389,7 +11389,7 @@
     "uniqueConstraints": [
       {
         "description": "When you Down an enemy",
-        "constraint": "DOWN_ENEMY",
+        "constraint": "ON_DOWN_DEALT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11398,7 +11398,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 4%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 4,
         "time": null,
         "statusEffect": null
@@ -11423,7 +11423,7 @@
     "uniqueConstraints": [
       {
         "description": "When you or an ally captures Treasure",
-        "constraint": "AFTER_CAPTURE_INCLUDE_ALLY",
+        "constraint": "ON_CAP_TEAM",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11469,7 +11469,7 @@
     "uniqueConstraints": [
       {
         "description": "When you capture the Treasure",
-        "constraint": "AFTER_CAPTURE",
+        "constraint": "ON_CAP_SELF",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11478,7 +11478,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 8%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 8,
         "time": null,
         "statusEffect": null
@@ -11509,7 +11509,7 @@
     "uniqueConstraints": [
       {
         "description": "When Critical occurs",
-        "constraint": "AFTER_CRIT_OCCURS",
+        "constraint": "ON_CRIT",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11518,7 +11518,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 2%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 2,
         "time": null,
         "statusEffect": null
@@ -11546,7 +11546,7 @@
     "uniqueConstraints": [
       {
         "description": "When an ally is KO`d (not including you)",
-        "constraint": "AFTER_ALLY_WAS_KOD",
+        "constraint": "ON_ALLY_DEAD",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11555,7 +11555,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 2 by 6%",
-        "trait": "REDUCE_CD_SKILL_2",
+        "trait": "SKILL_2_CD_REDUCTION",
         "value": 6,
         "time": null,
         "statusEffect": null
@@ -11586,7 +11586,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy whose ATK are boosted",
-        "constraint": "ATTACKING_ENEMY_BOOSTED_ATK",
+        "constraint": "ON_ATTACK_BUFF_ATK",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11595,7 +11595,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 3%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 3,
         "time": null,
         "statusEffect": null
@@ -11635,7 +11635,7 @@
     "uniqueConstraints": [
       {
         "description": "When attacking an enemy with the Element you are strong against",
-        "constraint": "ATTACKING_ENEMY_WITH_WEAKER_ELEMENT",
+        "constraint": "ON_ATTACK_ELEM_WEAKER",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11644,7 +11644,7 @@
     "uniqueTraits": [
       {
         "description": "Increase damage dealt by 5%",
-        "trait": "DAMAGE_INCREASE",
+        "trait": "DMG_INCREASE",
         "value": 5,
         "time": null,
         "statusEffect": null
@@ -11678,7 +11678,7 @@
     "uniqueConstraints": [
       {
         "description": "When using Skill 2",
-        "constraint": "AFTER_SKILL_2",
+        "constraint": "ON_S2_USE",
         "value": null,
         "tag": null,
         "statusEffect": null
@@ -11687,7 +11687,7 @@
     "uniqueTraits": [
       {
         "description": "Reduce the cooldown time of Skill 1 by 5%",
-        "trait": "REDUCE_CD_SKILL_1",
+        "trait": "SKILL_1_CD_REDUCTION",
         "value": 5,
         "time": null,
         "statusEffect": null

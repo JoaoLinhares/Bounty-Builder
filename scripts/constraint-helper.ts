@@ -63,211 +63,215 @@ function constraintTag(description: string, constraint: MedalTraitConstraintType
 export const constraintMap: Record<MedalTraitConstraintType,
     (constraint: string) => UniqueTraitConstraintExcel | undefined
 > = {
-    AFTER_KO: (constraint: string) => {
+    // --- COMBATS/KO ---
+    ON_KO_SELF: (constraint: string) => {
         const match = constraint.match(/After KOing an enemy$/i);
-        return match ? constraintSimple(constraint, 'AFTER_KO') : undefined;
+        return match ? constraintSimple(constraint, 'ON_KO_SELF') : undefined;
     },
-    AFTER_KO_INCLUDING_ALLY: (constraint: string) => {
-        const match = constraint.match(/When you or an ally KOs an enemy$/i);
-        return match ? constraintSimple(constraint, 'AFTER_KO_INCLUDING_ALLY') : undefined;
-    },
-    AFTER_ALLY_WAS_KOD: (constraint: string) => {
-        // Usei . para aceitar qualquer tipo de aspa ou caractere no KO'd
-        const match = constraint.match(/When an ally is KO.d \(not including you\)$/i);
-        return match ? constraintSimple(constraint, 'AFTER_ALLY_WAS_KOD') : undefined;
-    },
-    HP_OR_LESS_THAN: (constraint: string) => {
-        const match = constraint.match(/When your HP is (\d+)% or less$/i);
-        return match ? constraintValue(constraint, 'HP_OR_LESS_THAN', Number(match[1])) : undefined;
-    },
-    HP_OR_MORE_THAN: (constraint: string) => {
-        const match = constraint.match(/When your HP is (\d+)% or more$/i);
-        return match ? constraintValue(constraint, 'HP_OR_MORE_THAN', Number(match[1])) : undefined;
-    },
-    AFTER_CAPTURE: (constraint: string) => {
-        const match = constraint.match(/When you capture the Treasure$/i);
-        return match ? constraintSimple(constraint, 'AFTER_CAPTURE') : undefined;
-    },
-    AFTER_CAPTURE_INCLUDE_ALLY: (constraint: string) => {
-        const match = constraint.match(/When you or an ally captures Treasure$/i);
-        return match ? constraintSimple(constraint, 'AFTER_CAPTURE_INCLUDE_ALLY') : undefined;
-    },
-    SECONDS_OR_LESS_REMAINING: (constraint: string) => {
-        const match = constraint.match(/When there are (\d+) seconds or less remaining$/i);
-        return match ? constraintValue(constraint, 'SECONDS_OR_LESS_REMAINING', Number(match[1])) : undefined;
-    },
-    SECONDS_OR_MORE_REMAINING: (constraint: string) => {
-        const match = constraint.match(/When there are (\d+) seconds or more remaining$/i);
-        return match ? constraintValue(constraint, 'SECONDS_OR_MORE_REMAINING', Number(match[1])) : undefined;
-    },
-    SECONDS_AFTER_GAME_START: (constraint: string) => {
-        const match = constraint.match(/For (\d+) seconds after the battle has started$/i);
-        return match ? constraintValue(constraint, 'SECONDS_AFTER_GAME_START', Number(match[1])) : undefined;
-    },
-    TEAM_LESS_TREASURE: (constraint: string) => {
-        const match = constraint.match(/When your team has less Treasure secured$/i);
-        return match ? constraintSimple(constraint, 'TEAM_LESS_TREASURE') : undefined;
-    },
-    TEAM_MORE_TREASURE: (constraint: string) => {
-        const match = constraint.match(/When your team has more Treasure secured$/i);
-        return match ? constraintSimple(constraint, 'TEAM_MORE_TREASURE') : undefined;
-    },
-    RESPAWNED: (constraint: string) => {
+    ON_RESPAWN: (constraint: string) => {
         const match = constraint.match(/When Respawned$/i);
-        return match ? constraintSimple(constraint, 'RESPAWNED') : undefined;
+        return match ? constraintSimple(constraint, 'ON_RESPAWN') : undefined;
     },
-    ALLIES_NEAR_TREASURE: (constraint: string) => {
-        const match = constraint.match(/When your allies are near the Treasure area where you are at$/i);
-        return match ? constraintSimple(constraint, 'ALLIES_NEAR_TREASURE') : undefined;
+    ON_KO_TEAM: (constraint: string) => {
+        const match = constraint.match(/When you or an ally KOs an enemy$/i);
+        return match ? constraintSimple(constraint, 'ON_KO_TEAM') : undefined;
     },
-    ALLIES_NOT_NEAR_TREASURE: (constraint: string) => {
-        const match = constraint.match(/When your allies are not near the Treasure area where you are at$/i);
-        return match ? constraintSimple(constraint, 'ALLIES_NOT_NEAR_TREASURE') : undefined;
+    ON_ALLY_DEAD: (constraint: string) => {
+        const match = constraint.match(/When an ally is KO.d \(not including you\)$/i);
+        return match ? constraintSimple(constraint, 'ON_ALLY_DEAD') : undefined;
     },
-    WHEN_ATTACKED: (constraint: string) => {
-        const match = constraint.match(/When attacked by an enemy$/i);
-        return match ? constraintSimple(constraint, 'WHEN_ATTACKED') : undefined;
-    },
-    AROUND_ENEMY_TREASURE: (constraint: string) => {
-        const match = constraint.match(/(?:When (?:in|attacking an enemy in) the area around your enemy`s Treasure|When you are in your Enemy`s Treasure Area)$/i);
-        return match ? constraintSimple(constraint, 'AROUND_ENEMY_TREASURE') : undefined;
-    },
-    AROUND_TEAM_TREASURE: (constraint: string) => {
-        const match = constraint.match(/(?:When (?:in|attacking an enemy in) the area around your captured Treasure|When you are in your team`s Treasure Area)$/i);
-        return match ? constraintSimple(constraint, 'AROUND_TEAM_TREASURE') : undefined;
-    },
-    ANY_TREASURE: (constraint: string) => {
-        const match = constraint.match(/When in the Treasure Area$/i);
-        return match ? constraintSimple(constraint, 'ANY_TREASURE') : undefined;
-    },
-    TEAM_LOSES_TREASURE: (constraint: string) => {
-        const match = constraint.match(/When your team loses the Treasure$/i);
-        return match ? constraintSimple(constraint, 'TEAM_LOSES_TREASURE') : undefined;
-    },
-    ATTACKING_ENEMY_TYPE: (constraint: string) => {
-        const match = constraint.match(/When attacking a character type "([^"]+)" enemy$/i);
-        return match ? constraintSimple(constraint, 'ATTACKING_ENEMY_TYPE') : undefined;
-    },
-    AFTER_SKILL_2: (constraint: string) => {
-        const match = constraint.match(/When using Skill 2$/i);
-        return match ? constraintSimple(constraint, 'AFTER_SKILL_2') : undefined;
-    },
-    ATTACKING_WITH_SKILL_2: (constraint: string) => {
-        const match = constraint.match(/When attacking an enemy with Skill 2$/i);
-        return match ? constraintSimple(constraint, 'ATTACKING_WITH_SKILL_2') : undefined;
-    },
-    AFTER_SKILL_1: (constraint: string) => {
-        const match = constraint.match(/When using Skill 1$/i);
-        return match ? constraintSimple(constraint, 'AFTER_SKILL_1') : undefined;
-    },
-    KNOCKBACK_ENEMY: (constraint: string) => {
+    ON_KB_DEALT: (constraint: string) => {
         const match = constraint.match(/When you Knockback an enemy$/i);
-        return match ? constraintSimple(constraint, 'KNOCKBACK_ENEMY') : undefined;
+        return match ? constraintSimple(constraint, 'ON_KB_DEALT') : undefined;
     },
-    KNOCKBACK_BY_ENEMY: (constraint: string) => {
+    ON_KB_TAKEN: (constraint: string) => {
         const match = constraint.match(/When hit with Knockback by enemy$/i);
-        return match ? constraintSimple(constraint, 'KNOCKBACK_BY_ENEMY') : undefined;
+        return match ? constraintSimple(constraint, 'ON_KB_TAKEN') : undefined;
     },
-    AFTER_CRIT_OCCURS: (constraint: string) => {
-        const match = constraint.match(/When Critical occurs$/i);
-        return match ? constraintSimple(constraint, 'AFTER_CRIT_OCCURS') : undefined;
-    },
-    AFTER_PERFECT_DODGE: (constraint: string) => {
-        const match = constraint.match(/When performing a Perfect Dodge$/i);
-        return match ? constraintSimple(constraint, 'AFTER_PERFECT_DODGE') : undefined;
-    },
-    WHEN_DOWNED: (constraint: string) => {
-        const match = constraint.match(/When you are Downed$/i);
-        return match ? constraintSimple(constraint, 'WHEN_DOWNED') : undefined;
-    },
-    DOWN_ENEMY: (constraint: string) => {
+    ON_DOWN_DEALT: (constraint: string) => {
         const match = constraint.match(/When you Down an enemy$/i);
-        return match ? constraintSimple(constraint, 'DOWN_ENEMY') : undefined;
+        return match ? constraintSimple(constraint, 'ON_DOWN_DEALT') : undefined;
     },
-    ATTACKING_CHARACTER_BY_TYPE: (constraint: string) => {
-        const match = constraint.match(/When attacked by a character type \"([^"]+)\" enemy$/i);
-        return match ? constraintTag(constraint, 'ATTACKING_CHARACTER_BY_TYPE', match[1]) : undefined;
+    ON_DOWN_TAKEN: (constraint: string) => {
+        const match = constraint.match(/When you are Downed$/i);
+        return match ? constraintSimple(constraint, 'ON_DOWN_TAKEN') : undefined;
     },
-    ATTACKING_CHARACTER_INFLICTED_WITH_STATUS_EFFECT: (constraint: string) => {
-        const match = constraint.match(/When attacking an enemy inflicted With ([^"]+)$/i);
-        return match ? constraintStatusEffect(constraint, 'ATTACKING_CHARACTER_INFLICTED_WITH_STATUS_EFFECT', match[1]) : undefined;
+
+    // --- HP AND TIME ---
+    HP_LT: (constraint: string) => {
+        const match = constraint.match(/When your HP is (\d+)% or less$/i);
+        return match ? constraintValue(constraint, 'HP_LT', Number(match[1])) : undefined;
     },
-    ATTACKED_BY_ENEMY_INFLICTED_WITH_STATUS_EFFECT: (constraint: string) => {
-        const match = constraint.match(/When attacked by an enemy inflicted with ([^"]+)$/i);
-        return match ? constraintStatusEffect(constraint, 'ATTACKED_BY_ENEMY_INFLICTED_WITH_STATUS_EFFECT', match[1]) : undefined;
+    HP_GT: (constraint: string) => {
+        const match = constraint.match(/When your HP is (\d+)% or more$/i);
+        return match ? constraintValue(constraint, 'HP_GT', Number(match[1])) : undefined;
     },
-    INFLICTED_WITH_STATUS_EFFECT: (constraint: string) => {
-        const match = constraint.match(/When inflicted with ([^"]+) by enemies$/i);
-        return match ? constraintStatusEffect(constraint, 'INFLICTED_WITH_STATUS_EFFECT', match[1]) : undefined;
+    TIME_LT: (constraint: string) => {
+        const match = constraint.match(/When there are (\d+) seconds or less remaining$/i);
+        return match ? constraintValue(constraint, 'TIME_LT', Number(match[1])) : undefined;
     },
-    INFLICT_STATUS_EFFECT: (constraint: string) => {
-        const match = constraint.match(/When enemies are inflicted with ([^"]+)$/i);
-        return match ? constraintStatusEffect(constraint, 'INFLICT_STATUS_EFFECT', match[1]) : undefined;
+    TIME_GT: (constraint: string) => {
+        const match = constraint.match(/When there are (\d+) seconds or more remaining$/i);
+        return match ? constraintValue(constraint, 'TIME_GT', Number(match[1])) : undefined;
     },
-    NULLIFIED: (constraint: string) => {
-        const match = constraint.match(/When a damage-dealing ([^"]+) infliction has been nullifed$/i);
-        return match ? constraintStatusEffect(constraint, 'NULLIFIED', match[1]) : undefined;
+    ON_MATCH_START_TIMED: (constraint: string) => {
+        const match = constraint.match(/For (\d+) seconds after the battle has started$/i);
+        return match ? constraintValue(constraint, 'ON_MATCH_START_TIMED', Number(match[1])) : undefined;
     },
-    ATTACKING_ENEMY_SAME_ELEMENT: (constraint: string) => {
-        const match = constraint.match(/When attacking an enemy with the same Element$/i);
-        return match ? constraintSimple(constraint, 'ATTACKING_ENEMY_SAME_ELEMENT') : undefined;
+
+    // --- TREASURES ---
+    TREASURE_LESS: (constraint: string) => {
+        const match = constraint.match(/When your team has less Treasure secured$/i);
+        return match ? constraintSimple(constraint, 'TREASURE_LESS') : undefined;
     },
-    ATTACKING_ENEMY_WITH_WEAKER_ELEMENT: (constraint: string) => {
-        const match = constraint.match(/When attacking an enemy with the Element you are strong against$/i);
-        return match ? constraintSimple(constraint, 'ATTACKING_ENEMY_WITH_WEAKER_ELEMENT') : undefined;
+    TREASURE_MORE: (constraint: string) => {
+        const match = constraint.match(/When your team has more Treasure secured$/i);
+        return match ? constraintSimple(constraint, 'TREASURE_MORE') : undefined;
     },
-    ATTACKING_ENEMY_BOOSTED_DEF: (constraint: string) => {
-        const match = constraint.match(/When attacking an enemy whose DEF is boosted$/i);
-        return match ? constraintSimple(constraint, 'ATTACKING_ENEMY_BOOSTED_DEF') : undefined;
+    ON_CAP_SELF: (constraint: string) => {
+        const match = constraint.match(/When you capture the Treasure$/i);
+        return match ? constraintSimple(constraint, 'ON_CAP_SELF') : undefined;
     },
-    ATTACKING_ENEMY_BOOSTED_ATK: (constraint: string) => {
-        const match = constraint.match(/When attacking an enemy whose ATK are boosted$/i);
-        return match ? constraintSimple(constraint, 'ATTACKING_ENEMY_BOOSTED_ATK') : undefined;
+    ON_CAP_TEAM: (constraint: string) => {
+        const match = constraint.match(/When you or an ally captures Treasure$/i);
+        return match ? constraintSimple(constraint, 'ON_CAP_TEAM') : undefined;
     },
-    ATTACKED_BY_ENEMY_BOOSTED_ATK: (constraint: string) => {
-        const match = constraint.match(/When attacked by an enemy whose ATK is boosted$/i);
-        return match ? constraintSimple(constraint, 'ATTACKED_BY_ENEMY_BOOSTED_ATK') : undefined;
+    AREA_ENEMY: (constraint: string) => {
+        const match = constraint.match(/(?:When (?:in|attacking an enemy in) the area around your enemy`s Treasure|When you are in your Enemy`s Treasure Area)$/i);
+        return match ? constraintSimple(constraint, 'AREA_ENEMY') : undefined;
     },
-    ATTACKING_ENEMY_CAP_TREASURE: (constraint: string) => {
-        const match = constraint.match(/When attacking an enemy that is capturing Treasure$/i);
-        return match ? constraintSimple(constraint, 'ATTACKING_ENEMY_CAP_TREASURE') : undefined;
+    AREA_TEAM: (constraint: string) => {
+        const match = constraint.match(/(?:When (?:in|attacking an enemy in) the area around your captured Treasure|When you are in your team`s Treasure Area)$/i);
+        return match ? constraintSimple(constraint, 'AREA_TEAM') : undefined;
     },
-    WHEN_TREASURE_GAUGE_IS_RECOVERED_TO: (constraint: string) => {
+    AREA_ANY: (constraint: string) => {
+        const match = constraint.match(/When in the Treasure Area$/i);
+        return match ? constraintSimple(constraint, 'AREA_ANY') : undefined;
+    },
+    ALLY_NEAR: (constraint: string) => {
+        const match = constraint.match(/When your allies are near the Treasure area where you are at$/i);
+        return match ? constraintSimple(constraint, 'ALLY_NEAR') : undefined;
+    },
+    ALLY_AWAY: (constraint: string) => {
+        const match = constraint.match(/When your allies are not near the Treasure area where you are at$/i);
+        return match ? constraintSimple(constraint, 'ALLY_AWAY') : undefined;
+    },
+    GAUGE_SET: (constraint: string) => {
         const match = constraint.match(/When Treasure Gauge is recovered to (\d+)%$/i);
-        return match ? constraintValue(constraint, 'WHEN_TREASURE_GAUGE_IS_RECOVERED_TO', Number(match[1])) : undefined;
+        return match ? constraintValue(constraint, 'GAUGE_SET', Number(match[1])) : undefined;
     },
-    TREASURE_GAUGE_OR_MORE: (constraint: string) => {
+    GAUGE_GT: (constraint: string) => {
         const match = constraint.match(/Tr(?:e)?asure Gauge is (\d+)% or more$/i);
-        return match ? constraintValue(constraint, 'TREASURE_GAUGE_OR_MORE', Number(match[1])) : undefined;
+        return match ? constraintValue(constraint, 'GAUGE_GT', Number(match[1])) : undefined;
     },
-    TREASURE_GAUGE_OR_LESS: (constraint: string) => {
+    GAUGE_LT: (constraint: string) => {
         const match = constraint.match(/Treasure Gauge is (\d+)% or less$/i);
-        return match ? constraintValue(constraint, 'TREASURE_GAUGE_OR_LESS', Number(match[1])) : undefined;
+        return match ? constraintValue(constraint, 'GAUGE_LT', Number(match[1])) : undefined;
     },
-    USED_CHARACTER_HAS_TAG: (constraint: string) => {
-        const match = constraint.match(/When the equipped character is character type \"([^"]+)\"$/i);
-        return match ? constraintTag(constraint, 'USED_CHARACTER_HAS_TAG', match[1]) : undefined;
+    ON_FLAG_LOST: (constraint: string) => {
+        const match = constraint.match(/When your team loses the Treasure$/i);
+        return match ? constraintSimple(constraint, 'ON_FLAG_LOST') : undefined;
     },
-    ATTACKING_ENEMY_WITH_NORMALS: (constraint: string) => {
+    // --- SKILLS AND STATUS ---
+    ON_S2_USE: (constraint: string) => {
+        const match = constraint.match(/When using Skill 2$/i);
+        return match ? constraintSimple(constraint, 'ON_S2_USE') : undefined;
+    },
+    ON_S2_HIT: (constraint: string) => {
+        const match = constraint.match(/When attacking an enemy with Skill 2$/i);
+        return match ? constraintSimple(constraint, 'ON_S2_HIT') : undefined;
+    },
+    ON_S1_USE: (constraint: string) => {
+        const match = constraint.match(/When using Skill 1$/i);
+        return match ? constraintSimple(constraint, 'ON_S1_USE') : undefined;
+    },
+    ON_STATUS_GET: (constraint: string) => {
+        const match = constraint.match(/When inflicted with ([^"]+) by enemies$/i);
+        return match ? constraintStatusEffect(constraint, 'ON_STATUS_GET', match[1]) : undefined;
+    },
+    ON_STATUS_SET: (constraint: string) => {
+        const match = constraint.match(/When enemies are inflicted with ([^"]+)$/i);
+        return match ? constraintStatusEffect(constraint, 'ON_STATUS_SET', match[1]) : undefined;
+    },
+    ON_STATUS_NULL: (constraint: string) => {
+        const match = constraint.match(/When a damage-dealing ([^"]+) infliction has been nullifed$/i);
+        return match ? constraintStatusEffect(constraint, 'ON_STATUS_NULL', match[1]) : undefined;
+    },
+    ON_ATTACK_STATUS: (constraint: string) => {
+        const match = constraint.match(/When attacking an enemy inflicted With ([^"]+)$/i);
+        return match ? constraintStatusEffect(constraint, 'ON_ATTACK_STATUS', match[1]) : undefined;
+    },
+    ON_ATTACKED_STATUS: (constraint: string) => {
+        const match = constraint.match(/When attacked by an enemy inflicted with ([^"]+)$/i);
+        return match ? constraintStatusEffect(constraint, 'ON_ATTACKED_STATUS', match[1]) : undefined;
+    },
+
+    // --- OTHER INTERACTIONS ---
+    ON_NORMALS: (constraint: string) => {
         const match = constraint.match(/When attacking an enemy with a Normal Attack$/i);
-        return match ? constraintSimple(constraint, 'ATTACKING_ENEMY_WITH_NORMALS') : undefined;
+        return match ? constraintSimple(constraint, 'ON_NORMALS') : undefined;
     },
-    WHEN_SHOCK_NULLIFIED: (constraint: string) => {
-        const match = constraint.match(/When a damage_dealing Shock infliction has been nullifed$/i);
-        return match ? constraintSimple(constraint, 'WHEN_SHOCK_NULLIFIED') : undefined;
+    ON_ATTACK_TAG: (constraint: string) => {
+        const match = constraint.match(/When attacking a character type "([^"]+)" enemy$/i);
+        return match ? constraintTag(constraint, 'ON_ATTACK_TAG', match[1]) : undefined;
     },
-    RECEIVING_DAMAGE_FROM_ENEMY_WHICH_IS_MORE_OF_YOUR_MAX_HP: (constraint: string) => {
-        const match = constraint.match(/After reciving damage from an enemy which is more than (\d+)% of your max HP$/i);
-        return match ? constraintValue(constraint, 'RECEIVING_DAMAGE_FROM_ENEMY_WHICH_IS_MORE_OF_YOUR_MAX_HP', Number(match[1])) : undefined;
+    ON_ATTACKED_TAG: (constraint: string) => {
+        const match = constraint.match(/When attacked by a character type \"([^"]+)\" enemy$/i);
+        return match ? constraintTag(constraint, 'ON_ATTACKED_TAG', match[1]) : undefined;
     },
-    WHEN_ENEMY_STARTS_CAPTURING: (constraint: string) => {
+    ON_ATTACK_CAP: (constraint: string) => {
+        const match = constraint.match(/When attacking an enemy that is capturing Treasure$/i);
+        return match ? constraintSimple(constraint, 'ON_ATTACK_CAP') : undefined;
+    },
+    ON_ENEMY_CAP: (constraint: string) => {
         const match = constraint.match(/When an enemy begins capturing one of your team`s Treasure Areas$/i);
-        return match ? constraintSimple(constraint, 'WHEN_ENEMY_STARTS_CAPTURING') : undefined;
+        return match ? constraintSimple(constraint, 'ON_ENEMY_CAP') : undefined;
     },
-    ATTACKING_ENEMY: (constraint: string) => {
+    ON_CRIT: (constraint: string) => {
+        const match = constraint.match(/When Critical occurs$/i);
+        return match ? constraintSimple(constraint, 'ON_CRIT') : undefined;
+    },
+    ON_PDODGE: (constraint: string) => {
+        const match = constraint.match(/When performing a Perfect Dodge$/i);
+        return match ? constraintSimple(constraint, 'ON_PDODGE') : undefined;
+    },
+    ON_ATTACK: (constraint: string) => {
         const match = constraint.match(/When attacking an enemy$/i);
-        return match ? constraintSimple(constraint, 'ATTACKING_ENEMY') : undefined;
+        return match ? constraintSimple(constraint, 'ON_ATTACK') : undefined;
     },
+    ON_ATTACKED: (constraint: string) => {
+        const match = constraint.match(/When attacked by an enemy$/i);
+        return match ? constraintSimple(constraint, 'ON_ATTACKED') : undefined;
+    },
+    ON_BIG_HIT: (constraint: string) => {
+        const match = constraint.match(/After reciving damage from an enemy which is more than (\d+)% of your max HP$/i);
+        return match ? constraintValue(constraint, 'ON_BIG_HIT', Number(match[1])) : undefined;
+    },
+    ON_ATTACK_ELEM_SAME: (constraint: string) => {
+        const match = constraint.match(/When attacking an enemy with the same Element$/i);
+        return match ? constraintSimple(constraint, 'ON_ATTACK_ELEM_SAME') : undefined;
+    },
+    ON_ATTACK_ELEM_WEAKER: (constraint: string) => {
+        const match = constraint.match(/When attacking an enemy with the Element you are strong against$/i);
+        return match ? constraintSimple(constraint, 'ON_ATTACK_ELEM_WEAKER') : undefined;
+    },
+    ON_ATTACK_BUFF_DEF: (constraint: string) => {
+        const match = constraint.match(/When attacking an enemy whose DEF is boosted$/i);
+        return match ? constraintSimple(constraint, 'ON_ATTACK_BUFF_DEF') : undefined;
+    },
+    ON_ATTACK_BUFF_ATK: (constraint: string) => {
+        const match = constraint.match(/When attacking an enemy whose ATK are boosted$/i);
+        return match ? constraintSimple(constraint, 'ON_ATTACK_BUFF_ATK') : undefined;
+    },
+    ON_ATTACKED_BUFF_ATK: (constraint: string) => {
+        const match = constraint.match(/When attacked by an enemy whose ATK is boosted$/i);
+        return match ? constraintSimple(constraint, 'ON_ATTACKED_BUFF_ATK') : undefined;
+    },
+    SELF_TAG: (constraint: string) => {
+        const match = constraint.match(/When the equipped character is character type \"([^"]+)\"$/i);
+        return match ? constraintTag(constraint, 'SELF_TAG', match[1]) : undefined;
+    },
+
 };
 export function getUniqueTraitConstraint(constraint: string): UniqueTraitConstraintExcel | undefined {
 

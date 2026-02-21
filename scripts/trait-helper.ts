@@ -59,41 +59,41 @@ export const traitMap: Record<MedalTraitType,
     (trait: string) => UniqueTraitExcel | undefined
 > = {
     // --- DAMAGE / REDUCTION ---
-    DAMAGE_INCREASE: (trait: string) => {
+    DMG_INCREASE: (trait: string) => {
         const match = trait.match(/Increase damage dealt(?: to Defenders)? by (\d+)%$/i);
-        return match ? traitValue(trait, 'DAMAGE_INCREASE', Number(match[1])) : undefined;
+        return match ? traitValue(trait, 'DMG_INCREASE', Number(match[1])) : undefined;
     },
-    DAMAGE_REDUCTION: (trait: string) => {
+    DMG_REDUCTION: (trait: string) => {
         const match = trait.match(/Reduce damage recieved by (\d+)%$/i);
-        return match ? traitValue(trait, 'DAMAGE_REDUCTION', Number(match[1])) : undefined;
+        return match ? traitValue(trait, 'DMG_REDUCTION', Number(match[1])) : undefined;
     },
     NORMAL_ATK_DAMAGE: (trait: string) => {
         const match = trait.match(/Increase Normal Attack damage dealt by (\d+)%$/i);
         return match ? traitValue(trait, 'NORMAL_ATK_DAMAGE', Number(match[1])) : undefined;
     },
 
-    // --- COOLDOWN SPEED (SPEED PERCENTAGE) ---
-    BOOST_CD_SKILL_1: (trait: string) => {
+    // --- COOLDOWN SPEED  ---
+    SKILL_1_CD_SPEED: (trait: string) => {
         const match = trait.match(/Boost the cooldown reduction speed of Skill 1 by (\d+)%$/i);
-        return match ? traitValue(trait, 'BOOST_CD_SKILL_1', Number(match[1])) : undefined;
+        return match ? traitValue(trait, 'SKILL_1_CD_SPEED', Number(match[1])) : undefined;
     },
-    BOOST_CD_SKILL_2: (trait: string) => {
+    SKILL_2_CD_SPEED: (trait: string) => {
         const match = trait.match(/Boost the cooldown reduction speed of Skill 2 by (\d+)%$/i);
-        return match ? traitValue(trait, 'BOOST_CD_SKILL_2', Number(match[1])) : undefined;
+        return match ? traitValue(trait, 'SKILL_2_CD_SPEED', Number(match[1])) : undefined;
     },
-    BOOST_CD_DODGE: (trait: string) => {
+    DODGE_CD_SPEED: (trait: string) => {
         const match = trait.match(/Boost the cooldown reduction speed of dodge by (\d+)%$/i);
-        return match ? traitValue(trait, 'BOOST_CD_DODGE', Number(match[1])) : undefined;
+        return match ? traitValue(trait, 'DODGE_CD_SPEED', Number(match[1])) : undefined;
     },
 
     // --- FLAT REDUCTION (IMMEDIATE) ---
-    REDUCE_CD_SKILL_1: (trait: string) => {
+    SKILL_1_CD_REDUCTION: (trait: string) => {
         const match = trait.match(/Reduce the cooldown time of Skill 1 by (\d+)%$/i);
-        return match ? traitValue(trait, 'REDUCE_CD_SKILL_1', Number(match[1])) : undefined;
+        return match ? traitValue(trait, 'SKILL_1_CD_REDUCTION', Number(match[1])) : undefined;
     },
-    REDUCE_CD_SKILL_2: (trait: string) => {
+    SKILL_2_CD_REDUCTION: (trait: string) => {
         const match = trait.match(/Reduce the cooldown time of Skill 2 by (\d+)%$/i);
-        return match ? traitValue(trait, 'REDUCE_CD_SKILL_2', Number(match[1])) : undefined;
+        return match ? traitValue(trait, 'SKILL_2_CD_REDUCTION', Number(match[1])) : undefined;
     },
 
     // --- STATS PERCENTAGE ---
@@ -117,17 +117,17 @@ export const traitMap: Record<MedalTraitType,
         return undefined
     },
 
-    // --- STATS POINTS ---
-    HP_POINTS: () => {
+    // --- STATS FLAT ---
+    HP_FLAT: () => {
         return undefined
     },
-    ATK_POINTS: () => {
+    ATK_FLAT: () => {
         return undefined
     },
-    DEF_POINTS: () => {
+    DEF_FLAT: () => {
         return undefined
     },
-    CRIT_POINTS: () => {
+    CRIT_FLAT: () => {
         return undefined
     },
 
@@ -140,41 +140,41 @@ export const traitMap: Record<MedalTraitType,
         const match = trait.match(/Recover HP by (\d+)%$/i);
         return match ? traitValue(trait, 'HP_RECOVERY', Number(match[1])) : undefined;
     },
-    INCREASE_TREASURE_GAUGE_RECOVERY: (trait: string) => {
+    TREASURE_GAUGE_RECOVERY: (trait: string) => {
         const match = trait.match(/Increase Treasure Gauge recovery amount$/i);
-        return match ? traitSimple(trait, 'INCREASE_TREASURE_GAUGE_RECOVERY') : undefined;
+        return match ? traitSimple(trait, 'TREASURE_GAUGE_RECOVERY') : undefined;
     },
-    INCREASE_TREASURE_GAUGE_AMMOUNT_WHEN_CAPTURE: (trait: string) => {
+    TREASURE_GAUGE_CAPTURE: (trait: string) => {
         const match = trait.match(/Increase Treasure Gauge amount when you capture the Treasure$/i);
-        return match ? traitSimple(trait, 'INCREASE_TREASURE_GAUGE_AMMOUNT_WHEN_CAPTURE') : undefined;
+        return match ? traitSimple(trait, 'TREASURE_GAUGE_CAPTURE') : undefined;
     },
 
     // --- BOOSTS (TIMED) ---
-    BOOST_CRIT: (trait: string) => {
+    BUFF_CRIT_TIMED: (trait: string) => {
         const match = trait.match(/CRIT Boosted by (\d+)% for (\d+) second\(s\)$/i);
-        return match ? traitTime(trait, 'BOOST_CRIT', Number(match[1]), Number(match[2])) : undefined;
+        return match ? traitTime(trait, 'BUFF_CRIT_TIMED', Number(match[1]), Number(match[2])) : undefined;
     },
-    BOOST_SPEED: (trait: string) => {
+    BUFF_SPD_TIMED: (trait: string) => {
         const match = trait.match(/SPD Boosted by (\d+)% for (\d+) second\(s\)$/i);
-        return match ? traitTime(trait, 'BOOST_SPEED', Number(match[1]), Number(match[2])) : undefined;
+        return match ? traitTime(trait, 'BUFF_SPD_TIMED', Number(match[1]), Number(match[2])) : undefined;
     },
 
     // --- NULLIFY ---
-    CHANCE_NULLIFY_STATUS_EFFECT: (trait: string) => {
+    STATUS_NULLIFY_CHANCE: (trait: string) => {
         const match = trait.match(/(\d+)% chance to, Nullify ([^"]+)$/i);
-        return match ? traitStatusEffect(trait, 'CHANCE_NULLIFY_STATUS_EFFECT', Number(match[1]), match[2]) : undefined;
+        return match ? traitStatusEffect(trait, 'STATUS_NULLIFY_CHANCE', Number(match[1]), match[2]) : undefined;
     },
 
 
     // --- INFLICT ---
-    CHANCE_INFLICT_STATUS_EFFECT: (trait: string) => {
+    STATUS_INFLICT_CHANCE: (trait: string) => {
         const match = trait.match(/(\d+)% chance to, Inflict ([^"]+) for (\d+) second\(s\)/i);
-        return match ? traitStatusEffect(trait, 'CHANCE_INFLICT_STATUS_EFFECT', Number(match[1]), match[2], Number(match[3])) : undefined;
+        return match ? traitStatusEffect(trait, 'STATUS_INFLICT_CHANCE', Number(match[1]), match[2], Number(match[3])) : undefined;
     },
 
 
     // --- REDUCTION (STATUS) ---
-    STATUS_EFFECT_REDUCTION: () => {
+    STATUS_REDUCTION: () => {
         return undefined
     },
 };
