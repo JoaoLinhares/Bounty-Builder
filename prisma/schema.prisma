@@ -56,6 +56,7 @@ enum Type {
   CREATE_ENTITY
   STATE
   COUNTER
+  IMIDIATE_KO
 }
 
 enum Size {
@@ -383,14 +384,16 @@ model Character {
   bountyColours String[]
 
   //traits
-  sizeTraits           Json?
-  characterTraits      Json
-  traits1              Json
-  traits2              Json
-  boostTrait           Json
-  inflictsStatusEffect String[]
+  sizeTraits            String[]
+  characterTraits       String[]
+  traits1               String[]
+  traits2               String[]
+  boostTrait            String[]
+  inflictsStatusEffect  String[]
+  nullifiesStatusEffect String[]
+
   // character states - base and others (convert to giant, zoan version, switch character, element/class change, etc.. )
-  characterStates      CharacterState[]
+  characterStates CharacterState[]
 
   // medals that can be crafted using this character fragments
   medals Medal[]
@@ -419,9 +422,9 @@ model Character {
 // ------------------------------------------------------------------------------------- 
 model Skill {
   name        String
-  id          String @id @default(cuid())
-  description Json
-  effect      Json
+  id          String   @id @default(cuid())
+  description String[]
+  effect      String[]
 
   characterStateId String
   characterState   CharacterState @relation(fields: [characterStateId], references: [id], onDelete: Cascade)
@@ -456,8 +459,8 @@ model CharacterState {
   overrideBaseClass   Class?
   overrideBaseSize    Size?
 
-  stateTraits Json
-  sizeTraits  Json?
+  stateTraits String[]
+  sizeTraits  String[]
 
   // skills
   skills Skill[]

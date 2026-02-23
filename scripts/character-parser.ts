@@ -82,8 +82,8 @@ function defaultSkill(slot: number, calcPath: string): SkillExcell {
 
     return {
         name: '',
-        description: {},
-        effect: {},
+        description: [],
+        effect: [],
         asset: 'img_icon_' + calcPath + '_skill_' + (slot === 1 ? 'a' : 'b') + '.webp',
         slot,
         skillTransform: false,
@@ -100,11 +100,11 @@ function defaultCharacterState(name: string, isBase: boolean, overrideClass: Cla
     return {
         name,
         isBase,
-        sizeTraits: {},
         overrideBaseClass: isBase ? null : overrideClass,
         overrideBaseElement: null,
         overrideBaseSize: null,
-        stateTraits: {},
+        stateTraits: [],
+        sizeTraits: [],
         skills: isBase ? [defaultSkill(1, calcPath), defaultSkill(2, calcPath)] : []
     }
 }
@@ -310,19 +310,22 @@ async function characterRow(row: ExcelJS.Row, findGameId: Record<string, string>
         dateAdded: new Date(getDate(row.getCell(10))),
         assetLarge: 'img_chara_' + calcPath + '_l.webp',
         assetCard: 'img_chara_' + calcPath + '_m.webp',
-        ...getElementClass(row.getCell(8), calcPath),
-        mainSize: 'NORMAL', //Manual Change
-        ...getRarityDetails(row.getCell(6)),
+        mainSize: 'NORMAL', //Manual Change 
         teamBoost: 'ATTACK', //Manual Change
         bountyColours: [], //Manual Change
-        sizeTraits: null, //Manual Change
-        characterTraits: {}, //Manual Change
-        traits1: {}, //Manual Change
-        traits2: {}, //Manual Change
-        boostTrait: {}, //Manual Change
+        sizeTraits: [], //Manual Change
+        characterTraits: [], //Manual Change
+        traits1: [], //Manual Change
+        traits2: [], //Manual Change
+        boostTrait: [], //Manual Change
         inflictsStatusEffect: [], //Manual Change
+        nullifiesStatusEffect: [],
         tags: getTags(row.getCell(7)),
         medals: ['310100' + gameId, '310110' + gameId],
+        ...getRarityDetails(row.getCell(6)),
+        ...getElementClass(row.getCell(8), calcPath),
+
+
         medalSetEvaluation: {}, //AI Eval
         partySupportEvaluation: {},  //AI Eval
         playStyleEvaluation: {}  //AI Eval
