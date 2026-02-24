@@ -14,6 +14,7 @@ export enum StatusEffect {
     TOY = "TOY",
     FROSTBITE = "FROSTBITE",
     FILM = "FILM",
+    EDIT = "EDIT",
     CANDYMAN = "CANDYMAN",
     SEALED = "SEALED",
     CUTOUT = "CUTOUT",
@@ -32,7 +33,8 @@ export enum StatusEffect {
     DARK = "DARK",
     SHOCK = "SHOCK",
     MAX_HP_REDUCTION = "MAX_HP_REDUCTION",
-    ENTRANCE = "ENTRANCE"
+    ENTRANCE = "ENTRANCE",
+    INCINERATE = "INCINERATE"
 }
 
 export type StatusEffectType = keyof typeof StatusEffect;
