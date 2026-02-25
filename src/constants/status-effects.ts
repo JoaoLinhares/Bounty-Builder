@@ -34,7 +34,8 @@ export enum StatusEffect {
     SHOCK = "SHOCK",
     MAX_HP_REDUCTION = "MAX_HP_REDUCTION",
     ENTRANCE = "ENTRANCE",
-    INCINERATE = "INCINERATE"
+    INCINERATE = "INCINERATE",
+    SHADOWLESS = "SHADOWLESS"
 }
 
 export type StatusEffectType = keyof typeof StatusEffect;
