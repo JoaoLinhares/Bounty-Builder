@@ -25271,11 +25271,23 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When you are in your team's Treasure Area and the Treasure Gauge is 80% or more: No longer displayed on the enemy's mini map.",
+      "When you or an ally KOs an enemy: Recover HP by 10%.",
+      "When your team has less Treasure secured: Resist Stagger effect."
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%. and Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "Boost the cooldown reduction speed of dodge by 50%."
+    ],
+    "traits2": [
+      "When using Skill 2: DEF: Boosted by 30% for 20 second(s). (Cannot Stack)",
+      "When Respawned: Increase Team Boost Gauge by 15%. and SPD: Boosted by 30% for 10 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["CONFUSE"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -25304,7 +25316,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -25318,24 +25330,40 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Grenade",
+            "description": [
+              "Sets a bomb mid-range that explodes after a set amount of time and damages enemies within mid-range and has a Knockback effect.",
+              "Acquires an effect at Level 5 that has a chance to Confuse damaged enemies."
+            ],
+            "effect": [
+              "Step 1: Skill Power 316",
+              "Step 1: Knockback Effect",
+              "Step 1: Confuse Activation Probability 100%",
+              "Step 1: Confuse Effect Time 10 sec.",
+              "Cooldown 10 sec."
+            ],
             "asset": "img_icon_corazon_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 10,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Silence",
+            "description": [
+              "A long-range area effect with a chance to add Silence to allies.",
+              "When Silent, allies will not appear on the enemy's mini map."
+            ],
+            "effect": [
+              "Step 1: Silence Activation Probability 100%",
+              "Step 1: Silence Effect Time 20 sec.",
+              "Cooldown 46 sec."
+            ],
             "asset": "img_icon_corazon_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 46,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -25359,9 +25387,16 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your captured Treasure: Boost the cooldown reduction speed of Skill 1 by 30%."
+    ],
+    "traits2": [
+      "When in the area around your captured Treasure: Increase Knockback distance by 30%.",
+      "When performing a Perfect Dodge: Reduce the cooldown time of Skill 2 by 30%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -25379,7 +25414,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["COUNTER"],
     "mainElement": "GREEN",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -25393,24 +25428,36 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Back-To-The-Water-Dance",
+            "description": [
+              "When Counter Succeeds: If enemy attacks within a set period of time, deals a close-range area attack with a Knockback effect.",
+              "When Counter Fails: If the enemy does not attack within a set period of time, deals a mid-range charge attack.",
+              "Become temporarily invincible after use."
+            ],
+            "effect": [
+              "When Counter Succeeds: Step 1: Skill Power 628",
+              "When Counter Succeeds: Step 1: Knockback Effect",
+              "When Counter Fails: Step 1: Skill Power 270",
+              "Cooldown 25 sec."
+            ],
             "asset": "img_icon_rebecca_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 25,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "I'm Tired of Being the One Getting Helped!!!",
+            "description": [
+              "A mid-range charge attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 487", "Cooldown 25 sec."],
             "asset": "img_icon_rebecca_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 25,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -25430,14 +25477,20 @@
     "assetLarge": "img_chara_law_2yaf01_l.webp",
     "assetCard": "img_chara_law_2yaf01_m.webp",
     "mainSize": "NORMAL",
-    "teamBoost": "ATTACK",
+    "teamBoost": "SPD",
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "traits1": [
+      "When your HP is 80% or more: Boost capture speed by 50%.",
+      "When attacking an enemy inflicted with Stolen Heart: Increase damage dealt by 20%."
+    ],
+    "traits2": [
+      "After KOing an enemy, SPD: Boosted by 10% for 20 second(s). (Cannot Stack)",
+      "When an enemy is inflicted with Stolen Heart: Reduce the cooldown time of Skill 2 by 20%. and Recover HP by 15%."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["STOLEN_HEART", "SHOCK"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -25466,7 +25519,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT", "COUNTER"],
     "mainElement": "RED",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -25480,24 +25533,52 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Scalpel",
+            "description": [
+              "A mid-range area attack with a chance to inflict Stolen Heart status.",
+              "Acquires DEF debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 437",
+              "Step 1: Stolen Heart Activation Probability 100%",
+              "Step 1: Stolen Heart Effect Time 14 sec.",
+              "Step 1: Stolen Heart Damage 6%/6 sec.",
+              "Step 1: DEF Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 25 sec."
+            ],
             "asset": "img_icon_law_2yaf01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 25,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Counter Shock",
+            "description": [
+              "When Counter Succeeds: If enemy attacks within a set period of time, deals a mid-range area attack with a chance to Shock.",
+              "Also, increases own ATK.",
+              "When Counter Fails: If the enemy does not attack within a set period of time, deals a close-range area attack with a chance to Shock.",
+              "Become temporarily invincible after use."
+            ],
+            "effect": [
+              "When Counter Succeeds: Step 1: Skill Power 728",
+              "When Counter Succeeds: Step 1: Shock Activation Probability 100%",
+              "When Counter Succeeds: Step 1: Shock Effect Time 5 sec.",
+              "When Counter Succeeds: Step 1: Shock Damage 100/1 sec.",
+              "When Counter Succeeds: Step 2: ATK Increased by 20%",
+              "When Counter Succeeds: Step 2: Effect Time 10 sec.",
+              "When Counter Fails: Step 1: Skill Power 510",
+              "When Counter Fails: Step 1: Shock Activation Probability 50%",
+              "When Counter Fails: Step 1: Shock Effect Time 5 sec.",
+              "When Counter Fails: Step 1: Shock Damage 100/1 sec.",
+              "Cooldown 50 sec."
+            ],
             "asset": "img_icon_law_2yaf01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 50,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -25520,12 +25601,25 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "When in your specified Trait Area: Reduce damage received by 40%. and Change Knockback to a Down effect.",
+      "When attacked by an enemy, 3% chance to: Inflict an enemy with Shock for 5 second(s). (Excludes some attacks.)",
+      "When dealing damage to an enemy, 5% chance to: Inflict an enemy with Shock (Short) for 3 second(s).",
+      "Nullify Shock."
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%.",
+      "When attacking an enemy inflicted with Shock: Increase damage dealt by 20%."
+    ],
+    "traits2": [
+      "When an enemy is inflicted with Shock: Reduce the cooldown time of Skill 2 by 10%. and ATK: Boosted by 30% for 10 second(s). (Cannot Stack)",
+      "When in the area around your captured Treasure: Boost the cooldown reduction speed of Skill 1 by 50%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["SHOCK"],
+    "nullifiesStatusEffect": ["SHOCK"],
     "tags": [
       {
         "name": "DEFENDER"
@@ -25544,7 +25638,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -25558,24 +25652,47 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "One Hundred Million Volt Varie",
+            "description": [
+              "A mid-range attack with a chance to Shock.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires DEF debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 553",
+              "Step 1: Shock Activation Probability 100%",
+              "Step 1: Shock Effect Time 5 sec.",
+              "Step 1: Shock Damage 100/1 sec.",
+              "Step 1: DEF Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 37 sec."
+            ],
             "asset": "img_icon_enel_amal01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 37,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Mamaragan",
+            "description": [
+              "A mid-range area attack.",
+              "Creates a trait area that damages enemies within mid-range.",
+              "It will be removed after a certain period of time.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 528",
+              "Step 2: Skill Power 35 (Max 25 Consecutive Hits)",
+              "Step 3: Trait Area Activation Probability 100%",
+              "Step 3: Trait Area Effect Time 18 sec.",
+              "Cooldown 35 sec."
+            ],
             "asset": "img_icon_enel_amal01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 35,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -25598,11 +25715,21 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When your character is inflicted with Paper Art Fighting: SPD: Boosted by 10%. (Cannot Stack) and Boost capture speed by 50%.",
+      "When your character is inflicted with Paper Art Fighting: DEF: Reduced by 10%. (Cannot Stack)",
+      "When attacked by an enemy, 5% chance to: DEF: Boosted by 20% for 10 second(s). (Cannot Stack)"
+    ],
+    "traits1": [
+      "After KOing an enemy, Recover HP by 15%. and DEF: Boosted by 30% for 10 second(s). (Cannot Stack)",
+      "When your HP is 80% or more: Resist Stagger effect."
+    ],
+    "traits2": [
+      "When attacking an enemy, 100% chance to: Increase ATK by 3% (increases up to 50% but resets once KO'd). and Reduce the cooldown time of Skill 2 by 5%.",
+      "After receiving damage from an enemy which is 50% or more of your max HP: reduces damage received by 30%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
+    "inflictsStatusEffect": ["AFLAME", "STUN"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -25625,7 +25752,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT", "STATE", "TRANSFORM"],
     "mainElement": "RED",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -25639,24 +25766,59 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Life Return Paper Art Fighting: Release",
+            "description": [
+              "Normal State: Puts the character in Paper Art Fighting Form state.",
+              "A long-range area attack with a Knockback effect.",
+              "Attack ignores obstacles.",
+              "Acquires SPD debuff effect at Level 5.",
+              "Paper Art Fighting Form: Takes the character out of Paper Art Fighting Form state.",
+              "A long-range area attack with a chance to set enemies Aflame.",
+              "Acquires DEF debuff effect at Level 5.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Normal State:Step 1: Skill Power 364",
+              "Normal State:Step 1: Knockback Effect",
+              "Normal State:Step 1: Ignore Obstacles",
+              "Normal State:Step 1: SPD Reduced by 10%",
+              "Normal State:Step 1: Effect Time 20 sec.",
+              "Paper Art Fighting Form:Step 1: Skill Power 407",
+              "Paper Art Fighting Form:Step 1: Aflame Activation Probability 100%",
+              "Paper Art Fighting Form:Step 1: Aflame Effect Time 8 sec.",
+              "Paper Art Fighting Form:Step 1: AflameDamage 90/1 sec.",
+              "Paper Art Fighting Form:Step 1: DEF Reduced by 10%",
+              "Paper Art Fighting Form:Step 1: Effect Time 20 sec.",
+              "Cooldown 14 sec."
+            ],
             "asset": "img_icon_lucci_2yaf01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 14,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Spots Ultimate Radius Six King Pistol: Six King Pistol",
+            "description": [
+              "Normal State: Moves towards enemies at long-range and attacks with a chance to Stun.",
+              "A long-range area attack.",
+              "Paper Art Fighting Form: Moves towards enemies at long-range and attacks with a Knockback effect.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Normal State:Step 1: Skill Power 566",
+              "Normal State:Step 1: Stun (Short) Activation Probability 100%",
+              "Normal State:Step 1: Stun (Short) Effect Time 3 sec.",
+              "Normal State:Step 2: Skill Power 385",
+              "Paper Art Fighting Form:Step 1: Skill Power 509",
+              "Paper Art Fighting Form:Step 1: Knockback Effect",
+              "Cooldown 39 sec."
+            ],
             "asset": "img_icon_lucci_2yaf01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 39,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -25679,12 +25841,18 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": ["Nullify Shock.", "Nullify Entrance."],
+    "traits1": [
+      "When in the Treasure Area: Increase damage to Defenders by 50%.",
+      "When knocking back an enemy in the area around your enemy's Treasure: Reduce the cooldown time of Skill 2 by 50%."
+    ],
+    "traits2": [
+      "When your HP is 80% or more: Resist Stagger effect.",
+      "When your HP is 50% or more: 1 HP will be left even if KO'd (ineffective if HP is exactly 1)."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
     "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "nullifiesStatusEffect": ["SHOCK", "ENTRANCE"],
     "tags": [
       {
         "name": "ATTACKER"
@@ -25726,24 +25894,41 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum Giant Sumo Slap",
+            "description": [
+              "A mid-range attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires DEF debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 566",
+              "Step 1: Knockback Effect",
+              "Step 1: DEF Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 20 sec."
+            ],
             "asset": "img_icon_luffy_wano01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 20,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum Elephant Gun",
+            "description": [
+              "Moves towards enemies at long-range and attacks.",
+              "Damage dealt will disregard the enemy DEF stat.",
+              "Becomes temporarily invincible after use."
+            ],
+            "effect": [
+              "Step 1: Skill Power 555 (Ignores DEF)",
+              "Cooldown 48 sec."
+            ],
             "asset": "img_icon_luffy_wano01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 48,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -25763,14 +25948,22 @@
     "assetLarge": "img_chara_nami_wano01_l.webp",
     "assetCard": "img_chara_nami_wano01_m.webp",
     "mainSize": "NORMAL",
-    "teamBoost": "ATTACK",
+    "teamBoost": "SPD",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 100% chance to: Reduce the cooldown time of dodge by 30%."
+    ],
+    "traits1": [
+      "When your HP is 80% or more: Boost capture speed by 50%.",
+      "When an enemy captures one of your team's Treasure Areas: Reduce the cooldown time of Skill 2 by 15%."
+    ],
+    "traits2": [
+      "When your team has less Treasure secured: Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "When you Down an enemy: SPD: Boosted by 20% for 10 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["SHOCK", "CONFUSE"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -25790,7 +25983,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -25804,24 +25997,49 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Ninpo Lightning Blast",
+            "description": [
+              "A mid-range area attack.",
+              "Sets an attack with a chance to Shock effect for a set period of time. It is removed after a certain period of time.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 819",
+              "Step 1: SPD Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Step 2: Skill Power 81",
+              "Step 2: Shock (Short) Activation Probability 100%",
+              "Step 2: Shock (Short) Effect Time 3 sec.",
+              "Step 2: Shock (Short) Damage 100/1 sec.",
+              "Cooldown 45 sec."
+            ],
             "asset": "img_icon_nami_wano01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 45,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Fata Morgana",
+            "description": [
+              "Spawns a clone at close-range that moves towards the enemy's Treasure Area.",
+              "The clone will move forward if the enemy doesn't have a Treasure Area.",
+              "If the enemy touches the clone, it deals an attack with a chance to Confuse.",
+              "The clone will disappear after it reaches the Treasure Area, is touched by an enemy, receives any damage, or after a certain amount of time passes."
+            ],
+            "effect": [
+              "Step 1: Skill Power 219",
+              "Step 1: Confuse Activation Probability 100%",
+              "Step 1: Confuse Effect Time 10 sec.",
+              "Cooldown 24 sec.",
+              "Effect Time 20 sec."
+            ],
             "asset": "img_icon_nami_wano01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 24,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -25833,10 +26051,10 @@
     "playStyleEvaluation": {}
   },
   {
-    "name": "X.Drake",
+    "name": "X. Drake",
     "charDescription": "Land of Wano",
     "gameId": "127",
-    "nameId": "X.Drake",
+    "nameId": "X. Drake",
     "dateAdded": "2020-06-25T00:00:00.000Z",
     "assetLarge": "img_chara_xdrake_2yaf01_l.webp",
     "assetCard": "img_chara_xdrake_2yaf01_m.webp",
@@ -25844,10 +26062,19 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": [
+      "When using Skill 1: DEF: Boosted by 70% for 6 second(s). (Cannot Stack)",
+      "For a set period of time after using Skill 1: Change Down to a Stagger effect."
+    ],
+    "traits1": [
+      "When attacking an enemy in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "Reduce damage received from Defenders by 20%."
+    ],
+    "traits2": [
+      "After KOing an enemy with Skill 1: Reduce the cooldown time of Skill 1 by 50%.",
+      "When your HP is 50% or more: 1 HP will be left even if KO'd (ineffective if HP is exactly 1)."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -25888,24 +26115,36 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Allosaurus Assault",
+            "description": [
+              "A long-range charge attack with a Knockback effect.",
+              "Damage dealt will disregard the enemy DEF stat.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1-2: Skill Power 611 (Ignores DEF)",
+              "Step 1-2: Knockback Effect",
+              "Cooldown 39 sec."
+            ],
             "asset": "img_icon_xdrake_2yaf01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 39,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Cross Cut",
+            "description": [
+              "A long-range area attack.",
+              "This will deal a fixed amount of damage and will not increase due to a critical hit.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Fixed Damage 7500", "Cooldown 25 sec."],
             "asset": "img_icon_xdrake_2yaf01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 25,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -25928,10 +26167,21 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": [
+      "When you are Downed: ATK: Boosted by 30% for 10 second(s). (Cannot Stack)",
+      "When an ally is KO'd (not including you): CRIT: Boosted by 300% for 20 second(s). (Cannot Stack)"
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Increase damage dealt by 30%.",
+      "When using Skill 2: DEF: Boosted by 30% for 20 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "When in the area around your captured Treasure: Boost the cooldown reduction speed of Skill 2 by 50%.",
+      "When your team has more Treasure secured: Increase damage dealt by 20%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -25972,24 +26222,50 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "\"Attract\" \"Repel\"",
+            "description": [
+              "A close-range attack.",
+              "After that, a long-range attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires effect that decreases ATK at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 316",
+              "Step 1-2: ATK Reduced by 10%",
+              "Step 1-2: Effect Time 20 sec.",
+              "Step 2: Skill Power 237",
+              "Step 2: Knockback Effect",
+              "Cooldown 20 sec."
+            ],
             "asset": "img_icon_kid_2yaf01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 20,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "I'll kill you here and now!",
+            "description": [
+              "Begin charging by holding down the skill button.",
+              "If you let go of the skill button before the charge has completed, or after a certain period of time has passed, the charge will cancel and you will attack normally.",
+              "If the charge has finished, you will unleash a different attack. Nullifies Stagger for a set period of time.",
+              "Charging: Enemies within a certain area at long-range will be pulled to your position. This does not work for enemies that are capturing Treasure. A mid-range multiple hit area attack.",
+              "Not Charged: A close-range area attack with a Knockback effect.",
+              "Charged: A mid-range area attack with a Knockback effect."
+            ],
+            "effect": [
+              "Charging: Step 1: Skill Power 75 (Max 4 Consecutive Hits)",
+              "Not Charged: Step 1: Skill Power 418",
+              "Not Charged: Step 1: Knockback Effect",
+              "Charged: Step 1: Skill Power 633",
+              "Charged: Step 1: Knockback Effect",
+              "Cooldown 50 sec."
+            ],
             "asset": "img_icon_kid_2yaf01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 50,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26013,9 +26289,14 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "After KOing an enemy, SPD: Boosted by 10% for 20 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "When your HP is 30% or less: Increase damage dealt by 20%.",
+      "When you capture the Treasure: Reduce the cooldown time of Skill 2 by 30%."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -26047,24 +26328,38 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Sickle Barrage Slash",
+            "description": [
+              "Moves towards enemies at long-range and attacks.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1-3: Skill Power 539",
+              "Step 1-3: SPD Reduced by 10%",
+              "Step 1-3: Effect Time 20 sec.",
+              "Cooldown 35 sec."
+            ],
             "asset": "img_icon_killer_2yaf01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 35,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Spinning Sickle Charge",
+            "description": [
+              "A long-range multiple hit area attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1-2: Skill Power 48 (Max 5 Consecutive Hits)",
+              "Cooldown 24 sec."
+            ],
             "asset": "img_icon_killer_2yaf01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 24,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26087,11 +26382,19 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When you Down an enemy: SPD: Boosted by 10% for 6 second(s). (Cannot Stack)"
+    ],
+    "traits1": [
+      "When your HP is 80% or more: Boost capture speed by 50%.",
+      "When using Skill 2: SPD: Boosted by 20% for 10 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "When attacking an enemy in the area around your enemy's Treasure: Increase damage dealt by 20%.",
+      "When you capture the Treasure: Reduce the cooldown time of Skill 2 by 30%."
+    ],
+    "boostTrait": ["When your HP is 100% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["STUN", "AFLAME"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -26117,7 +26420,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -26131,24 +26434,55 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "\"Slash\"",
+            "description": [
+              "A close-range attack with a chance to Stun.",
+              "Moves to the back for a long-range area attack.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 254",
+              "Step 1: Stun Activation Probability 100%",
+              "Step 1: Stun Effect Time 5 sec.",
+              "Step 2: Skill Power 127 (Max 3 Consecutive Hits)",
+              "Step 2: SPD Reduced by 10% (Max 3 Consecutive Hits)",
+              "Step 2: Effect Time 20 sec.",
+              "Cooldown 28 sec."
+            ],
             "asset": "img_icon_apoo_2yaf01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 28,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "\"Boom\"",
+            "description": [
+              "Begin charging by holding down the skill button.",
+              "You will attack after a certain amount of time has passed or after letting go of the skill button.",
+              "If the charge has finished, you will unleash a different attack.",
+              "You are able to move while holding down the skill button.",
+              "Not Charged: A close-range area attack with a chance to set enemies Aflame.",
+              "Charged: A mid-range area attack with a chance to set enemies Aflame.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Not Charged: Step 1: Skill Power 656",
+              "Not Charged: Step 1: Aflame (Long) Activation Probability 50%",
+              "Not Charged: Step 1: Aflame (Long) Effect Time 10 sec.",
+              "Not Charged: Step 1: Aflame (Long) Damage 90/1 sec.",
+              "Charged: Step 1: Skill Power 819",
+              "Charged: Step 1: Aflame (Long) Activation Probability 100%",
+              "Charged: Step 1: Aflame (Long) Effect Time 10 sec.",
+              "Charged: Step 1: Aflame (Long) Damage 90/1 sec.",
+              "Cooldown 39 sec."
+            ],
             "asset": "img_icon_apoo_2yaf01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 39,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26171,10 +26505,21 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": [
+      "When your HP is 50% or less: Increase damage dealt by 30%.",
+      "When your HP is 50% or less: Reduce damage received by 20%."
+    ],
+    "traits1": [
+      "When attacked by an enemy, 100% chance to: Reduce the cooldown time of Skill 1 by 5%.",
+      "After receiving damage from an enemy which is 30% or more of your max HP: ATK: Boosted by 30% for 20 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "When attacked by an enemy, 100% chance to: Increase DEF by 5% (increases up to 50% but resets once KO'd).",
+      "When your HP is 50% or more: 1 HP will be left even if KO'd (ineffective if HP is exactly 1)."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -26195,7 +26540,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["COUNTER"],
     "mainElement": "RED",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -26209,24 +26554,47 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Karmic Punishment",
+            "description": [
+              "When Counter Succeeds: If enemy attacks within a set period of time, deals a mid-range attack with a Knockback effect.",
+              "When Counter Succeeds: The lower this character's remaining HP becomes, damage dealt is increased.",
+              "When Counter Succeeds: HP will be recovered.",
+              "When Counter Fails: If the enemy does not attack within a set period of time, deals a close-range area attack.",
+              "When Counter Fails: HP will be recovered.",
+              "Become temporarily invincible after use."
+            ],
+            "effect": [
+              "When Counter Succeeds: Step 1: Skill Power 730 (Increase Damage when HP is decreased)",
+              "When Counter Succeeds: Step 1: Knockback Effect",
+              "When Counter Succeeds: Step 2: Recovery 240",
+              "When Counter Fails: Step 1: Skill Power 308",
+              "When Counter Fails: Step 2: Recovery 116",
+              "Cooldown 30 sec."
+            ],
             "asset": "img_icon_urouge_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 30,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Mad Monk's Advance",
+            "description": [
+              "A mid-range charge attack with a Knockback effect.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1-2: Skill Power 739",
+              "Step 1-2: Knockback Effect",
+              "Step 1-2: SPD Reduced by 10%",
+              "Step 1-2: Effect Time 20 sec.",
+              "Cooldown 39 sec."
+            ],
             "asset": "img_icon_urouge_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 39,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26249,11 +26617,28 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When an enemy captures one of your team's Treasure Areas: SPD: Boosted by 20% for 10 second(s). (Cannot Stack)",
+      "When using Skill 2: Create a trait area for 10 second(s).",
+      "When you or an ally enters a trait area: Recover HP by 25%.",
+      "When you or an ally enters a trait area: DEF: Boosted by 30% for 10 second(s). (Cannot Stack)",
+      "When dealing damage on the 3rd hit of a normal attack combo: Knock enemies back.",
+      "For a set period of time after using Skill 1: Change Down to a Stagger effect."
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%.",
+      "When in the area around your captured Treasure: Boost the cooldown reduction speed of Skill 2 by 50%.",
+      "When you Knockback an enemy: Recover HP by 15%.",
+      "When you Knockback an enemy: Reduce the cooldown time of Skill 1 by 15%."
+    ],
+    "traits2": [
+      "After receiving damage from an enemy which is 20% or less of your max HP: Reduces damage received by 40%.",
+      "When you are Downed: Inflict self with Nullify Stagger for 10 second(s)."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["STUN", "AFLAME"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -26279,7 +26664,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -26293,24 +26678,50 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Shockwave",
+            "description": [
+              "Continues to deal a mid-range multiple hit area attack with a chance to inflict Stun while the skill button is held down.",
+              "Deals a close-range attack with a Knockback effect and a high critical hit chance that damages enemies after a certain period of time or when the skill button is released.",
+              "Damage dealt will disregard the enemy DEF stat.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1-6: Skill Power 84 (Ignores DEF)",
+              "Step 3: Stun (Short) Activation Probability 50%",
+              "Step 3: Stun (Short) Effect Time 3 sec.",
+              "Step 6: Stun (Short) Activation Probability 100%",
+              "Step 6: Stun (Short) Effect Time 3 sec.",
+              "Step 7: Skill Power 222 (Ignores DEF)",
+              "Step 7: Knockback Effect",
+              "Cooldown 41 sec."
+            ],
             "asset": "img_icon_sengoku_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 41,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Firing Command",
+            "description": [
+              "A mid-range area attack with a chance to set enemies Aflame.",
+              "The attack will end after a set period of time.",
+              "Acquires ATK debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1-15: Skill Power 474",
+              "Step 1-15: Aflame Activation Probability 50%",
+              "Step 1-15: Aflame Effect Time 8 sec.",
+              "Step 1-15: Aflame Damage 90/1 sec.",
+              "Step 1-15: ATK Reduced by 10%",
+              "Step 1-15: Effect Time 20 sec.",
+              "Cooldown 37 sec."
+            ],
             "asset": "img_icon_sengoku_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 37,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26333,11 +26744,21 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When performing a Perfect Dodge: Teleport towards the enemy.",
+      "When performing a Perfect Dodge: A close-range area Stun effect for 5 seconds after teleporting.",
+      "When performing a Perfect Dodge: ATK: Boosted by 70% for 3 second(s). (Cannot Stack)"
+    ],
+    "traits1": [
+      "After KOing an enemy, Reduce the cooldown time of Skill 1 by 30%.",
+      "When your HP is 80% or more: Resist Stagger effect."
+    ],
+    "traits2": [
+      "After KOing an enemy, Recover HP by 15%.",
+      "After receiving damage from an enemy which is 50% or more of your max HP: reduces damage received by 30%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
+    "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -26354,7 +26775,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -26368,24 +26789,36 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "The Dark King's lai",
+            "description": [
+              "A mid-range charge attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 754", "Cooldown 37 sec."],
             "asset": "img_icon_rayleigh_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 37,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "The Dark King's Lunge",
+            "description": [
+              "A long-range area attack.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 453",
+              "Step 1: SPD Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 25 sec."
+            ],
             "asset": "img_icon_rayleigh_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 25,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26408,12 +26841,22 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": [
+      "Nullify Shock.",
+      "Nullify Entrance.",
+      "When there are 30 seconds or less remaining: 10% chance to dodge without taking damage or the accompanying effect (Doesn't activate when immobilized by a status effect)"
+    ],
+    "traits1": [
+      "When you capture the Treasure: Recover HP by 25%.",
+      "When in the area around your enemy's Treasure: Boost the cooldown reduction speed of Skill 2 by 50%."
+    ],
+    "traits2": [
+      "While you are capturing Treasure: Resist Stagger effect.",
+      "When your HP is 50% or more: 1 HP will be left even if KO'd (ineffective if HP is exactly 1)."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
     "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "nullifiesStatusEffect": ["SHOCK", "ENTRANCE"],
     "tags": [
       {
         "name": "RUNNER"
@@ -26455,24 +26898,42 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Black Mamba",
+            "description": [
+              "A mid-range area attack.",
+              "Sets a mid-range attack that inflicts Stagger within a set area at certain intervals.",
+              "It will be removed after a certain period of time.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 73 (Max 10 Consecutive Hits)",
+              "Cooldown 30 sec."
+            ],
             "asset": "img_icon_luffy_snak01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 30,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum King Cobra",
+            "description": [
+              "A long-range area attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires ATK debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 728",
+              "Step 1: Knockback Effect",
+              "Step 1: ATK Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 25 sec."
+            ],
             "asset": "img_icon_luffy_snak01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 25,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26485,21 +26946,31 @@
   },
   {
     "name": "Emporio Ivankov",
-    "charDescription": "Revolutoonary Army",
+    "charDescription": "Revolutionary Army",
     "gameId": "119",
     "nameId": "Emporio Ivankov",
     "dateAdded": "2020-04-28T00:00:00.000Z",
     "assetLarge": "img_chara_ivankov_orig01_l.webp",
     "assetCard": "img_chara_ivankov_orig01_m.webp",
     "mainSize": "NORMAL",
-    "teamBoost": "ATTACK",
+    "teamBoost": "SPD",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "Reduces duration of Poison by 80%",
+      "Reduces duration of Aflame by 80%",
+      "Recover 15% of HP 1 time(s) when enough damage is taken to KO character."
+    ],
+    "traits1": [
+      "When you are in your enemy's Treasure Area and the Treasure Gauge is 50% or more: Boost capture speed by 50%.",
+      "When an ally is KO'd (not including you): Reduce the cooldown time of Skill 1 by 15%."
+    ],
+    "traits2": [
+      "Boost the cooldown reduction speed of dodge by 50%.",
+      "When attacking an enemy inflicted with \"Hormone\": Increase damage dealt by 20%. and Reduce the cooldown time of Skill 2 by 5%."
+    ],
+    "boostTrait": ["When your HP is 100% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["HORMONE"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -26525,7 +26996,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -26539,24 +27010,42 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Laser Surgery Fist",
+            "description": [
+              "A mid-range area attack with a chance to inflict \"Hormone\" status.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires DEF debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 546",
+              "Step 1: \"Hormone\" Activation Probability 100%",
+              "Step 1: \"Hormone\" Effect Time 18 sec.",
+              "Step 1: DEF Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 25 sec."
+            ],
             "asset": "img_icon_ivankov_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 25,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Hell Wink",
+            "description": [
+              "A long-range area attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 758",
+              "Step 1: Knockback Effect",
+              "Cooldown 35 sec."
+            ],
             "asset": "img_icon_ivankov_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 35,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26579,11 +27068,23 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 5% chance to: Inflict an enemy with Poison (Long) for 19 second(s). (Excludes some attacks.)",
+      "When attacking an enemy, 5% chance to: Inflict an enemy with Poison (Long) for 19 second(s).",
+      "When using Skill 1: SPD: Reduced by 40% for 15 second(s). (Cannot Stack)"
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%.",
+      "When attacked by an enemy, 100% chance to: Reduce the cooldown time of Skill 1 by 5%."
+    ],
+    "traits2": [
+      "When your HP is 50% or more: 1 HP will be left even if KO'd (ineffective if HP is exactly 1).",
+      "When your HP is 50% or more: Reduce damage received by 30%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["POISON", "VENOM"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -26603,7 +27104,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -26617,24 +27118,55 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Venom Demon: Judgment of Hell",
+            "description": [
+              "Spawns Venom Demon.",
+              "When Venom Demon is spawned: A long-range area attack with a Knockback effect and a chance to inflict Venom.",
+              "While Venom Demon is spawned: A mid-range area attack with a chance to inflict Venom.",
+              "Enemies that touch Venom Demon have a chance to be inflicted with Venom.",
+              "Venom Demon will disappear after a certain period of time or when KO'd."
+            ],
+            "effect": [
+              "When Venom Demon is spawned: Step 1: Skill Power 615",
+              "When Venom Demon is spawned: Step 1: Knockback Effect",
+              "When Venom Demon is spawned: Step 1: Venom Activation Probability 100%",
+              "When Venom Demon is spawned: Step 1: Venom Effect Time 10 sec.",
+              "When Venom Demon is spawned: Step 1: Venom Damage 2.5%/1 sec.",
+              "While Venom Demon is spawned: Step 1-2: Skill Power 120",
+              "While Venom Demon is spawned: Step 1-2: Venom Activation Probability 100%",
+              "While Venom Demon is spawned: Step 1-2: Venom Effect Time 10 sec.",
+              "While Venom Demon is spawned: Step 1-2: Venom Damage 2.5%/1 sec.",
+              "Cooldown 45 sec.",
+              "Venom Demon Spawn Time 15 sec."
+            ],
             "asset": "img_icon_magellan_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 45,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Chloro-Ball",
+            "description": [
+              "Sets a mid-range attack that damages enemies for a set period of time with a chance to inflict Venom.",
+              "It will be removed after a certain period of time.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires ATK debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 351",
+              "Step 1: Poison (Long) Activation Probability 100%",
+              "Step 1: Poison (Long) Effect Time 19 sec.",
+              "Step 1: Poison (Long) Damage 1.15%/1 sec.",
+              "Step 1: ATK Reduced by 30%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 20 sec."
+            ],
             "asset": "img_icon_magellan_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 20,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26647,7 +27179,7 @@
   },
   {
     "name": "Smoker",
-    "charDescription": "Gerand Line Navel Base 5 / Vice Admiral",
+    "charDescription": "Grand Line Navel Base 5 / Vice Admiral",
     "gameId": "115",
     "nameId": "Smoker",
     "dateAdded": "2020-04-16T00:00:00.000Z",
@@ -26657,11 +27189,19 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 15% chance to: Reduce damage received by 30%."
+    ],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When an enemy captures one of your team's Treasure Areas: Reduce the cooldown time of Skill 1 by 15%."
+    ],
+    "traits2": [
+      "When there are 60 seconds or less remaining: Increase damage dealt by 20%.",
+      "When attacking an enemy inflicted with Stun: Increase damage dealt by 20%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
+    "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -26684,7 +27224,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -26698,24 +27238,42 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "You ain't layin' a finger on my soldiers!!!",
+            "description": [
+              "A long-range area attack that attracts the enemy to your current position with a chance to Stun.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 189",
+              "Step 1: Stun Activation Probability 100%",
+              "Step 1: Stun Effect Time 5 sec.",
+              "Step 2: Skill Power 660",
+              "Cooldown 43 sec."
+            ],
             "asset": "img_icon_smoker_2yaf01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 43,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Don't fraternize with the pirates.",
+            "description": [
+              "A mid-range multiple hit attack with a chance to Stun."
+            ],
+            "effect": [
+              "Step 1-6: Skill Power 283",
+              "Step 3: Stun Activation Probability 100%",
+              "Step 3: Stun Effect Time 5 sec.",
+              "Step 6: Stun Activation Probability 100%",
+              "Step 6: Stun Effect Time 5 sec.",
+              "Cooldown 20 sec."
+            ],
             "asset": "img_icon_smoker_2yaf01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 20,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26739,9 +27297,15 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When your HP is 80% or more:",
+      "Increase the Treasure Gauge amount when you capture Treasure."
+    ],
+    "traits2": [
+      "When using Skill 1: SPD: Boosted by 10% for 6 second(s). (Cannot Stack)",
+      "When your team has less Treasure secured: Boost the cooldown reduction speed of Skill 1 by 50%."
+    ],
+    "boostTrait": ["When your HP is 100% or more: Resist Stagger effect."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -26773,24 +27337,36 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Shave",
+            "description": [
+              "Moves forward.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Cooldown 14 sec."],
             "asset": "img_icon_tashigi_2yaf01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 14,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Cutting Mist",
+            "description": [
+              "A mid-range charge attack.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 637",
+              "Step 1: SPD Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 28 sec."
+            ],
             "asset": "img_icon_tashigi_2yaf01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 28,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26813,11 +27389,24 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacking an enemy, 5% chance to: Inflict an enemy with \"Bind\" for 4 second(s).",
+      "When attacked by an enemy, 5% chance to: Inflict an enemy with \"Bind\" for 4 second(s). (Excludes some attacks.)",
+      "When your HP is 90% or more: Recovers the Treasure Gauge 50% past its maximum amount. and Reduce damage received by 50%.",
+      "When attacking an enemy with Skill 2: Remove enemy's parameter stat buffs."
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%. and Resist Stagger effect.",
+      "When an enemy is inflicted with \"Bind\": Reduce the cooldown time of Skill 1 by 30%. and Recover HP by 30%."
+    ],
+    "traits2": [
+      "When attacking an enemy inflicted with \"Bind\": Increase damage dealt by 30%.",
+      "When in the area around your captured Treasure: Boost the cooldown reduction speed of Skill 2 by 100%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["BIND"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -26840,7 +27429,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -26854,24 +27443,42 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Black Spear",
+            "description": [
+              "A long-range area attack.",
+              "Damage dealt will disregard damage reduction.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 761 (Ignores Damage Reduction)",
+              "Cooldown 34 sec."
+            ],
             "asset": "img_icon_hina_2yaf01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 34,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Kimono Sleeve Cage",
+            "description": [
+              "A long-range area attack with a chance to inflict Bind.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires DEF debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 246",
+              "Step 1: \"Bind\" Activation Probability 100%",
+              "Step 1: \"Bind\" Effect Time 4 sec.",
+              "Step 1: DEF Reduced by 30%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 27 sec."
+            ],
             "asset": "img_icon_hina_2yaf01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 27,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26894,12 +27501,23 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "When your allies are not near the Treasure area where you are at: Reduce damage received by 20%. and Increases damage dealt to character type \"Roger Pirates / Ex-Roger Pirates\" enemies by 20%.",
+      "When your HP is 70% or more: Change Down to a Stagger effect. and Reduce damage received by 30%.",
+      "For a set period of time after using Skill 2: Change Down to a Stagger effect. and Reduce damage received by 50%.",
+      "Nullify Stun."
+    ],
+    "traits1": [
+      "When in the Treasure Area: Increase damage dealt by 30%.",
+      "When using Skill 2: ATK: Boosted by 30% for 20 second(s). (Cannot Stack) and DEF: Boosted by 20% for 20 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "When attacking a character type \"Roger Pirates / Ex-Roger Pirates\" enemy: Increase the cooldown time of the enemy's dodging by 50%.",
+      "When you Down an enemy: Inflict self with Nullify Stagger for 10 second(s). and Recover HP by 10%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
+    "inflictsStatusEffect": ["TREMOR"],
+    "nullifiesStatusEffect": ["STUN"],
     "tags": [
       {
         "name": "ATTACKER"
@@ -26921,7 +27539,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -26935,24 +27553,48 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Color of Arms Fist",
+            "description": [
+              "A long-range charge attack.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires ATK debuff and SPD debuff effects at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 509",
+              "Step 1: ATK Reduced by 20%",
+              "Step 1: SPD Reduced by 20%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 22 sec."
+            ],
             "asset": "img_icon_bullet_stam01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 22,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "I will crush you in a single blow!",
+            "description": [
+              "Begin charging by holding down the skill button. If you let go of the skill button before the charge has completed, the charge will cancel and you will attack normally. If the charge has finished, you will unleash a different attack. Nullifies Stagger for a set period of time.",
+              "Not Charged: A mid-range area attack with a chance to inflict Tremor. HP will be recovered.",
+              "Charged: A long-range area attack with a chance to inflict Tremor. HP will be recovered."
+            ],
+            "effect": [
+              "Not Charged: Step 1: Skill Power 594",
+              "Not Charged: Step 1: Tremor Activation Probability 100%",
+              "Not Charged: Step 1: Tremor Effect Time 5 sec.",
+              "Not Charged: Step 2: Recovery 200",
+              "Charged: Step 1: Skill Power 764",
+              "Charged: Step 1: Tremor Activation Probability 100%",
+              "Charged: Step 1: Tremor Effect Time 5 sec.",
+              "Charged: Step 2: Recovery 350",
+              "Cooldown 34 sec."
+            ],
             "asset": "img_icon_bullet_stam01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 34,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -26975,12 +27617,23 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "Nullify Negative.",
+      "When there are 90 seconds or less remaining: Boost the cooldown reduction speed of Skill 2 by 100%. and Boost capture speed by 20%.",
+      "Recover 3% of HP 1 time(s) when enough damage is taken to KO character.",
+      "Boost the cooldown reduction speed of dodge by 50%."
+    ],
+    "traits1": [
+      "When your allies are not near the Treasure area where you are at: Boost capture speed by 30%. and Increase the Treasure Gauge amount when you capture Treasure.",
+      "When attacking an enemy in the area around your enemy's Treasure: Increase damage dealt by 30%."
+    ],
+    "traits2": [
+      "When you are Downed: SPD: Boosted by 10% for 15 second(s). (Cannot Stack)",
+      "When an ally is KO'd (not including you): CRIT: Boosted by 300% for 20 second(s). (Cannot Stack) and Reduce the cooldown time of Skill 2 by 15%."
+    ],
+    "boostTrait": ["When your HP is 100% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["CONFUSE", "AFLAME"],
+    "nullifiesStatusEffect": ["NEGATIVE"],
     "tags": [
       {
         "name": "RUNNER"
@@ -26999,7 +27652,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "COLA",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -27013,24 +27666,42 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Metallic Star",
+            "description": [
+              "A long-range attack.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires Confuse effect at Level 5."
+            ],
+            "effect": [
+              "Step 1-3: Skill Power 364",
+              "Step 1-3: Confuse Activation Probability 100%",
+              "Step 1-3: Confuse Effect Time 10 sec.",
+              "Cooldown 15 sec."
+            ],
             "asset": "img_icon_usopp_soge01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 15,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Firebird Star",
+            "description": [
+              "An extra long-range attack with a chance to set enemies Aflame and a high Critical hit chance.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 637",
+              "Step 1: Aflame (Long) Activation Probability 100%",
+              "Step 1: Aflame (Long) Effect Time 10 sec.",
+              "Step 1: Aflame (Long) Damage 90/1 sec.",
+              "Cooldown 35 sec."
+            ],
             "asset": "img_icon_usopp_soge01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 35,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27053,11 +27724,19 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 100% chance to: Reduce the cooldown time of Skill 2 by 5%."
+    ],
+    "traits1": [
+      "When you capture the Treasure: Recover HP by 15%. and Reduce the cooldown time of Skill 2 by 30%.",
+      "When your allies are not near the Treasure area where you are at: Increase the Treasure Gauge amount when you capture Treasure."
+    ],
+    "traits2": [
+      "When your HP is 80% or more: Boost capture speed by 50%.",
+      "When using Skill 1: SPD: Boosted by 10% for 15 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -27080,7 +27759,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "RED",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -27094,24 +27773,35 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Shave",
+            "description": [
+              "Moves forward.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Cooldown 20 sec."],
             "asset": "img_icon_kaku_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 20,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Nose Pistol",
+            "description": [
+              "A long-range area attack with a chance to Stun.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 730",
+              "Step 1: Stun Activation Probability 100%",
+              "Step 1: Stun Effect Time 5 sec.",
+              "Cooldown 28 sec."
+            ],
             "asset": "img_icon_kaku_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 28,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27134,11 +27824,19 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 5% chance to: DEF: Boosted by 20% for 10 second(s). (Cannot Stack)"
+    ],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When attacking an enemy, 100% chance to: Increase CRIT by 15% (increases up to 500% but resets once KO'd)."
+    ],
+    "traits2": [
+      "When your HP is 80% or more: Resist Stagger effect.",
+      "When Critical occurs: Reduce the cooldown time of Skill 2 by 10%. and Recover HP by 5%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
+    "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -27161,7 +27859,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -27175,24 +27873,43 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Finger Pistol: Yellow Lotus",
+            "description": [
+              "A close-range multiple hit attack.",
+              "Inflicts Stun on enemies while they are sustaining damage.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 38 (Max 13 Consecutive Hits)",
+              "Step 1: Stun (Short) Activation Probability 100%",
+              "Step 1: Stun (Short) Effect Time 3 sec.",
+              "Step 2: Skill Power 76",
+              "Step 2: SPD Reduced by 10%",
+              "Step 2: Effect Time 20 sec.",
+              "Cooldown 25 sec."
+            ],
             "asset": "img_icon_lucci_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 25,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Six Powers: Supreme Six King Pistol",
+            "description": [
+              "Moves towards enemies at long-range and attacks.",
+              "Damage dealt will disregard the enemy DEF stat.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 509 (Ignores DEF)",
+              "Cooldown 44 sec."
+            ],
             "asset": "img_icon_lucci_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 44,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27215,12 +27932,23 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "When an ally is KO'd (not including you): CRIT: Boosted by 300% for 20 second(s). (Cannot Stack)",
+      "When attacked by an enemy, 15% chance to: Reduce damage received by 30%.",
+      "When attacked by an enemy while inflicted with Flame-Flame, 100% chance to: Inflict an enemy with Aflame for 8 second(s). (Excludes some attacks.)",
+      "Nullify Aflame."
+    ],
+    "traits1": [
+      "When attacking an enemy in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When attacking an enemy inflicted with Aflame: Increase damage dealt by 20%. and Recover HP by 10%."
+    ],
+    "traits2": [
+      "When attacked by an enemy while inflicted with Flame-Flame, 100% chance to: Reduce damage received by 50%.",
+      "When your HP is 80% or more: Resist Stagger effect."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
+    "inflictsStatusEffect": ["AFLAME"],
+    "nullifiesStatusEffect": ["AFLAME"],
     "tags": [
       {
         "name": "ATTACKER"
@@ -27242,7 +27970,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATE", "STATUS_EFFECT"],
     "mainElement": "RED",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -27256,24 +27984,41 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Sorry, Ace! I'm gonna use your move...",
+            "description": [
+              "Puts the character in Flame-Flame state.",
+              "When in Flame-Flame state, ATK is increased for normal attacks, character gains Status Effect Nullification, and attacks have a chance to set enemies Aflame.",
+              "Flame-Flame state will be removed after a certain period of time or when starting to capture Treasure."
+            ],
+            "effect": [
+              "Step 1: Flame-Flame State Activation Probability 100%",
+              "Step 1: Flame-Flame State Effect Time 24 sec.",
+              "Cooldown 51 sec."
+            ],
             "asset": "img_icon_sabo_mera01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 51,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Flame Dragon King",
+            "description": [
+              "A long-range charge attack with a chance to inflict Aflame.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 660",
+              "Step 1: Aflame (Long) Activation Probability 50%",
+              "Step 1: Aflame (Long) Effect Time 10 sec.",
+              "Step 1: Aflame (Long) Damage 90/1 sec.",
+              "Cooldown 25 sec."
+            ],
             "asset": "img_icon_sabo_mera01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 25,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27296,11 +28041,24 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacking a character type \"The Seven Warlords of the Sea / Former Warlords of the Sea\" enemy: Increase damage dealt by 30%.",
+      "When attacked by a character type \"Straw Hat Pirates\" enemy: Reduce the cooldown time of Skill 1 by 5%. and Recover HP by 5%.",
+      "When your allies are near the Treasure area where you are at: Resist Stagger effect. and Remove status effects and nullify status effects inflicted by enemy.",
+      "When you Down an enemy: Enemy's SPD: Reduced by 20% for 10 second(s). (Cannot Stack)"
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%. and Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "When you are Downed: Reduce the cooldown time of Skill 2 by 30%."
+    ],
+    "traits2": [
+      "When you Knockback an enemy: ATK: Boosted by 30% for 20 second(s). (Cannot Stack) and Recover HP by 15%.",
+      "When your HP is 70% or more: Reduce damage received by 50%. and Recovers the Treasure Gauge 50% past its maximum amount."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["GRAVITY"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -27326,7 +28084,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -27340,24 +28098,57 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gravity Blade: Raging Tiger",
+            "description": [
+              "A mid-range area attack.",
+              "A long-range multiple hit area attack with a Knockback effect and a chance to inflict Gravity and a SPD debuff.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 180",
+              "Step 1: Gravity Activation Probability 100%",
+              "Step 1: Gravity Effect Time 10 sec.",
+              "Step 1: Extended Downed Duration 3 sec.",
+              "Step 1: SPD Reduced by 20%",
+              "Step 1: Effect Time 20 sec.",
+              "Step 2-4: Skill Power 10",
+              "Step 5: Skill Power 535",
+              "Step 5: Knockback Effect",
+              "Step 5: Gravity Activation Probability 100%",
+              "Step 5: Gravity Effect Time 10 sec.",
+              "Step 5: Extended Downed Duration 3 sec.",
+              "Step 5: SPD Reduced by 20%",
+              "Step 5: Effect Time 20 sec.",
+              "Cooldown 34 sec."
+            ],
             "asset": "img_icon_fujitora_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 34,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Meteorite Drop",
+            "description": [
+              "Drops a meteorite after a set period of time.",
+              "A long-range area attack.",
+              "Damage dealt will disregard the enemy DEF stat.",
+              "Attack ignores obstacles.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires ATK debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 603 (Ignores DEF)",
+              "Step 1: Ignore Obstacles",
+              "Step 1: ATK Reduced by 20%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 55 sec."
+            ],
             "asset": "img_icon_fujitora_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 55,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27380,11 +28171,19 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When dealing damage to an enemy, 5% chance to: Inflict an enemy with Stun (Short) for 3 second(s)."
+    ],
+    "traits1": [
+      "When attacking an enemy in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When an enemy is inflicted with Stun: Reduce the cooldown time of Skill 2 by 15%. and Recover HP by 10%."
+    ],
+    "traits2": [
+      "When using Skill 1: ATK: Boosted by 30% for 10 second(s). (Cannot Stack)",
+      "When an enemy captures one of your team's Treasure Areas: Reduce the cooldown time of Skill 1 by 15%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
+    "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -27404,7 +28203,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -27418,24 +28217,40 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Blade of Beauty: Prince of Stardust Slash",
+            "description": [
+              "A long-range attack with a chance to Stun.",
+              "Acquires DEF debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 264",
+              "Step 1: Stun Activation Probability 100%",
+              "Step 1: Stun Effect Time 5 sec.",
+              "Step 1: DEF Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 29 sec."
+            ],
             "asset": "img_icon_cavendish_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 29,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Hakuba",
+            "description": [
+              "A mid-range multiple hit area attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 136 (Max 5 Consecutive Hits)",
+              "Cooldown 45 sec."
+            ],
             "asset": "img_icon_cavendish_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 45,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27459,9 +28274,17 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%.",
+      "When in the area around your captured Treasure: Boost the cooldown reduction speed of Skill 2 by 50%."
+    ],
+    "traits2": [
+      "When you are Downed: DEF: Boosted by 30% for 10 second(s). (Cannot Stack)",
+      "When you Knockback an enemy: Reduce the cooldown time of Skill 2 by 15%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -27485,7 +28308,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["COUNTER"],
     "mainElement": "RED",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -27499,24 +28322,49 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Homage Holy Fist Barrier-Barrier Pistol",
+            "description": [
+              "A mid-range area attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires ATK debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 810",
+              "Step 1: Knockback Effect",
+              "Step 1: ATK Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 41 sec."
+            ],
             "asset": "img_icon_bartolomeo_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 41,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Barrier",
+            "description": [
+              "A close-range attack.",
+              "Creates a Barrier which nullifies enemy attacks.",
+              "Nullifies Stagger for a set period of time.",
+              "When Counter Succeeds: If enemy attacks the Barrier within a set period of time, deals a mid-range attack with a Knockback effect. Also, increases own DEF. Become temporarily invincible after use.",
+              "When Counter Fails: If the enemy does not attack the Barrier within a set period of time, increases own DEF."
+            ],
+            "effect": [
+              "When Counter Succeeds: Step 1: Skill Power 562",
+              "When Counter Succeeds: Step 1: Knockback Effect",
+              "When Counter Succeeds: Step 2: DEF Increased by 10%",
+              "When Counter Succeeds: Step 2: Effect Time 20 sec.",
+              "When Counter Fails: Step 1: DEF Increased by 10%",
+              "When Counter Fails: Step 1: Effect Time 20 sec.",
+              "Step 1: Skill Power 141 (Max 5 Consecutive Hits)",
+              "Cooldown 34 sec."
+            ],
             "asset": "img_icon_bartolomeo_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 34,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27539,12 +28387,23 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "Nullify Shock. and Nullify Entrance.",
+      "While you are capturing Treasure: Resist Stagger and being Downed. and Reduce damage received by 30%.",
+      "When using Skill 1: ATK: Boosted by 20% for 10 second(s). (Cannot Stack)",
+      "When using Skill 2: SPD: Boosted by 20% for 10 second(s). (Cannot Stack)"
+    ],
+    "traits1": [
+      "When in the Treasure Area: Reduce damage received by 30%.",
+      "When your allies are not near the Treasure area where you are at: Increase the Treasure Gauge amount when you capture Treasure. and Boost capture speed by 50%."
+    ],
+    "traits2": [
+      "When your team has less Treasure secured: Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "When you capture the Treasure: Reduce the cooldown time of Skill 1 by 30%. and Recover HP by 20%."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["AFLAME"],
+    "nullifiesStatusEffect": ["SHOCK", "ENTRANCE"],
     "tags": [
       {
         "name": "RUNNER"
@@ -27572,7 +28431,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -27586,24 +28445,39 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum Giant Rifle & Fire Fist",
+            "description": [
+              "A mid-range area attack with a Knockback effect and a chance to set enemies Aflame.",
+              "Increases damage against [Navy] type characters.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 819",
+              "Step 1: Knockback Effect",
+              "Step 1: Aflame (Long) Activation Probability 100%",
+              "Step 1: Aflame (Long) Effect Time 10 sec.",
+              "Step 1: Aflame (Long) Damage 90/1 sec.",
+              "Cooldown 42 sec.",
+              "Navy: Increase damage inflicted by 100%"
+            ],
             "asset": "img_icon_luffy_topw01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 42,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum Jet Rocket",
+            "description": [
+              "A long-range charge attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 462", "Cooldown 26 sec."],
             "asset": "img_icon_luffy_topw01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 26,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27623,15 +28497,28 @@
     "assetLarge": "img_chara_shanks_hand01_l.webp",
     "assetCard": "img_chara_shanks_hand01_m.webp",
     "mainSize": "NORMAL",
-    "teamBoost": "ATTACK",
+    "teamBoost": "EX_ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "Nullify Stun.",
+      "When the enemy has inflicted you with status effects: Inflict self with Nullify Stagger for 10 second(s). and DEF: Boosted by 50% for 5 second(s). (Cannot Stack)"
+    ],
+    "traits1": [
+      "When your team has less Treasure secured: Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "After KOing an enemy, Reduce the cooldown time of Skill 1 by 50%. and DEF: Boosted by 30% for 20 second(s). (Cannot Stack)",
+      "When your HP is 70% or more: Reduce damage received by 30%. and Change Down to a Stagger effect."
+    ],
+    "traits2": [
+      "After KOing an enemy, Increase ATK by 25% (increases up to 100% but resets once KO'd). and Recover HP by 30%.",
+      "When attacking an Attacker(s): Increase damage dealt by 30%. and Reduce the cooldown time of Skill 1 by 3%.",
+      "When your HP is 30% or more: Reduce Critical Damage received from enemies by 30%. and 1 HP will be left even if KO'd (ineffective if HP is exactly 1)."
+    ],
+    "boostTrait": [
+      "When dealing damage to an enemy, 5% chance to: Inflict an enemy with Stun for 5 second(s)."
+    ],
+    "inflictsStatusEffect": ["STUN"],
+    "nullifiesStatusEffect": ["STUN"],
     "tags": [
       {
         "name": "ATTACKER"
@@ -27653,7 +28540,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "EXTREME",
     "rarity": null,
-    "type": [],
+    "type": ["COUNTER", "STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -27667,24 +28554,43 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "I've Come to Put an End to This War!!!",
+            "description": [
+              "When Counter Succeeds: If enemy attacks within a set period of time, deals a mid-range area attack with a Knockback effect. Also, HP will be recovered.",
+              "When Counter Fails: If the enemy does not attack within a set period of time, deals a mid-range area attack.",
+              "Become temporarily invincible after use."
+            ],
+            "effect": [
+              "When Counter Succeeds: Step 1: Skill Power 824",
+              "When Counter Succeeds: Step 1: Knockback Effect",
+              "When Counter Succeeds: Step 2: Recovery 150",
+              "When Counter Fails: Step 1: Skill Power 377",
+              "Cooldown 33 sec."
+            ],
             "asset": "img_icon_shanks_hand01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 33,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Griffon Slash",
+            "description": [
+              "A long-range area attack.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires DEF debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 754",
+              "Step 1: DEF Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 44 sec."
+            ],
             "asset": "img_icon_shanks_hand01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 44,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27704,15 +28610,29 @@
     "assetLarge": "img_chara_teach_orig01_l.webp",
     "assetCard": "img_chara_teach_orig01_m.webp",
     "mainSize": "NORMAL",
-    "teamBoost": "ATTACK",
+    "teamBoost": "EX_RECOVERY",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "When attacking a character type \"Power users\" enemy: Increase damage dealt by 30%.",
+      "Recover 15% of HP 1 time(s) when enough damage is taken to KO character.",
+      "Nullify Sleep."
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%. and Reduce damage received from Attackers by 20%.",
+      "When in the area around your captured Treasure: Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "When your HP is 70% or more: Increase damage dealt by 20%."
+    ],
+    "traits2": [
+      "When attacked by an enemy, 100% chance to: Reduce the cooldown time of Skill 2 by 5%.",
+      "When you are Downed: ATK: Boosted by 30% for 10 second(s). (Cannot Stack) and Recover HP by 15%.",
+      "After KOing an enemy, Reduce the cooldown time of Skill 1 by 30%. and Recover HP by 15%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 15%."
+    ],
+    "inflictsStatusEffect": ["DARK"],
+    "nullifiesStatusEffect": ["SLEEP"],
     "tags": [
       {
         "name": "DEFENDER"
@@ -27743,7 +28663,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "EXTREME",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "RED",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -27757,24 +28677,49 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Black Vortex",
+            "description": [
+              "A long-range attack that attracts the enemy to your current position.",
+              "Plus, increases damage against [Power users].",
+              "Enemies who are attracted will be afflicted by Dark and will not be able to Dodge.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: \"Dark\" Activation Probability 100%",
+              "Step 1: \"Dark\" Effect Time 3 sec.",
+              "Step 1: SPD Reduced by 30%",
+              "Step 1: Effect Time 20 sec.",
+              "Step 2: Skill Power 308",
+              "Cooldown 27 sec.",
+              "Power users: Increase damage inflicted by 200%"
+            ],
             "asset": "img_icon_teach_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 27,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "\"Black Hole\" \"Liberation\"",
+            "description": [
+              "A mid-range area attack that attracts the enemy to your current position with a Knockback effect.",
+              "Enemies who are attracted will be afflicted by Dark and will not be able to Dodge.",
+              "Become temporarily invincible after use."
+            ],
+            "effect": [
+              "Step 1: Skill Power 52 (Max 5 Consecutive Hits)",
+              "Step 1: \"Dark\" Activation Probability 100%",
+              "Step 1: \"Dark\" Effect Time 3 sec.",
+              "Step 2: Skill Power 602",
+              "Step 2: Knockback Effect",
+              "Cooldown 52 sec."
+            ],
             "asset": "img_icon_teach_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 52,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27798,9 +28743,16 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%."
+    ],
+    "traits2": [
+      "When you Down an enemy: Recover HP by 10%.",
+      "When your HP is 70% or more: Boost the cooldown reduction speed of Skill 2 by 50%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -27832,24 +28784,38 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Fist of Love",
+            "description": [
+              "A close-range attack.",
+              "Damage dealt will disregard the enemy DEF stat.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires ATK debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 312 (Ignores DEF)",
+              "Step 1: ATK Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 27 sec."
+            ],
             "asset": "img_icon_garp_mari01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 27,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Meteor Fist Shower",
+            "description": ["A long-range attack with a Knockback effect."],
+            "effect": [
+              "Step 1-5: Skill Power 520",
+              "Step 1-5: Knockback Effect",
+              "Cooldown 41 sec."
+            ],
             "asset": "img_icon_garp_mari01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 41,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27872,10 +28838,19 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": [
+      "When you are Downed: Inflict self with Steady Recovery for 16 second(s).",
+      "When hit with Knockback by enemy: Inflict self with Steady Recovery for 16 second(s)."
+    ],
+    "traits1": [
+      "When using Skill 1: SPD: Boosted by 10% for 10 second(s). (Cannot Stack)",
+      "When your allies are near the Treasure area where you are at: Boost the cooldown reduction speed of Skill 2 by 50%."
+    ],
+    "traits2": [
+      "Recover 15% of HP 1 time(s) when enough damage is taken to KO character.",
+      "When an ally is KO'd (not including you): Reduce the cooldown time of Skill 1 by 10%."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -27913,24 +28888,40 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "You can't take our king this early in the game",
+            "description": [
+              "Moves towards allies at long-range and has a mid-range area effect that recovers your allies' HP.",
+              "There is a cooldown in effect for a set period of time at the start of battle."
+            ],
+            "effect": [
+              "Step 1: Recovery 352",
+              "Cooldown 39 sec.",
+              "Start-up Cooldown 7 sec. Activated"
+            ],
             "asset": "img_icon_marco_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 39,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Phoenix Claw",
+            "description": [
+              "A mid-range area attack.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1-3: Skill Power 527",
+              "Step 1-3: SPD Reduced by 10%",
+              "Step 1-3: Effect Time 20 sec.",
+              "Cooldown 20 sec."
+            ],
             "asset": "img_icon_marco_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 20,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -27950,15 +28941,26 @@
     "assetLarge": "img_chara_ace_topw01_l.webp",
     "assetCard": "img_chara_ace_topw01_m.webp",
     "mainSize": "NORMAL",
-    "teamBoost": "ATTACK",
+    "teamBoost": "SPD",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 15% chance to: Reduce damage received by 30%.",
+      "When attacked by an enemy, 5% chance to: Inflict an enemy with Aflame (Long) for 10 second(s). (Excludes some attacks.)",
+      "Nullify Aflame.",
+      "While you are capturing Treasure: Resist Stagger effect."
+    ],
+    "traits1": [
+      "When you capture the Treasure: Reduce the cooldown time of Skill 2 by 30%. and Recover HP by 25%.",
+      "When using Skill 2: SPD: Boosted by 10% for 15 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "When an enemy is inflicted with Aflame: Reduce the cooldown time of Skill 1 by 20%.",
+      "When your HP is 70% or more: Boost capture speed by 50%. and Reduce damage received by 30%."
+    ],
+    "boostTrait": ["When your HP is 100% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["AFLAME"],
+    "nullifiesStatusEffect": ["AFLAME"],
     "tags": [
       {
         "name": "RUNNER"
@@ -27980,7 +28982,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT", "COUNTER"],
     "mainElement": "GREEN",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -27994,24 +28996,51 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Mirror Flame",
+            "description": [
+              "When Counter Succeeds:",
+              "If enemy attacks within a set period of time, sets a close-range attack with a Knockback effect that damages enemies for a set period of time with a chance to set them Aflame.",
+              "When Counter Fails:",
+              "If the enemy does not attack within a set period of time, sets a mid-range attack that damages enemies for a set period of time with a chance to set them Aflame.",
+              "It will be removed after a certain period of time.",
+              "Become temporarily invincible after use."
+            ],
+            "effect": [
+              "When Counter Succeeds: Step 1: Skill Power 110",
+              "When Counter Succeeds: Step 1-2: Knockback Effect",
+              "When Counter Succeeds: Step 2: Skill Power 364",
+              "When Counter Succeeds: Step 2: Aflame (Long) Activation Probability 100%",
+              "When Counter Succeeds: Step 2: Aflame (Long) Effect Time 10 sec.",
+              "When Counter Succeeds: Step 2: Aflame (Long) Damage 90/1 sec.",
+              "When Counter Fails: Step 1: Skill Power 189",
+              "When Counter Fails: Step 1: Aflame Activation Probability 100%",
+              "When Counter Fails: Step 1: Aflame Effect Time 8 sec.",
+              "When Counter Fails: Step 1: Aflame Damage 90/1 sec.",
+              "Cooldown 29 sec."
+            ],
             "asset": "img_icon_ace_topw01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 29,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Great Flame Commandment Flame Emperor",
+            "description": [
+              "A long-range attack with a chance to set enemies Aflame."
+            ],
+            "effect": [
+              "Step 1: Skill Power 819",
+              "Step 1: Aflame (Long) Activation Probability 100%",
+              "Step 1: Aflame (Long) Effect Time 10 sec.",
+              "Step 1: Aflame (Long) Damage 90/1 sec.",
+              "Cooldown 32 sec."
+            ],
             "asset": "img_icon_ace_topw01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 32,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28034,10 +29063,18 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": [
+      "Recover 15% of HP 1 time(s) when enough damage is taken to KO character."
+    ],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When attacked by an enemy, 100% chance to: Reduce the cooldown time of Skill 1 by 5%."
+    ],
+    "traits2": [
+      "When your team has less Treasure secured: Boost the cooldown reduction speed of Skill 2 by 50%.",
+      "When your allies are near the Treasure area where you are at: Resist Stagger effect."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -28064,7 +29101,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATE"],
     "mainElement": "GREEN",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -28078,24 +29115,38 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Thunder Bagua",
+            "description": [
+              "A mid-range attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 849", "Cooldown 37 sec."],
             "asset": "img_icon_kaido_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 37,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Angry Drunk",
+            "description": [
+              "Increases own ATK and DEF.",
+              "While the effect is active, character gains Status Effect Nullification, but is inflicted with the status I'm Not Drunk !!! and is unable to dodge.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: I'm Not Drunk !!! Activation Probability 100%",
+              "Step 1: I'm Not Drunk !!! Effect Time 20 sec.",
+              "Step 1: ATK Increased by 100%",
+              "Step 1: DEF Increased by 100%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 67 sec."
+            ],
             "asset": "img_icon_kaido_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 67,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28115,12 +29166,18 @@
     "assetLarge": "img_chara_robin_holi01_l.webp",
     "assetCard": "img_chara_robin_holi01_m.webp",
     "mainSize": "NORMAL",
-    "teamBoost": "ATTACK",
+    "teamBoost": "SPD",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
+    "characterTraits": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%.",
+      "When your team has less Treasure secured: Boost the cooldown reduction speed of Skill 1 by 50%."
+    ],
+    "traits1": [
+      "When you capture the Treasure: Reduce the cooldown time of Skill 2 by 30%.",
+      "When using Skill 2: SPD: Boosted by 10% for 15 second(s). (Cannot Stack)"
+    ],
+    "traits2": ["When your HP is 97% or more: Resist Stagger effect."],
     "boostTrait": [],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
@@ -28145,7 +29202,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["CREATE_ENTITY"],
     "mainElement": "BLUE",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -28159,24 +29216,42 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Mil Fleurs Gigantesco Mano Spank",
+            "description": [
+              "A mid-range attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 492",
+              "Step 1: Knockback Effect",
+              "Step 1: SPD Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 28 sec."
+            ],
             "asset": "img_icon_robin_holi01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 28,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Cuerpo Fleurs",
+            "description": [
+              "Spawns a clone at close-range that can restore the Treasure Gauge.",
+              "While the clone is in the area around your captured Treasure, the enemy will not be able to capture the Treasure.",
+              "The clone will disappear after it receives a certain amount of damage or after a certain amount of time passes."
+            ],
+            "effect": [
+              "Cooldown 37 sec.",
+              "Clone HP 8000",
+              "Effect Time 20 sec."
+            ],
             "asset": "img_icon_robin_holi01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 37,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28200,10 +29275,15 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%."
+    ],
+    "traits2": [
+      "When you are Downed: ATK: Boosted by 30% for 10 second(s). (Cannot Stack)",
+      "When using Skill 2: Reduce the cooldown time of Skill 1 by 20%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
+    "inflictsStatusEffect": ["AFLAME", "STUN"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -28220,7 +29300,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "RED",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -28234,24 +29314,40 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Franky Fire Ball",
+            "description": [
+              "A long-range attack with a chance to set enemies Aflame."
+            ],
+            "effect": [
+              "Step 1: Skill Power 566",
+              "Step 1: Aflame Activation Probability 100%",
+              "Step 1: Aflame Effect Time 8 sec.",
+              "Step 1: Aflame Damage 90/1 sec.",
+              "Cooldown 43 sec."
+            ],
             "asset": "img_icon_franky_holi01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 43,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Nipple Light Special",
+            "description": [
+              "A mid-range attack with a chance to Stun.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 430",
+              "Step 1: Stun Activation Probability 100%",
+              "Step 1: Stun Effect Time 5 sec.",
+              "Cooldown 20 sec."
+            ],
             "asset": "img_icon_franky_holi01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 20,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28274,11 +29370,19 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When dealing damage to an enemy, 5% chance to: Inflict an enemy with Freeze for 6 second(s)."
+    ],
+    "traits1": [
+      "When attacking an enemy in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When attacked by an enemy, 100% chance to: Reduce the cooldown time of Skill 1 by 5%."
+    ],
+    "traits2": [
+      "When your team has less Treasure secured: Boost the cooldown reduction speed of Skill 2 by 50%.",
+      "When Critical occurs: SPD: Boosted by 30% for 6 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
+    "inflictsStatusEffect": ["FREEZE"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -28304,7 +29408,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -28318,24 +29422,34 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Experiment",
+            "description": [
+              "A mid-range area attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 377",
+              "Step 1: Knockback Effect",
+              "Step 1: SPD Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 29 sec."
+            ],
             "asset": "img_icon_chopper_holi01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 29,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Snow Creature Attack",
+            "description": ["A long-range attack."],
+            "effect": ["Step 1-3: Skill Power 754", "Cooldown 44 sec."],
             "asset": "img_icon_chopper_holi01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 44,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28358,10 +29472,22 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": [
+      "Increase Knockback distance by 100%.",
+      "When you Knockback an enemy: Recover HP by 20%.",
+      "When your HP is 70% or more: Change Knockback to a Down effect."
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%. and Reduce damage received from Runners by 20%.",
+      "When you are in your team's Treasure Area and the Treasure Gauge is 50% or more: Reduce damage received by 20%."
+    ],
+    "traits2": [
+      "When in the area around your captured Treasure: Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "When in the area around your captured Treasure: Increase damage dealt by 20%. and Increase damage to Runners by 20%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -28408,24 +29534,41 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Thrust Pad Cannon",
+            "description": [
+              "A long-range attack with a Knockback effect.",
+              "Attack ignores obstacles.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1-10: Skill Power 318",
+              "Step 1-10: Knockback Effect",
+              "Step 1-10: Ignore Obstacles",
+              "Cooldown 35 sec."
+            ],
             "asset": "img_icon_bkuma_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 35,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Ursa Shock",
+            "description": [
+              "A long-range attack with a Knockback effect.",
+              "Damage dealt will disregard the enemy DEF stat.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 516 (Ignores DEF)",
+              "Step 1: Knockback Effect",
+              "Cooldown 41 sec."
+            ],
             "asset": "img_icon_bkuma_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 41,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28448,12 +29591,23 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "Nullify Poison.",
+      "When spawning: Acquire a defensive shield (durability: 5% of max HP).",
+      "While defensive shield is active, enemy attacks will reduce shield durability instead of HP, and it will inflict Stagger on the enemy who attacked you. (Excludes some attacks.)",
+      "When you capture the Treasure: Recover durability of defensive shield by 50% (restores the shield if it was destroyed)."
+    ],
+    "traits1": [
+      "When your HP is 80% or more: Boost capture speed by 50%.",
+      "When Critical occurs: Inflict an enemy with Poison for 14 second(s)."
+    ],
+    "traits2": [
+      "When your team has more Treasure secured: Boost the cooldown reduction speed of Skill 2 by 50%.",
+      "When attacking an enemy inflicted with Poison: Recover HP by 5%. and Reduce the cooldown time of Skill 2 by 5%."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["POISON"],
+    "nullifiesStatusEffect": ["POISON"],
     "tags": [
       {
         "name": "RUNNER"
@@ -28472,7 +29626,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["SHIELD", "STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -28486,24 +29640,45 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Pink Hornet",
+            "description": [
+              "A long-range attack with a chance to Poison.",
+              "Acquires effect that debuffs ATK at Level 5."
+            ],
+            "effect": [
+              "Step 1-5: Skill Power 401",
+              "Step 1-5: Poison (Long) Activation Probability 100%",
+              "Step 1-5: Poison (Long) Effect Time 19 sec.",
+              "Step 1-5: Poison (Long) Damage 1.15%/1 sec.",
+              "Step 1-5: ATK Reduced by 10%",
+              "Step 1-5: Effect Time 20 sec.",
+              "Cooldown 35 sec."
+            ],
             "asset": "img_icon_reiju_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 35,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Pink Shelter",
+            "description": [
+              "Creates a mid-range area Barrier with a chance for allies within to become invincible.",
+              "Plus, it deals damage to enemies with a chance to inflict Poison."
+            ],
+            "effect": [
+              "Step 1: Invincible Activation Probability 100%",
+              "Step 2: Skill Power 182 (Max 3 Consecutive Hits)",
+              "Step 2: Poison Activation Probability 100%",
+              "Step 2: Poison Effect Time 14 sec.",
+              "Step 2: Poison Damage 1.15%/1 sec.",
+              "Cooldown 32 sec."
+            ],
             "asset": "img_icon_reiju_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 32,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28527,10 +29702,17 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%."
+    ],
+    "traits2": [
+      "When an ally is KO'd (not including you): DEF: Boosted by 20% for 10 second(s). (Cannot Stack)",
+      "When your HP is 70% or more: Boost the cooldown reduction speed of Skill 2 by 50%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 45% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["POISON"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -28559,7 +29741,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "RED",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -28573,24 +29755,33 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "My military power is on a different scale!",
+            "description": ["A long-range area attack."],
+            "effect": ["Step 1-12: Skill Power 527", "Cooldown 20 sec."],
             "asset": "img_icon_bege_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 20,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "KX Launcher",
+            "description": [
+              "A long-range attack with a Knockback effect and a chance to Poison."
+            ],
+            "effect": [
+              "Step 1: Skill Power 702",
+              "Step 1: Knockback Effect",
+              "Step 1: Poison (Long) Activation Probability 100%",
+              "Step 1: Poison (Long) Effect Time 19 sec.",
+              "Step 1: Poison (Long) Damage 1.15%/1 sec.",
+              "Cooldown 55 sec."
+            ],
             "asset": "img_icon_bege_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 55,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28614,10 +29805,16 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When you Down an enemy: SPD: Boosted by 30% for 10 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "When your team has less Treasure secured: Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "When an enemy captures one of your team's Treasure Areas: CRIT: Boosted by 300% for 10 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
+    "inflictsStatusEffect": ["AFLAME"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -28637,7 +29834,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "RED",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -28651,24 +29848,43 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Diable Jambe, Crosse Strike",
+            "description": [
+              "A long-range charge attack with a Knockback effect and a chance to set enemies Aflame.",
+              "Damage dealt will not be affected by the enemy's DEF stat.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 436 (Ignores DEF)",
+              "Step 1: Knockback Effect",
+              "Step 1: Aflame (Long) Activation Probability 100%",
+              "Step 1: Aflame (Long) Effect Time 10 sec.",
+              "Step 1: Aflame (Long) Damage 90/1 sec.",
+              "Cooldown 29 sec."
+            ],
             "asset": "img_icon_sanji_cake01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 29,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "You hungry ?! I'll feed you!!",
+            "description": [
+              "Moves towards allies at long-range and has a close-range area effect that recovers your allies' HP.",
+              "Acquires effect that increases ATK at Level 5."
+            ],
+            "effect": [
+              "Step 1: Recovery 382",
+              "Step 1: ATK Increased by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 34 sec."
+            ],
             "asset": "img_icon_sanji_cake01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 34,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28691,10 +29907,21 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": [
+      "When attacking a character type \"Power users\" enemy: Increase damage dealt by 30%. and Increase power of Skill 2 by 5% up to a max of 50% (resets when Skill 2 is used or character is KO'd).",
+      "When attacking a character type \"Power users\" enemy: Reduce the cooldown time of Skill 1 by 5%. and Recover HP by 5%.",
+      "When the enemy has inflicted you with status effects: Reduce the cooldown time of Skill 2 by 10%. and Recover HP by 15%.",
+      "Reduces the effect time of status effects inflicted by enemies by 80%."
+    ],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When your team has less Treasure secured: Increase damage dealt by 20%. and Reduce damage received by 30%."
+    ],
+    "traits2": [
+      "When there are 90 seconds or less remaining: Increase damage dealt by 20%. and Boost the cooldown reduction speed of Skill 1 by 100%.",
+      "When your HP is 70% or more: Resist Stagger and Knockback."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -28732,24 +29959,43 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Ocean Current Shoulder Throw",
+            "description": [
+              "A long-range area attack.",
+              "Plus, increases damage against [Power users].",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 362 (Max 2 Consecutive Hits)",
+              "Step 2: Skill Power 392 (Max 2 Consecutive Hits)",
+              "Cooldown 37 sec.",
+              "Power users: Increase damage inflicted by 200%"
+            ],
             "asset": "img_icon_jinbe_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 37,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Arabesque Brick Fist",
+            "description": [
+              "A long-range area attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 660",
+              "Step 1: Knockback Effect",
+              "Step 1: SPD Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 28 sec."
+            ],
             "asset": "img_icon_jinbe_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 28,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28772,11 +30018,19 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 3% chance to: Inflict an enemy with Stun (Short) for 3 second(s). (Excludes some attacks.)"
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Increase Normal Attack damage dealt by 40%.",
+      "When dealing damage to an enemy, 5% chance to: Inflict an enemy with Shock (Short) for 3 second(s)."
+    ],
+    "traits2": [
+      "When dodging, 100% chance to: SPD: Boosted by 10% for 20 second(s). (Cannot Stack)",
+      "When attacking an enemy inflicted with Shock: Recover HP by 15%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
+    "inflictsStatusEffect": ["STUN", "SHOCK"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -28796,7 +30050,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "COLA",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -28810,24 +30064,42 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Cyclone Tempo",
+            "description": [
+              "A mid-range area attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 566",
+              "Step 1: Knockback Effect",
+              "Cooldown 22 sec."
+            ],
             "asset": "img_icon_nami_brid01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 22,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Thunderbolt Tempo",
+            "description": [
+              "A mid-range area attack with a chance to Shock enemies.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 754",
+              "Step 1: Shock Activation Probability 100%",
+              "Step 1: Shock Effect Time 5 sec.",
+              "Step 1: Shock Damage 100/1 sec.",
+              "Step 1: SPD Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 59 sec."
+            ],
             "asset": "img_icon_nami_brid01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 59,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28851,10 +30123,16 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "traits1": [
+      "When attacked by an enemy, 100% chance to: Reduce the cooldown time of Skill 2 by 5%.",
+      "When your team has more Treasure secured: Boost the cooldown reduction speed of Skill 1 by 50%."
+    ],
+    "traits2": [
+      "When using Skill 1: SPD: Boosted by 10% for 20 second(s). (Cannot Stack)",
+      "When your HP is 80% or more: Boost capture speed by 50%."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["NEGATIVE"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -28877,7 +30155,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -28891,24 +30169,38 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Negative Hollow",
+            "description": [
+              "A long-range attack with a chance to inflict Negative effect."
+            ],
+            "effect": [
+              "Step 1-4: Skill Power 546",
+              "Step 1-4: Negative Activation Probability 100%",
+              "Step 1-4: Negative Effect Time 10 sec.",
+              "Cooldown 27 sec."
+            ],
             "asset": "img_icon_perona_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 27,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Special Hollow",
+            "description": [
+              "Sets Special Hollows at close range. If an enemy touches the Special Hollow, it deals damage with a Knockback effect. The Special Hollows are removed after a certain period of time or when touched.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 728",
+              "Step 1: Knockback Effect",
+              "Cooldown 35 sec."
+            ],
             "asset": "img_icon_perona_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 35,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -28932,9 +30224,14 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%."
+    ],
+    "traits2": [
+      "When your allies are not near the Treasure area where you are at: Boost the cooldown reduction speed of dodge by 50%.",
+      "After KOing an enemy with Skill 1: Recover HP by 40%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -28963,24 +30260,27 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Three-Pace Hum Notch Slash",
+            "description": [
+              "A mid-range charge attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 637", "Cooldown 47 sec."],
             "asset": "img_icon_ryuma_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 47,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Polka Remise",
+            "description": ["A long-range multiple hit attack."],
+            "effect": ["Step 1-5: Skill Power 64", "Cooldown 28 sec."],
             "asset": "img_icon_ryuma_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 28,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29003,12 +30303,18 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
+    "characterTraits": ["Nullify Shock.", "Nullify Entrance."],
+    "traits1": [
+      "When in the area around your captured Treasure: Increase damage dealt by 30%.",
+      "When an ally is KO'd (not including you): DEF: Boosted by 20% for 10 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "When an ally is KO'd (not including you): ATK: Boosted by 30% for 10 second(s). (Cannot Stack)",
+      "When your HP is 70% or more: Increase Treasure Gauge recovery amount by 50%."
+    ],
     "boostTrait": [],
     "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "nullifiesStatusEffect": ["SHOCK", "ENTRANCE"],
     "tags": [
       {
         "name": "DEFENDER"
@@ -29047,24 +30353,32 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Shadow of a Skilled Navy Swordsman",
+            "description": ["A mid-range charge attack."],
+            "effect": ["Step 1: Skill Power 860", "Cooldown 48 sec."],
             "asset": "img_icon_luffy_nigh01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 48,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum Storm",
+            "description": [
+              "A long-range multiple hit charge attack with a Knockback effect.",
+              "The lower this character's remaining HP becomes, damage dealt is increased.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1-6: Skill Power 105.4 (Increase Damage when HP is decreased)",
+              "Step 6: Knockback Effect",
+              "Cooldown 20 sec."
+            ],
             "asset": "img_icon_luffy_nigh01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 20,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29087,10 +30401,21 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": [
+      "When attacked by an enemy, 2% chance to: Dodge without taking damage or the accompanying effect (Doesn't activate when immobilized by a status effect)",
+      "Change Down to a Stagger effect.",
+      "When performing a Perfect Dodge: Recover HP by 30%.",
+      "When attacked by an enemy whose parameters is boosted: Inflict self with Nullify Stagger for 10 second(s). and Reduce damage received by 30%."
+    ],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%. and Reduce damage received by 20%.",
+      "When attacked by an enemy, 100% chance to: Reduce the cooldown time of dodge by 50%. and Reduce the cooldown time of Skill 2 by 5%."
+    ],
+    "traits2": [
+      "When your allies are not near the Treasure area where you are at: Increase damage dealt by 30%. and Increase damage to enemies with the Element you are strong against by 20%.",
+      "When using Skill 1: ATK: Boosted by 30% for 20 second(s). (Cannot Stack) and DEF: Boosted by 30% for 20 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -29131,24 +30456,41 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Power Mochi",
+            "description": [
+              "A mid-range attack.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires Knockback effect at Level 5."
+            ],
+            "effect": [
+              "Step 1-2: Skill Power 330",
+              "Step 2: Knockback Effect",
+              "Cooldown 29 sec."
+            ],
             "asset": "img_icon_katakuri_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 29,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Rainfall Mochi",
+            "description": [
+              "A mid-range area attack.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1-5: Skill Power 185",
+              "Step 1-5: SPD Reduced by 30%",
+              "Step 1-5: Effect Time 20 sec.",
+              "Cooldown 39 sec."
+            ],
             "asset": "img_icon_katakuri_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 39,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29171,11 +30513,21 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When your HP is 90% or more: Reduce damage received by 80%."
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Increase damage dealt by 30%.",
+      "When attacking an enemy inflicted with Shock: Increase damage dealt by 20%."
+    ],
+    "traits2": [
+      "When an enemy captures one of your team's Treasure Areas: SPD: Boosted by 30% for 10 second(s). (Cannot Stack)",
+      "After KOing an enemy, Recover HP by 15%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["SHOCK", "AFLAME"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -29201,7 +30553,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -29215,24 +30567,43 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "The Lightning Clouds of Zeus",
+            "description": [
+              "An attack that inflicts damage in the area behind you with a chance to Shock enemies. Attack ignores obstacles. The attack will end after a set period of time."
+            ],
+            "effect": [
+              "Step 1-8: Skill Power 174",
+              "Step 1-8: Ignore Obstacles",
+              "Step 1-8: Shock (Short) Activation Probability 100%",
+              "Step 1-8: Shock (Short) Effect Time 3 sec.",
+              "Step 1-8: Shock (Short)Damage 100/1 sec.",
+              "Cooldown 37 sec."
+            ],
             "asset": "img_icon_bigmom_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 37,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "The Sun Itself, Prometheus",
+            "description": [
+              "A mid-range attack with a Knockback effect and a chance to set enemies Aflame.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 752",
+              "Step 1: Knockback Effect",
+              "Step 1: Aflame (Long) Activation Probability 100%",
+              "Step 1: Aflame (Long) Effect Time 10 sec.",
+              "Step 1: Aflame (Long)Damage 90/1 sec.",
+              "Cooldown 51 sec."
+            ],
             "asset": "img_icon_bigmom_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 51,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29256,9 +30627,15 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your captured Treasure: Increase damage dealt by 30%.",
+      "When your HP is 70% or more: Change Down to a Stagger effect."
+    ],
+    "traits2": [
+      "When your team has more Treasure secured: Increase damage dealt by 20%.",
+      "When in the area around your captured Treasure: Reduce damage received by 30%. and Boost the cooldown reduction speed of Skill 1 by 50%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -29293,24 +30670,27 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Ultra Tiger Hunt",
+            "description": [
+              "A mid-range charge attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 891", "Cooldown 44 sec."],
             "asset": "img_icon_zoro_wano01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 44,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Nigiri Tower Climb Ripple",
+            "description": ["A long-range attack."],
+            "effect": ["Step 1: Skill Power 377", "Cooldown 18 sec."],
             "asset": "img_icon_zoro_wano01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 18,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29334,9 +30714,16 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%."
+    ],
+    "traits2": [
+      "When using Skill 2: Reduce the cooldown time of Skill 1 by 20%.",
+      "When attacked by an enemy, 2% chance to: Dodge without taking damage or the accompanying effect (Doesn't activate when immobilized by a status effect)"
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 45% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -29377,24 +30764,48 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Strawman Card",
+            "description": [
+              "A mid-range attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1-2: Skill Power 297",
+              "Step 2: Knockback Effect",
+              "Cooldown 39 sec."
+            ],
             "asset": "img_icon_hawkins_wano01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 39,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "The shadow of death is on your face today.",
+            "description": [
+              "A mid-range area effect that gives a random effect to your allies."
+            ],
+            "effect": [
+              "Step 1: One of the following will occur:",
+              "Step 1: ATK Increased by 30%",
+              "Probability 30%",
+              "Effect Time 24 sec.",
+              "Step 1: DEF Increased by 30%",
+              "Probability 30%",
+              "Effect Time 24 sec.",
+              "Step 1: SPD Increased by 30%",
+              "Probability 30%",
+              "Effect Time 24 sec.",
+              "Step 1: ATK Increased by 100%",
+              "Probability 10%",
+              "Effect Time 12 sec.",
+              "Cooldown 35 sec."
+            ],
             "asset": "img_icon_hawkins_wano01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 35,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29418,10 +30829,18 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%.",
+      "When you are Downed: ATK: Boosted by 30% for 20 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "After KOing an enemy, Recover HP by 15%.",
+      "When using Skill 1: DEF: Boosted by 20% for 10 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -29450,7 +30869,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "RED",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -29464,24 +30883,44 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "ROOM",
+            "description": [
+              "A mid-range area effect that temporarily applies DEF and SPD debuffs to the enemy.",
+              "Attack ignores obstacles.",
+              "The debuffs will be removed after a certain period of time."
+            ],
+            "effect": [
+              "Step 1: Ignore Obstacles",
+              "Step 1: DEF Reduced by 30% (Max 5 Consecutive Hits)",
+              "Step 1: SPD Reduced by 30% (Max 5 Consecutive Hits)",
+              "Step 1: Effect Time 2 sec.",
+              "Cooldown 32 sec."
+            ],
             "asset": "img_icon_law_atta01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 32,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gamma Knife",
+            "description": [
+              "Moves towards enemies at long-range and attacks with a chance to Stun.",
+              "The lower this character's remaining HP becomes, damage dealt is increased.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 1",
+              "Step 2: Skill Power 738 (Increase Damage when HP is decreased)",
+              "Step 2: Stun (Long) Activation Probability 100%",
+              "Step 2: Stun (Long) Effect Time 7 sec.",
+              "Cooldown 48 sec."
+            ],
             "asset": "img_icon_law_atta01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 48,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29504,11 +30943,17 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": ["When your HP is 1% or less: Recover HP by 30%."],
+    "traits1": [
+      "When you are in your enemy's Treasure Area and the Treasure Gauge is 50% or more: Boost capture speed by 50%.",
+      "Increase the Treasure Gauge amount when you capture Treasure."
+    ],
+    "traits2": [
+      "When your HP is 50% or more: 1 HP will be left even if KO'd (ineffective if HP is exactly 1).",
+      "When using Skill 1: SPD: Boosted by 10% for 10 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["When your HP is 100% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -29543,7 +30988,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "RED",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -29557,24 +31002,42 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Black Knight",
+            "description": [
+              "Spawns a clone at close-range that moves forward.",
+              "The clone will have a close-range area attack with a chance to Stun.",
+              "Become temporarily invincible after use."
+            ],
+            "effect": [
+              "Step 1: Skill Power 41 (Max 9 Consecutive Hits)",
+              "Step 1: Stun (Short) Activation Probability 100%",
+              "Step 1: Stun (Short) Effect Time 3 sec.",
+              "Cooldown 17 sec."
+            ],
             "asset": "img_icon_doflamingo_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 17,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Billow-White",
+            "description": [
+              "A long-range area attack.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 146 (Max 5 Consecutive Hits)",
+              "Step 1: SPD Reduced by 30% (Max 5 Consecutive Hits)",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 35 sec."
+            ],
             "asset": "img_icon_doflamingo_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 35,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29597,12 +31060,22 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "Nullify Shock.",
+      "Nullify Entrance.",
+      "When attacked by an enemy, 5% chance to: DEF: Boosted by 20% for 10 second(s). (Cannot Stack)"
+    ],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When using Skill 2: ATK: Boosted by 30% for 10 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "When your allies are not near the Treasure area where you are at: Increase damage dealt by 20%.",
+      "When your HP is 80% or more: Resist Stagger effect."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
+    "inflictsStatusEffect": ["TREMOR"],
+    "nullifiesStatusEffect": ["SHOCK", "ENTRANCE"],
     "tags": [
       {
         "name": "ATTACKER"
@@ -29630,7 +31103,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -29644,24 +31117,42 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum Leo Bazooka",
+            "description": [
+              "A mid-range attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 407",
+              "Step 1: Knockback Effect",
+              "Step 1: SPD Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 29 sec."
+            ],
             "asset": "img_icon_luffy_boun01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 29,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum King Kong Gun",
+            "description": [
+              "A mid-range area attack with a chance to inflict Tremor.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 566",
+              "Step 1: Tremor Activation Probability 100%",
+              "Step 1: Tremor Effect Time 5 sec.",
+              "Cooldown 52 sec."
+            ],
             "asset": "img_icon_luffy_boun01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 52,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29684,12 +31175,23 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "When an ally is KO'd (not including you): CRIT: Boosted by 300% for 20 second(s). (Cannot Stack)",
+      "When attacked by an enemy, 15% chance to: Reduce damage received by 30%.",
+      "Nullify Aflame.",
+      "When attacking an enemy with Skill 1: Reduce the cooldown time of Skill 2 by 30% and ATK: Boosted by 20% for 20 second(s). (Cannot Stack)"
+    ],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When Critical occurs: Inflict an enemy with Aflame for 8 second(s). and Reduce the cooldown time of Skill 1 by 10%."
+    ],
+    "traits2": [
+      "When attacking an enemy inflicted with Aflame: Increase damage dealt by 20% and Recover HP by 10%.",
+      "When using Skill 2: Reduce the cooldown time of Skill 1 by 15%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
+    "inflictsStatusEffect": ["AFLAME"],
+    "nullifiesStatusEffect": ["AFLAME"],
     "tags": [
       {
         "name": "ATTACKER"
@@ -29711,7 +31213,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -29725,24 +31227,46 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Fire Fist Flame Fence",
+            "description": [
+              "Sets a mid-range attack with a Knockback effect and a chance to set enemies Aflame for a set period of time. It will be removed after a certain period of time.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 364",
+              "Step 1: Knockback Effect",
+              "Step 1: Aflame (Long) Activation Probability 100%",
+              "Step 1: Aflame (Long) Effect Time 10 sec.",
+              "Step 1: Aflame (Long) Damage 90/1 sec.",
+              "Step 1: SPD Reduced by 20%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 29 sec."
+            ],
             "asset": "img_icon_sabo_stam01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 29,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Flame Dragon King",
+            "description": [
+              "A long-range attack with a chance to set enemies Aflame.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 754",
+              "Step 1: Aflame (Long) Activation Probability 100%",
+              "Step 1: Aflame (Long) Effect Time 10 sec.",
+              "Step 1: Aflame (Long) Damage 90/1 sec.",
+              "Cooldown 40 sec."
+            ],
             "asset": "img_icon_sabo_stam01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 40,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29765,12 +31289,17 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": ["Nullify Shock.", "Nullify Entrance."],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%."
+    ],
+    "traits2": [
+      "When your allies are near the Treasure area where you are at: Boost capture speed by 50%.",
+      "After KOing an enemy, SPD: Boosted by 10% for 20 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
+    "inflictsStatusEffect": ["STUN"],
+    "nullifiesStatusEffect": ["SHOCK", "ENTRANCE"],
     "tags": [
       {
         "name": "ATTACKER"
@@ -29798,7 +31327,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -29812,24 +31341,40 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum Elephant Gun",
+            "description": [
+              "A mid-range area attack.",
+              "Acquires DEF debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 638",
+              "Step 1: DEF Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 65 sec."
+            ],
             "asset": "img_icon_luffy_stam01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 65,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum Giant Pistol",
+            "description": [
+              "A mid-range attack with a chance to Stun.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 240",
+              "Step 1: Stun Activation Probability 50%",
+              "Step 1: Stun Effect Time 5 sec.",
+              "Cooldown 43 sec."
+            ],
             "asset": "img_icon_luffy_stam01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 43,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29852,11 +31397,23 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 15% chance to: Reduce damage received by 30%.",
+      "When dealing damage with a normal attack, 15% chance to: Inflict an enemy with Stun (Short) for 3 second(s).",
+      "When an enemy is inflicted with Stun: DEF: Boosted by 30% for 20 second(s). (Cannot Stack) and Recover HP by 15%."
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30% and Reduce damage received from Runners by 20%.",
+      "When your HP is 80% or more: Resist Stagger effect."
+    ],
+    "traits2": [
+      "When your allies are not near the Treasure area where you are at: Boost the cooldown reduction speed of Skill 2 by 50%.",
+      "When attacking an enemy inflicted with Stun: Increase damage dealt by 20% and Increases damage dealt to character type \"Power users\" enemies by 20%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 45% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -29879,7 +31436,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "STEP_UP",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -29893,24 +31450,45 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Don't you look away!!",
+            "description": [
+              "A long-range attack with a Knockback effect and a chance to inflict Stun.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 539",
+              "Step 1: Stun (Short) Activation Probability 100%",
+              "Step 1: Stun (Short) Effect Time 3 sec.",
+              "Step 2: Skill Power 323",
+              "Step 2: Knockback Effect",
+              "Cooldown 31 sec."
+            ],
             "asset": "img_icon_smoker_stam01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 31,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Where do you think you're going!",
+            "description": [
+              "A mid-range charge attack with a chance to Stun and attracts the enemy to your current position.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 351",
+              "Step 1: Stun Activation Probability 100%",
+              "Step 1: Stun Effect Time 5 sec.",
+              "Step 1: SPD Reduced by 30%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 27 sec."
+            ],
             "asset": "img_icon_smoker_stam01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 27,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -29933,12 +31511,21 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 15% chance to: Reduce damage received by 30%.",
+      "Nullify Aflame."
+    ],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When Critical occurs: ATK: Boosted by 30% for 10 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "When your HP is 50% or more: 1 HP will be left even if KO'd (ineffective if HP is exactly 1).",
+      "When using Skill 1: Reduce the cooldown time of Skill 2 by 15%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
+    "inflictsStatusEffect": ["AFLAME"],
+    "nullifiesStatusEffect": ["AFLAME"],
     "tags": [
       {
         "name": "ATTACKER"
@@ -29963,7 +31550,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "COLA",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "RED",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -29977,24 +31564,41 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Fire Fist",
+            "description": [
+              "A long-range attack with a chance to inflict Aflame effect.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 377",
+              "Step 1: Aflame Activation Probability 100%",
+              "Step 1: Aflame Effect Time 8 sec.",
+              "Step 1: Aflame Damage 90/1 sec.",
+              "Cooldown 25 sec."
+            ],
             "asset": "img_icon_ace_mari01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 25,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Flame Commandment Fire Pillar",
+            "description": [
+              "A mid-range area attack.",
+              "Acquires ATK debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1-2: Skill Power 754",
+              "Step 1-2: ATK Reduced by 10%",
+              "Step 1-2: Effect Time 20 sec.",
+              "Cooldown 48 sec."
+            ],
             "asset": "img_icon_ace_mari01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 48,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -30017,11 +31621,21 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 15% chance to: Reduce damage received by 30%."
+    ],
+    "traits1": [
+      "When in the area around your captured Treasure: Increase damage dealt by 30%.",
+      "When you are in your team's Treasure Area and the Treasure Gauge is 80% or more: Resist Stagger effect."
+    ],
+    "traits2": [
+      "When your allies are not near the Treasure area where you are at: Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "When attacking an enemy, 5% chance to: Inflict an enemy with Poison for 14 second(s)."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 60% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["POISON"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -30044,7 +31658,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "COLA",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -30058,24 +31672,41 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Sables",
+            "description": [
+              "A long-range area attack.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires SPD debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 615",
+              "Step 1: SPD Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 58 sec."
+            ],
             "asset": "img_icon_sircrocodile_impe01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 58,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Desert Spada",
+            "description": [
+              "A long-range attack with a Knockback effect that will decreases DEF."
+            ],
+            "effect": [
+              "Step 1: Skill Power 351",
+              "Step 1: Knockback Effect",
+              "Step 1: DEF Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 34 sec."
+            ],
             "asset": "img_icon_sircrocodile_impe01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 34,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -30098,11 +31729,19 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 3% chance to: Inflict an enemy with Stun (Short) for 3 second(s). (Excludes some attacks.)"
+    ],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%.",
+      "When your HP is 80% or more: Resist Stagger effect."
+    ],
+    "traits2": [
+      "When attacking an enemy, 5% chance to: Inflict an enemy with Entrance for 5 second(s).",
+      "When your team has less Treasure secured: Increase damage dealt by 20%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 10%."],
+    "inflictsStatusEffect": ["STUN", "ENTRANCE"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -30131,7 +31770,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "ATTACKER",
     "characterStates": [
@@ -30145,24 +31784,41 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Love Is Always a Hurricane",
+            "description": [
+              "Sets a mid-range attack that damages enemies for a set period of time with a chance to inflict Entrance.",
+              "It will be removed after a certain period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 284",
+              "Step 1: Entrance (Short) Activation Probability 100%",
+              "Step 1: Entrance (Short) Effect Time 3 sec.",
+              "Cooldown 33 sec."
+            ],
             "asset": "img_icon_boahancock_swim01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 33,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Pistol Kiss",
+            "description": [
+              "A long-range attack.",
+              "Damage dealt will disregard the enemy DEF stat.",
+              "Acquires ATK debuff effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 397 (Ignores DEF)",
+              "Step 1: ATK Reduced by 10%",
+              "Step 1: Effect Time 20 sec.",
+              "Cooldown 18 sec."
+            ],
             "asset": "img_icon_boahancock_swim01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 18,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -30182,14 +31838,22 @@
     "assetLarge": "img_chara_nami_swim01_l.webp",
     "assetCard": "img_chara_nami_swim01_m.webp",
     "mainSize": "NORMAL",
-    "teamBoost": "ATTACK",
+    "teamBoost": "SPD",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "characterTraits": [
+      "When attacked by an enemy, 3% chance to: Inflict an enemy with Stun (Short) for 3 second(s). (Excludes some attacks.)"
+    ],
+    "traits1": [
+      "When your HP is 70% or more: Boost capture speed by 50%.",
+      "When your allies are not near the Treasure area where you are at: Boost the cooldown reduction speed of Skill 2 by 50%."
+    ],
+    "traits2": [
+      "When using Skill 1: Recover HP by 15%.",
+      "When your allies are not near the Treasure area where you are at: Reduce damage received by 20%."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["STUN", "CONFUSE"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -30209,7 +31873,7 @@
     "baseGrade": "FOUR_STAR",
     "fourStarType": "BOUNTY_FEST",
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -30223,24 +31887,35 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Water Gun",
+            "description": ["A long-range area attack."],
+            "effect": ["Step 1: Skill Power 546", "Cooldown 39 sec."],
             "asset": "img_icon_nami_swim01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 39,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "High Kick",
+            "description": [
+              "A close-range attack with a Knockback effect.",
+              "This will deal a fixed amount of damage and will not increase due to a critical hit.",
+              "Nullifies Stagger for a set period of time.",
+              "Acquires Confuse effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Fixed Damage 6500",
+              "Step 1: Knockback Effect",
+              "Step 1: Confuse (Short) Activation Probability 100%",
+              "Step 1: Confuse (Short) Effect Time 5 sec.",
+              "Cooldown 25 sec."
+            ],
             "asset": "img_icon_nami_swim01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 25,
             "isPowerGage": false,
             "isTimeGated": false
           }
