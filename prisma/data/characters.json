@@ -36858,9 +36858,14 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%."
+    ],
+    "traits2": [
+      "After KOing an enemy, Reduce the cooldown time of Skill 1 by 30%.",
+      "When your HP is 30% or less: Resist Stagger effect."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -36889,24 +36894,34 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "The Demon Man",
+            "description": [
+              "A close-range attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 479", "Cooldown 32 sec."],
             "asset": "img_icon_gin_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 32,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "I Can't Show You Any Mercy Now",
+            "description": [
+              "A mid-range charge attack.",
+              "The lower this character's remaining HP becomes, damage dealt is increased."
+            ],
+            "effect": [
+              "Step 1: Skill Power 58 (Increase Damage when HP is decreased)",
+              "Step 2: Skill Power 383 (Increase Damage when HP is decreased)",
+              "Cooldown 50 sec."
+            ],
             "asset": "img_icon_gin_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 50,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -36930,9 +36945,16 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When your allies are near the Treasure area where you are at: Increase damage dealt by 40%."
+    ],
+    "traits2": [
+      "When your allies are near the Treasure area where you are at: Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "When there are 60 seconds or less remaining: CRIT: Boosted by 300% for 20 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 45% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -36961,24 +36983,31 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Chef Drop",
+            "description": ["A close-range jump attack."],
+            "effect": ["Step 1: Skill Power 297", "Cooldown 27 sec."],
             "asset": "img_icon_zeff_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 27,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Red Shoes",
+            "description": [
+              "A mid-range attack with a Knockback effect and a high Critical hit chance.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 485",
+              "Step 1: Knockback Effect",
+              "Cooldown 47 sec."
+            ],
             "asset": "img_icon_zeff_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 47,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37002,9 +37031,14 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%."
+    ],
+    "traits2": [
+      "When your team has more Treasure secured: Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "After KOing an enemy, SPD: Boosted by 30% for 20 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -37036,24 +37070,30 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Out of the Bag!!!",
+            "description": [
+              "A mid-range multiple hit area attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 128 (Max 5 Consecutive Hits)",
+              "Cooldown 54 sec."
+            ],
             "asset": "img_icon_kuro_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 54,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Cat Claws",
+            "description": ["A mid-range charge attack."],
+            "effect": ["Step 1: Skill Power 479", "Cooldown 35 sec."],
             "asset": "img_icon_kuro_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 35,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37076,10 +37116,17 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": [
+      "When attacked by an enemy, 15% chance to: Reduce damage received by 20%."
+    ],
+    "traits1": [
+      "When your allies are near the Treasure area where you are at: Increase damage dealt by 40%."
+    ],
+    "traits2": [
+      "When your allies are near the Treasure area where you are at: Boost the cooldown reduction speed of Skill 1 by 50%.",
+      "When your team has more Treasure secured: Increase Treasure Gauge recovery amount by 120%."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -37120,24 +37167,33 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Chop-Chop Festival",
+            "description": [
+              "A mid-range area attack.",
+              "Becomes temporarily invincible after use."
+            ],
+            "effect": ["Step 1: Skill Power 616", "Cooldown 49 sec."],
             "asset": "img_icon_buggy_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 49,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Chop-Chop Cannon",
+            "description": [
+              "Moves forward while performing a mid-range multiple hit attack."
+            ],
+            "effect": [
+              "Step 1: Skill Power 77",
+              "Step 2: Skill Power 231",
+              "Cooldown 24 sec."
+            ],
             "asset": "img_icon_buggy_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 24,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37161,9 +37217,11 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When your allies are near the Treasure area where you are at: Increase damage dealt by 40%."
+    ],
+    "traits2": ["When your HP is 30% or less: Boost capture speed by 50%."],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -37192,24 +37250,35 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Leafcutter Sword",
+            "description": [
+              "A close-range attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 140",
+              "Step 2: Skill Power 280",
+              "Cooldown 34 sec."
+            ],
             "asset": "img_icon_johnny_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 34,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Brace Yourself, You Navy Popinjay!!!",
+            "description": ["Increases own ATK."],
+            "effect": [
+              "Step 1: ATK Increased by 10%",
+              "Step 1: Effect Time 30 sec.",
+              "Cooldown 52 sec."
+            ],
             "asset": "img_icon_johnny_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 52,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37233,9 +37302,13 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When your allies are near the Treasure area where you are at: Reduce damage received by 40%."
+    ],
+    "traits2": [
+      "When your HP is 70% or more: Increase the Treasure Gauge amount when you capture Treasure."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -37264,24 +37337,31 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Leafcutter Sword",
+            "description": [
+              "A close-range attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 420", "Cooldown 30 sec."],
             "asset": "img_icon_yosaku_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 30,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "We've Got to Do Something!!",
+            "description": ["Increases own DEF."],
+            "effect": [
+              "Step 1: DEF Increased by 10%",
+              "Step 1: Effect Time 30 sec.",
+              "Cooldown 45 sec."
+            ],
             "asset": "img_icon_yosaku_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 45,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37305,10 +37385,16 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "traits1": [
+      "When your allies are near the Treasure area where you are at: Increase damage dealt by 40%."
+    ],
+    "traits2": [
+      "When your HP is 30% or less: SPD: Boosted by 10% for 20 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 45% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["TREMOR"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -37322,7 +37408,7 @@
     "baseGrade": "TWO_STAR",
     "fourStarType": null,
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -37336,24 +37422,39 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Cat-a-pult Catastrophe",
+            "description": [
+              "A close-range area attack with a chance to inflict Tremor.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 405",
+              "Step 1: Tremor Activation Probability 60%",
+              "Step 1: Tremor Effect Time 5 sec.",
+              "Cooldown 51 sec."
+            ],
             "asset": "img_icon_butchie_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 51,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Swash!",
+            "description": [
+              "A mid-range charge attack with a Knockback effect."
+            ],
+            "effect": [
+              "Step 1: Skill Power 68",
+              "Step 2: Skill Power 203",
+              "Step 2: Knockback Effect",
+              "Cooldown 30 sec."
+            ],
             "asset": "img_icon_butchie_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 30,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37377,9 +37478,15 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%."
+    ],
+    "traits2": [
+      "When your HP is 70% or more: Boost the cooldown reduction speed of Skill 1 by 50%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 45% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -37411,24 +37518,37 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "One, Two, Django",
+            "description": [
+              "A mid-range area effect that increases your ally's ATK."
+            ],
+            "effect": [
+              "Step 1: ATK Increased by 10%",
+              "Step 1: Effect Time 24 sec.",
+              "Cooldown 52 sec."
+            ],
             "asset": "img_icon_django_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 52,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "I'm Not Strange!!!",
+            "description": [
+              "A close-range attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 473",
+              "Step 1: Knockback Effect",
+              "Cooldown 37 sec."
+            ],
             "asset": "img_icon_django_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 37,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37452,9 +37572,13 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When your allies are near the Treasure area where you are at: Increase the Treasure Gauge amount when you capture Treasure."
+    ],
+    "traits2": [
+      "When your team has more Treasure secured: Boost capture speed by 50%."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -37483,24 +37607,30 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Dance of 100 Kamikaze Tops",
+            "description": [
+              "A mid-range multiple hit area attack.",
+              "This will deal a fixed amount of damage and will not increase due to a critical hit."
+            ],
+            "effect": [
+              "Step 1: Fixed Damage 260 (Max 5 Consecutive Hits)",
+              "Cooldown 23 sec."
+            ],
             "asset": "img_icon_cabaji_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 23,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Sting of the Unicycle",
+            "description": ["A close-range attack."],
+            "effect": ["Step 1: Skill Power 420", "Cooldown 37 sec."],
             "asset": "img_icon_cabaji_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 37,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37524,9 +37654,15 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When your allies are near the Treasure area where you are at: Reduce damage received by 40%."
+    ],
+    "traits2": [
+      "When there are 60 seconds or less remaining: CRIT: Boosted by 500% for 20 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 45% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -37558,24 +37694,37 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Mutiny!",
+            "description": [
+              "Moves forward while performing a mid-range multiple hit attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1-2: Skill Power 135",
+              "Step 3: Skill Power 270",
+              "Cooldown 54 sec."
+            ],
             "asset": "img_icon_morgan_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 54,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "I Sentence You to Death!",
+            "description": [
+              "A close-range area attack with a Knockback effect."
+            ],
+            "effect": [
+              "Step 1: Skill Power 405",
+              "Step 1: Knockback Effect",
+              "Cooldown 40 sec."
+            ],
             "asset": "img_icon_morgan_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 40,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37599,9 +37748,13 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When your allies are near the Treasure area where you are at: Increase damage dealt by 40%."
+    ],
+    "traits2": [
+      "When you capture the Treasure: SPD: Boosted by 10% for 20 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -37633,24 +37786,30 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "If You Even Blink, I'll Shoot!",
+            "description": ["A long-range attack."],
+            "effect": ["Step 1-4: Skill Power 35", "Cooldown 30 sec."],
             "asset": "img_icon_helmeppo_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 30,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Fine! I'lI Just Shoot Him Then!",
+            "description": [
+              "A long-range attack.",
+              "The lower this character's remaining HP is, the less damage it deals."
+            ],
+            "effect": [
+              "Step 1: Skill Power 399 (Decrease Damage when HP is decreased)",
+              "Cooldown 45 sec."
+            ],
             "asset": "img_icon_helmeppo_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 45,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37674,10 +37833,16 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%."
+    ],
+    "traits2": [
+      "When your allies are not near the Treasure area where you are at: Increase Treasure Gauge recovery amount by 50%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 45% or more of your max HP: Recover HP by 5%."
+    ],
+    "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "tags": [
       {
@@ -37694,7 +37859,7 @@
     "baseGrade": "TWO_STAR",
     "fourStarType": null,
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "DEFENDER",
     "characterStates": [
@@ -37708,24 +37873,36 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Who Is the Fairest?",
+            "description": [
+              "A close-range attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 270",
+              "Step 1: Knockback Effect",
+              "Cooldown 26 sec."
+            ],
             "asset": "img_icon_alvida_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 26,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "I Don't Want To See Even One Speck of Dust!",
+            "description": ["A mid-range attack with a chance to Stun."],
+            "effect": [
+              "Step 1: Skill Power 473",
+              "Step 1: Stun Activation Probability 60%",
+              "Step 1: Stun Effect Time 5 sec.",
+              "Cooldown 54 sec."
+            ],
             "asset": "img_icon_alvida_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 54,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37749,9 +37926,15 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When your allies are near the Treasure area where you are at: Boost capture speed by 50%."
+    ],
+    "traits2": [
+      "When your team has less Treasure secured: Increase Treasure Gauge recovery amount by 50%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 45% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -37780,24 +37963,36 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Y-Yes, Right Away!",
+            "description": [
+              "A close-range area attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 473",
+              "Step 1: Knockback Effect",
+              "Cooldown 47 sec."
+            ],
             "asset": "img_icon_coby_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 47,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Shut Up!!!",
+            "description": ["A close-range attack with a chance to Stun."],
+            "effect": [
+              "Step 1: Skill Power 135",
+              "Step 1: Stun Activation Probability 60%",
+              "Step 1: Stun Effect Time 5 sec.",
+              "Cooldown 33 sec."
+            ],
             "asset": "img_icon_coby_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 33,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37821,9 +38016,13 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%."
+    ],
+    "traits2": [
+      "When using Skill 1: SPD: Boosted by 30% for 20 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -37852,24 +38051,27 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Damn It!!!",
+            "description": ["Fast travel to Respawn Area."],
+            "effect": ["Cooldown 40 sec."],
             "asset": "img_icon_higuma_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 40,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Goodbye...",
+            "description": [
+              "A close-range attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 435", "Cooldown 31 sec."],
             "asset": "img_icon_higuma_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 31,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37892,12 +38094,16 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": ["Nullify Shock.", "Nullify Stolen Heart."],
+    "traits1": [
+      "When your allies are near the Treasure area where you are at: Reduce damage received by 40%."
+    ],
+    "traits2": [
+      "When attacking an enemy inflicted with Stun: Increase damage dealt by 20%."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["STUN"],
+    "nullifiesStatusEffect": ["STOLEN_HEART", "SHOCK"],
     "tags": [
       {
         "name": "RUNNER"
@@ -37919,7 +38125,7 @@
     "baseGrade": "TWO_STAR",
     "fourStarType": null,
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "GREEN",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -37933,24 +38139,33 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Three-Pace Hum Notch Slash",
+            "description": [
+              "A long-range charge attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 280", "Cooldown 34 sec."],
             "asset": "img_icon_brook_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 34,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Lullaby Parry",
+            "description": [
+              "A mid-range effect with a chance to inflict Stun effect."
+            ],
+            "effect": [
+              "Step 1: Stun (Long) Activation Probability 100%",
+              "Step 1: Stun (Long) Effect Time 7 sec.",
+              "Cooldown 40 sec."
+            ],
             "asset": "img_icon_brook_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 40,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -37974,9 +38189,15 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%."
+    ],
+    "traits2": [
+      "When an ally is KO'd (not including you): Reduce the cooldown time of Skill 2 by 15%."
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 45% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -38008,24 +38229,38 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Strong Hammer",
+            "description": [
+              "A close-range attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 270",
+              "Step 1: Knockback Effect",
+              "Cooldown 26 sec."
+            ],
             "asset": "img_icon_franky_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 26,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Coup De Vent",
+            "description": [
+              "A long-range area attack with a Knockback effect.",
+              "The lower this character's remaining HP becomes, damage dealt is increased."
+            ],
+            "effect": [
+              "Step 1: Skill Power 497 (Increase Damage when HP is decreased)",
+              "Step 1: Knockback Effect",
+              "Cooldown 51 sec."
+            ],
             "asset": "img_icon_franky_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 51,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -38049,9 +38284,13 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When your allies are near the Treasure area where you are at: Increase damage dealt by 40%."
+    ],
+    "traits2": [
+      "When using Skill 2: SPD: Boosted by 10% for 20 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -38089,24 +38328,31 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Cien Fleurs",
+            "description": ["A mid-range attack."],
+            "effect": ["Step 1: Skill Power 580", "Cooldown 53 sec."],
             "asset": "img_icon_robin_skyp01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 53,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Seis Fleurs",
+            "description": [
+              "A mid-range attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1-2: Skill Power 73",
+              "Step 3: Skill Power 145",
+              "Cooldown 34 sec."
+            ],
             "asset": "img_icon_robin_skyp01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 34,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -38126,13 +38372,17 @@
     "assetLarge": "img_chara_chopper_orig01_l.webp",
     "assetCard": "img_chara_chopper_orig01_m.webp",
     "mainSize": "NORMAL",
-    "teamBoost": "ATTACK",
+    "teamBoost": "RECOVERY",
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When your team has less Treasure secured: Boost the cooldown reduction speed of Skill 1 by 50%."
+    ],
+    "traits2": [
+      "When your HP is 70% or more: Increase the Treasure Gauge amount when you capture Treasure."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -38170,24 +38420,33 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Scope",
+            "description": [
+              "A mid-range area effect that decreases your enemy's DEF.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: DEF Reduced by 10%",
+              "Step 1: Effect Time 30 sec.",
+              "Cooldown 52 sec."
+            ],
             "asset": "img_icon_chopper_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 52,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "First Aid",
+            "description": [
+              "A mid-range area effect that recovers your ally's HP."
+            ],
+            "effect": ["Step 1: Recovery 401", "Cooldown 34 sec."],
             "asset": "img_icon_chopper_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 34,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -38211,9 +38470,13 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%."
+    ],
+    "traits2": [
+      "When using Skill 1: Reduce the cooldown time of Skill 2 by 30%."
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -38245,24 +38508,31 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Collier Coup",
+            "description": [
+              "A close-range attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 290", "Cooldown 27 sec."],
             "asset": "img_icon_sanji_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 27,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Mouton Mallet",
+            "description": ["A mid-range multiple hit charge attack."],
+            "effect": [
+              "Step 1: Skill Power 116 (Max 3 Consecutive Hits)",
+              "Step 2: Skill Power 232",
+              "Cooldown 53 sec."
+            ],
             "asset": "img_icon_sanji_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 53,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -38285,12 +38555,14 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
-    "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "characterTraits": ["Nullify Negative."],
+    "traits1": [
+      "When in the area around your captured Treasure: Reduce damage received by 30%."
+    ],
+    "traits2": ["When your HP is 30% or less: Boost capture speed by 50%."],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
+    "inflictsStatusEffect": ["STUN", "AFLAME"],
+    "nullifiesStatusEffect": ["NEGATIVE"],
     "tags": [
       {
         "name": "RUNNER"
@@ -38309,7 +38581,7 @@
     "baseGrade": "TWO_STAR",
     "fourStarType": null,
     "rarity": null,
-    "type": [],
+    "type": ["STATUS_EFFECT"],
     "mainElement": "BLUE",
     "mainClass": "RUNNER",
     "characterStates": [
@@ -38323,24 +38595,40 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Lead Stars",
+            "description": [
+              "A long-range attack.",
+              "Acquires Stun effect at Level 5."
+            ],
+            "effect": [
+              "Step 1: Skill Power 280",
+              "Step 1: Stun Activation Probability 50%",
+              "Step 1: Stun Effect Time 5 sec.",
+              "Cooldown 37 sec."
+            ],
             "asset": "img_icon_usopp_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 37,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Fire Star",
+            "description": [
+              "A long-range attack with a chance to set enemies Aflame."
+            ],
+            "effect": [
+              "Step 1: Skill Power 420",
+              "Step 1: Aflame Activation Probability 100%",
+              "Step 1: Aflame Effect Time 8 sec.",
+              "Step 1: Aflame Damage 90/1 sec.",
+              "Cooldown 55 sec."
+            ],
             "asset": "img_icon_usopp_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 55,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -38364,9 +38652,13 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When using Skill 1: SPD: Boosted by 30% for 20 second(s). (Cannot Stack)"
+    ],
+    "traits2": [
+      "When you capture the Treasure: Reduce the cooldown time of Skill 1 by 30%."
+    ],
+    "boostTrait": ["When your HP is 97% or more: Resist Stagger effect."],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -38398,24 +38690,33 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Belle-mère's Tangerines",
+            "description": [
+              "A mid-range area effect that increases your ally's ATK."
+            ],
+            "effect": [
+              "Step 1: ATK Increased by 10%",
+              "Step 1: Effect Time 30 sec.",
+              "Cooldown 59 sec."
+            ],
             "asset": "img_icon_nami_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 59,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Smash",
+            "description": [
+              "A close-range attack.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": ["Step 1: Skill Power 280", "Cooldown 23 sec."],
             "asset": "img_icon_nami_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 23,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -38439,9 +38740,15 @@
     "bountyColours": [],
     "sizeTraits": [],
     "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "traits1": [
+      "When in the area around your captured Treasure: Increase damage dealt by 30%."
+    ],
+    "traits2": [
+      "When your HP is 30% or less: CRIT: Boosted by 300% for 20 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": [
+      "After receiving damage from an enemy which is 45% or more of your max HP: Recover HP by 5%."
+    ],
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "tags": [
@@ -38473,24 +38780,39 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Onigiri",
+            "description": [
+              "A mid-range charge attack.",
+              "Acquires Knockback effect at Level 5.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1: Skill Power 540",
+              "Step 1: Knockback Effect",
+              "Cooldown 54 sec."
+            ],
             "asset": "img_icon_zoro_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 54,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Dragon Twister",
+            "description": [
+              "A mid-range attack with a Knockback effect.",
+              "Nullifies Stagger for a set period of time."
+            ],
+            "effect": [
+              "Step 1-2: Skill Power 270",
+              "Step 1-2: Knockback Effect",
+              "Cooldown 33 sec."
+            ],
             "asset": "img_icon_zoro_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 33,
             "isPowerGage": false,
             "isTimeGated": false
           }
@@ -38513,12 +38835,16 @@
     "teamBoost": "ATTACK",
     "bountyColours": [],
     "sizeTraits": [],
-    "characterTraits": [],
-    "traits1": [],
-    "traits2": [],
-    "boostTrait": [],
+    "characterTraits": ["Nullify Shock.", "Nullify Entrance."],
+    "traits1": [
+      "When in the area around your enemy's Treasure: Increase damage dealt by 30%."
+    ],
+    "traits2": [
+      "After KOing an enemy, CRIT: Boosted by 300% for 20 second(s). (Cannot Stack)"
+    ],
+    "boostTrait": ["Increase Critical Damage dealt by 20%."],
     "inflictsStatusEffect": [],
-    "nullifiesStatusEffect": [],
+    "nullifiesStatusEffect": ["SHOCK", "ENTRANCE"],
     "tags": [
       {
         "name": "ATTACKER"
@@ -38557,24 +38883,28 @@
         "sizeTraits": [],
         "skills": [
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum Pistol",
+            "description": ["A mid-range attack."],
+            "effect": ["Step 1: Skill Power 290", "Cooldown 31 sec."],
             "asset": "img_icon_luffy_orig01_skill_a.webp",
             "slot": 1,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 31,
             "isPowerGage": false,
             "isTimeGated": false
           },
           {
-            "name": "",
-            "description": [],
-            "effect": [],
+            "name": "Gum-Gum Gatling",
+            "description": ["A close-range multiple hit attack."],
+            "effect": [
+              "Step 1: Skill Power 22 (Max 16 Consecutive Hits)",
+              "Step 2: Skill Power 232",
+              "Cooldown 49 sec."
+            ],
             "asset": "img_icon_luffy_orig01_skill_b.webp",
             "slot": 2,
             "skillTransform": false,
-            "cooldown": 0,
+            "cooldown": 49,
             "isPowerGage": false,
             "isTimeGated": false
           }
