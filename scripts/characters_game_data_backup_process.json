@@ -584,7 +584,8 @@
     ],
     "selfStatusEffect": [],
     "type": [
-      "STATUS_EFFECT"
+      "STATUS_EFFECT",
+      "DOUBLE_TEAM"
     ],
     "characterStates": [
       {
@@ -617,7 +618,8 @@
             "skillTransform": false,
             "cooldown": 42,
             "type": [
-              "STATUS_EFFECT"
+              "STATUS_EFFECT",
+              "DOUBLE_TEAM"
             ],
             "inflictsStatusEffect": [
               "AFLAME"
@@ -1434,7 +1436,8 @@
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
     "type": [
-      "STATUS_EFFECT"
+      "STATUS_EFFECT",
+      "DOUBLE_TEAM"
     ],
     "characterStates": [
       {
@@ -1489,7 +1492,8 @@
             "skillTransform": false,
             "cooldown": 20,
             "type": [
-              "STATUS_EFFECT"
+              "STATUS_EFFECT",
+              "DOUBLE_TEAM"
             ],
             "inflictsStatusEffect": [
               "STUN"
@@ -4540,7 +4544,8 @@
     "selfStatusEffect": [],
     "type": [
       "STATUS_EFFECT",
-      "ONE_HP_WILL_BE_LEFT"
+      "ONE_HP_WILL_BE_LEFT",
+      "DOUBLE_TEAM"
     ],
     "characterStates": [
       {
@@ -4572,7 +4577,8 @@
             "skillTransform": false,
             "cooldown": 22,
             "type": [
-              "STATUS_EFFECT"
+              "STATUS_EFFECT",
+              "DOUBLE_TEAM"
             ],
             "inflictsStatusEffect": [
               "RECOVERY_BLOCK"
@@ -4603,7 +4609,8 @@
             "skillTransform": false,
             "cooldown": 44,
             "type": [
-              "STATUS_EFFECT"
+              "STATUS_EFFECT",
+              "DOUBLE_TEAM"
             ],
             "inflictsStatusEffect": [
               "STUN",
@@ -4834,7 +4841,8 @@
     "type": [
       "STATUS_EFFECT",
       "CREATE_SHIELD",
-      "CHARGE"
+      "CHARGE",
+      "DOUBLE_TEAM"
     ],
     "characterStates": [
       {
@@ -4864,7 +4872,8 @@
             "skillTransform": false,
             "cooldown": 37,
             "type": [
-              "CREATE_SHIELD"
+              "CREATE_SHIELD",
+              "DOUBLE_TEAM"
             ],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
@@ -5832,7 +5841,8 @@
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
     "type": [
-      "STATUS_EFFECT"
+      "STATUS_EFFECT",
+      "DOUBLE_TEAM"
     ],
     "characterStates": [
       {
@@ -5885,7 +5895,8 @@
             "skillTransform": false,
             "cooldown": 39,
             "type": [
-              "STATUS_EFFECT"
+              "STATUS_EFFECT",
+              "DOUBLE_TEAM"
             ],
             "inflictsStatusEffect": [
               "TREMOR"
@@ -8644,7 +8655,8 @@
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
     "type": [
-      "STATUS_EFFECT"
+      "STATUS_EFFECT",
+      "DOUBLE_TEAM"
     ],
     "characterStates": [
       {
@@ -8703,7 +8715,8 @@
             "skillTransform": false,
             "cooldown": 32,
             "type": [
-              "STATUS_EFFECT"
+              "STATUS_EFFECT",
+              "DOUBLE_TEAM"
             ],
             "inflictsStatusEffect": [
               "TREMOR"
@@ -9906,7 +9919,8 @@
     "selfStatusEffect": [],
     "type": [
       "STATUS_EFFECT",
-      "CREATE_SHIELD"
+      "CREATE_SHIELD",
+      "DOUBLE_TEAM"
     ],
     "characterStates": [
       {
@@ -9937,7 +9951,8 @@
             "skillTransform": false,
             "cooldown": 29,
             "type": [
-              "CREATE_SHIELD"
+              "CREATE_SHIELD",
+              "DOUBLE_TEAM"
             ],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
@@ -22662,7 +22677,8 @@
       "STATUS_EFFECT",
       "ONE_HP_WILL_BE_LEFT",
       "NULLIFY_ONE_HP_WILL_BE_LEFT",
-      "IGNORE_ENEMY_CAPTURE"
+      "IGNORE_ENEMY_CAPTURE",
+      "DOUBLE_TEAM"
     ],
     "characterStates": [
       {
@@ -22718,7 +22734,8 @@
             "cooldown": 22,
             "type": [
               "CREATE_SHIELD",
-              "STATUS_EFFECT"
+              "STATUS_EFFECT",
+              "DOUBLE_TEAM"
             ],
             "inflictsStatusEffect": [
               "STUN"
