@@ -4,11 +4,14 @@ import path from 'path';
     Script used to parse data from an Excel Medal Data Set and store them in the correct folder with the types defined by the Prisma Schema at prisma/schema.prisma
 */
 import { CharacterTag as CharacterTagEnum, CharacterTagType } from '@/constants/character-tags';
+import { CharacterMechanics } from '@/constants/mechanics';
+import { StatusEffect } from '@/constants/status-effects';
 import ExcelJS from 'exceljs';
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'fs';
 import { stdin, stdout } from 'node:process';
 import readline from 'node:readline/promises';
-import { BaseGrade, Character, CharacterState, CharacterTag, Class, Element, FourStarType, Rarity, Skill, Type } from './../src/generated/prisma/client';
+import { BaseGrade, Character, CharacterState, CharacterTag, Class, Element, FourStarType, Size, Skill, TeamBoost } from './../src/generated/prisma/client';
+import { CharacterGameData } from './seperate_main_game_data';
 
 export type CharacterTagExcel = Omit<CharacterTag, 'id'>
 export type SkillExcell = Omit<Skill, 'id' | 'characterStateId'>
@@ -24,6 +27,11 @@ export type CharacterExcel = {
 }
     & Omit<Character, 'id'>
 
+const rl = readline.createInterface({
+    input: stdin,
+    output: stdout
+});
+
 function stringFormatter(cell: ExcelJS.Cell): string {
 
     const value = cell.result as string ?? cell.value as string;
@@ -38,6 +46,12 @@ const characters: CharacterExcel[] = [];
 const nameRecord: Record<string, number> = {};
 
 
+let errorLog: string = ''
+
+function addLog(msg: string) {
+    errorLog += msg + '\n'
+}
+
 function save(output: string) {
 
     if (!existsSync(output)) {
@@ -51,6 +65,14 @@ function save(output: string) {
             'utf-8'
         );
         console.log('File characters.json saved successfully!');
+
+        if (errorLog) {
+            writeFileSync(
+                path.join('scripts', 'errorLog.txt'),
+                errorLog,
+                'utf-8'
+            );
+        }
 
     } catch (error) {
         console.error('Error saving file:', error);
@@ -78,42 +100,9 @@ function getDate(cell: ExcelJS.Cell): string {
 
 }
 
-function defaultSkill(slot: number, calcPath: string): SkillExcell {
-
-    return {
-        name: '',
-        description: [],
-        effect: [],
-        asset: 'img_icon_' + calcPath + '_skill_' + (slot === 1 ? 'a' : 'b') + '.webp',
-        slot,
-        skillTransform: false,
-        cooldown: 0,
-        isPowerGage: false,
-        isTimeGated: false
-
-    }
-}
-
-function defaultCharacterState(name: string, isBase: boolean, overrideClass: Class, calcPath: string): CharacterStateExcel {
-
-
-    return {
-        name,
-        isBase,
-        overrideBaseClass: isBase ? null : overrideClass,
-        overrideBaseElement: null,
-        overrideBaseSize: null,
-        stateTraits: [],
-        sizeTraits: [],
-        skills: isBase ? [defaultSkill(1, calcPath), defaultSkill(2, calcPath)] : []
-    }
-}
-
-function getElementClass(cell: ExcelJS.Cell, calcPath: string): {
-    type: Type[]
+function getElementClass(cell: ExcelJS.Cell, characterGameData: CharacterGameData, calcPath: string): {
     mainElement: Element,
     mainClass: Class,
-    characterStates: CharacterStateExcel[]
 } {
 
     const values = (cell.result as string ?? cell.value as string).trim().split(' ~ ')
@@ -122,29 +111,29 @@ function getElementClass(cell: ExcelJS.Cell, calcPath: string): {
     const gameClass = values[1].replaceAll(' ', '')
 
 
-    const types: Type[] = []
+    const types: CharacterMechanics[] = []
 
     const elements = element.split('-')
 
     if (elements.length > 1) {
-        types.push(Type.ELEMENT_CHANGE)
+        if (!(characterGameData.type.includes(CharacterMechanics.ELEMENT_CHANGE))) {
+            addLog(characterGameData.gameId + ' should had element change type.')
+        }
     }
 
     const classes = gameClass.split('-')
 
     if (classes.length > 1) {
-        types.push(Type.CLASS_CHANGE)
+        if (!(characterGameData.type.includes(CharacterMechanics.CLASS_CHANGE))) {
+            addLog(characterGameData.gameId + ' should had class change type.')
+        }
     }
 
 
     return {
-        type: types,
         mainElement: Element[elements[0].toUpperCase() as keyof typeof Element],
         mainClass: Class[classes[0].toUpperCase() as keyof typeof Class],
-        characterStates: classes.map((c, index) => {
-            const isBase = index === 0
-            return defaultCharacterState(c.charAt(0) + c.toLowerCase().slice(1), isBase, Class[c.toUpperCase() as keyof typeof Class], calcPath)
-        })
+
     }
 
 }
@@ -163,7 +152,7 @@ function getTags(cell: ExcelJS.Cell): CharacterTagExcel[] {
             }
         }
         if (!tagEnum) {
-            console.error('Didnt find: ' + formatedTag + ' original: ' + tag + ' values: ' + tagValues + 'cell: ' + cell.value + ' ' + cell.$col$row)
+            addLog('Didnt find: ' + formatedTag + ' original: ' + tag + ' values: ' + tagValues + 'cell: ' + cell.value + ' ' + cell.$col$row)
         }
         return {
             name: tagEnum
@@ -171,15 +160,15 @@ function getTags(cell: ExcelJS.Cell): CharacterTagExcel[] {
     })
 }
 
-function getRarityDetails(cell: ExcelJS.Cell): {
+function getGradeDetails(cell: ExcelJS.Cell): {
     baseGrade: BaseGrade,
     fourStarType: FourStarType | null,
-    rarity: Rarity | null
 } {
 
-    const values = (cell.result as string ?? cell.value as string).trim().split(' - ')
+    const values = (cell.result as string ?? cell.value as string).trim().split(' ~ ')
 
-    const rarity = values.length > 1 ? values[0].trim().toUpperCase() as keyof typeof Rarity : null
+
+
 
     const grade = values.length > 1 ? values[1].trim().toUpperCase() : values[0].trim().toUpperCase()
 
@@ -204,7 +193,6 @@ function getRarityDetails(cell: ExcelJS.Cell): {
     return {
         baseGrade,
         fourStarType,
-        rarity
     }
 
 }
@@ -246,7 +234,7 @@ async function determinePath(fullName: string, name: string, possiblePaths: Set<
     }
 
     if (res.length == 0) {
-        console.error('Not found: ' + fullName)
+        addLog('Not found: ' + fullName)
     }
 
 
@@ -257,37 +245,108 @@ async function determinePath(fullName: string, name: string, possiblePaths: Set<
         return value
     }
 
-    const rl = readline.createInterface({
-        input: stdin,
-        output: stdout
-    });
-
-    try {
-        const string = res.reduce((prev, r, i) => prev + ' ' + i + ' : ' + r + '\n', '')
-        let answered = false
-        while (!answered) {
-            const answer = await rl.question('Choose one for ' + fullName + ': \n' + string + '\n');
+    const string = res.reduce((prev, r, i) => prev + ' ' + i + ' : ' + r + '\n', '')
+    let answered = false
+    while (!answered) {
+        const answer = await rl.question('Choose one for ' + fullName + ': \n' + string + '\n');
+        const number = Number(answer)
+        if (!Number.isNaN(number) && number >= 0 && number < res.length) {
             const number = Number(answer)
-            if (!Number.isNaN(number) && number >= 0 && number < res.length) {
-                const number = Number(answer)
-                const value = res[number]
-                console.log('Chose: ' + value + ' for: ' + fullName)
-                possiblePaths.delete(value)
-                answered = true
-                return value
+            const value = res[number]
+            console.log('Chose: ' + value + ' for: ' + fullName)
+            possiblePaths.delete(value)
+            answered = true
+            return value
 
-            } else {
-                console.log('Wrong input. Choose between those numbers.');
-            }
+        } else {
+            console.log('Wrong input. Choose between those numbers.');
         }
-
-        return 'NOT FOUND'
-    } finally {
-        rl.close();
     }
+
+    return 'NOT FOUND'
+
 }
 
-async function characterRow(row: ExcelJS.Row, findGameId: Record<string, string>, knownPaths: Record<string, string>, possiblePaths: Set<string>): Promise<CharacterExcel> {
+function getGameData(gameId: string, characterGameData: CharacterGameData): {
+    mainSize: Size,
+    teamBoost: TeamBoost,
+    sizeTraits: string[],
+    characterTraits: string[],
+    traits1: string[],
+    traits2: string[],
+    boostTrait: string[],
+    inflictsStatusEffect: string[],
+    nullifiesStatusEffect: string[],
+    selfStatusEffect: string[],
+    type: string[],
+    characterStates: CharacterStateExcel[]
+} {
+    let mainSize: Size = Size.NORMAL
+    if (characterGameData.mainSize && characterGameData.mainSize in Size) {
+        mainSize = characterGameData.mainSize
+    } else {
+        addLog(gameId + ' somethint wrong in game data in mainSize.')
+    }
+
+    let teamBoost: TeamBoost = TeamBoost.ATTACK
+    if (characterGameData.teamBoost && characterGameData.teamBoost in TeamBoost) {
+        teamBoost = characterGameData.teamBoost
+    } else {
+        addLog(gameId + ' something wrong in game data in teamBoost.')
+    }
+
+    const inflictsStatusEffect: string[] = characterGameData.inflictsStatusEffect || []
+    if (characterGameData.inflictsStatusEffect) {
+        const temp = inflictsStatusEffect.filter(s => s in StatusEffect)
+
+        if (temp.length !== inflictsStatusEffect.length) {
+            addLog(gameId + ' something wrong in game data in inflictsStatusEffect.')
+        }
+    }
+
+    const nullifiesStatusEffect: string[] = characterGameData.nullifiesStatusEffect || []
+    if (characterGameData.nullifiesStatusEffect) {
+        const temp = nullifiesStatusEffect.filter(s => s in StatusEffect)
+
+        if (temp.length !== nullifiesStatusEffect.length) {
+            addLog(gameId + ' something wrong in game data in nullifiesStatusEffect.')
+        }
+    }
+
+    const type: string[] = characterGameData.type || []
+    if (characterGameData.type) {
+        const temp = type.filter(t => t in CharacterMechanics)
+        if (temp.length !== type.length) {
+            addLog(gameId + ' something wrong in game data in type.')
+        }
+
+        if ((!type.includes(CharacterMechanics.STATUS_EFFECT) && inflictsStatusEffect.length !== 0) || (type.includes(CharacterMechanics.STATUS_EFFECT) && inflictsStatusEffect.length === 0)) {
+            addLog(gameId + ' inconsistency between status effect and status effect applied.')
+        }
+    }
+
+
+    return {
+        mainSize,
+        teamBoost,
+        sizeTraits: characterGameData.sizeTraits || [],
+        characterTraits: characterGameData.characterTraits || [],
+        traits1: characterGameData.traits1 || [],
+        traits2: characterGameData.traits2 || [],
+        boostTrait: characterGameData.boostTrait || [],
+        inflictsStatusEffect,
+        nullifiesStatusEffect,
+        selfStatusEffect: [],
+        type,
+        characterStates: characterGameData.characterStates || []
+
+    }
+
+
+
+}
+
+async function characterRow(row: ExcelJS.Row, gameData: Record<string, CharacterGameData>, findGameId: Record<string, string>, knownPaths: Record<string, string>, possiblePaths: Set<string>, bountyColors: Record<string, string[]>): Promise<CharacterExcel> {
     const fullName = stringFormatter(row.getCell(4)).trim()
     const nameSplit = fullName.split('~')
     const name = nameSplit?.[1].trim().replace('Vinsmoke Neji', 'Vinsmoke Niji')
@@ -302,29 +361,24 @@ async function characterRow(row: ExcelJS.Row, findGameId: Record<string, string>
 
     const calcPath = knownPaths[gameId] ?? await determinePath(fullName, name, possiblePaths)
 
+    const characterGameData = gameData[gameId]
+
+
     const character: CharacterExcel = {
         name: name,
         charDescription: charDescription,
         gameId: gameId,
-        nameId: name,
+        nameId: gameData[gameId].nameId || name,
         dateAdded: new Date(getDate(row.getCell(10))),
         assetLarge: 'img_chara_' + calcPath + '_l.webp',
         assetCard: 'img_chara_' + calcPath + '_m.webp',
-        mainSize: 'NORMAL', //Manual Change 
-        teamBoost: 'ATTACK', //Manual Change
-        bountyColours: [], //Manual Change
-        sizeTraits: [], //Manual Change
-        characterTraits: [], //Manual Change
-        traits1: [], //Manual Change
-        traits2: [], //Manual Change
-        boostTrait: [], //Manual Change
-        inflictsStatusEffect: [], //Manual Change
-        nullifiesStatusEffect: [],
+        ...getGameData(gameId, characterGameData),
         tags: getTags(row.getCell(7)),
         medals: ['310100' + gameId, '310110' + gameId],
-        ...getRarityDetails(row.getCell(6)),
-        ...getElementClass(row.getCell(8), calcPath),
-
+        ...getGradeDetails(row.getCell(6)),
+        colab: ['FILM RED', 'STAMPED', 'ODYSSEY', 'FILM GOLD', 'FILM STRONG WORLD'].includes(charDescription.toUpperCase()) || name === 'Uta',
+        ...getElementClass(row.getCell(8), characterGameData, calcPath),
+        bountyColours: bountyColors[calcPath] || [],
 
         medalSetEvaluation: {}, //AI Eval
         partySupportEvaluation: {},  //AI Eval
@@ -335,7 +389,7 @@ async function characterRow(row: ExcelJS.Row, findGameId: Record<string, string>
     return character
 }
 
-async function characterParse(input: string, output: string, findGameId: Record<string, string>, knownPaths: Record<string, string>, possiblePaths: Set<string>) {
+async function characterParse(input: string, output: string, gameData: Record<string, CharacterGameData>, findGameId: Record<string, string>, knownPaths: Record<string, string>, possiblePaths: Set<string>, bountyColors: Record<string, string[]>) {
 
     try {
 
@@ -353,7 +407,7 @@ async function characterParse(input: string, output: string, findGameId: Record<
         });
 
         for (const row of rows) {
-            const character: CharacterExcel = await characterRow(row, findGameId, knownPaths, possiblePaths);
+            const character: CharacterExcel = await characterRow(row, gameData, findGameId, knownPaths, possiblePaths, bountyColors);
             characters.push(character);
         }
 
@@ -393,6 +447,16 @@ if (!existsSync('public/chars_large')) {
     process.exit(1);
 }
 
+if (!existsSync('public/bounty_colors')) {
+    console.error(`Missing public/bounty_colors folder. Please add this folder with all character bounty colors images.`);
+    process.exit(1);
+}
+
+if (!existsSync('scripts/characters_game_data.json')) {
+    console.error(`Missing scripts/characters_game_data.json file. Please add this file with all game data.`);
+    process.exit(1);
+}
+
 const rawData = readFileSync('scripts/characterId.json', 'utf-8');
 
 const findGameId: Record<string, string> = JSON.parse(rawData);
@@ -401,6 +465,10 @@ const findGameId: Record<string, string> = JSON.parse(rawData);
 const rawDataPath = readFileSync('scripts/paths.json', 'utf-8');
 
 const knownPaths: Record<string, string> = JSON.parse(rawDataPath);
+
+
+const gameData: Record<string, CharacterGameData> = JSON.parse(readFileSync('scripts/characters_game_data.json', 'utf-8'));
+
 
 function calculatePossiblePaths(): Set<string> {
     const ids = new Set<string>();
@@ -425,6 +493,38 @@ function calculatePossiblePaths(): Set<string> {
     );
 }
 
-const possiblePaths: Set<string> = calculatePossiblePaths()
 
-characterParse(input, output ?? defaultOutput, findGameId, knownPaths, possiblePaths)
+function calculateBountyColors(): Record<string, string[]> {
+    const bc: Record<string, string[]> = {};
+
+
+
+    const files = readdirSync('public/bounty_colors');
+
+    const regex = /(?<=img_chara_)(.+?01)/g;
+
+    for (const file of files) {
+        const match = file.match(regex);
+
+        if (match) {
+            const id = match[0]
+
+            if (!bc[id]) {
+                bc[id] = []
+            }
+            bc[id].push(file)
+        }
+    }
+
+
+    return bc
+}
+
+const possiblePaths: Set<string> = calculatePossiblePaths()
+const bountyColors = calculateBountyColors()
+
+try {
+    await characterParse(input, output ?? defaultOutput, gameData, findGameId, knownPaths, possiblePaths, bountyColors)
+} finally {
+    rl.close()
+}

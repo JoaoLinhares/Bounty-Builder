@@ -23,7 +23,6 @@ datasource db {
  * - Sizes
  * - Base Grades
  * - FourStarTypes
- * - Rarity
  * - Team Boosts
  * - Medal Types
  */
@@ -43,22 +42,6 @@ enum Class {
   RUNNER
 }
 
-enum Type {
-  TRANSFORM
-  ELEMENT_CHANGE
-  CLASS_CHANGE
-  SKILL_TRANSFORM
-  CHARACTER_SWAP
-  STATUS_EFFECT
-  SHIELD
-  POWER_GAGE
-  TREASURE_AREA_EFFECT
-  CREATE_ENTITY
-  STATE
-  COUNTER
-  IMIDIATE_KO
-}
-
 enum Size {
   NORMAL
   SMALL
@@ -76,11 +59,6 @@ enum FourStarType {
   BOUNTY_FEST
   EXTREME
   COLA
-}
-
-enum Rarity {
-  FREE
-  LIMITED
 }
 
 enum TeamBoost {
@@ -369,14 +347,14 @@ model Character {
   assetCard  String
 
   // Mechanics information
-  type        Type[]
+  type        String[]
   mainElement Element
   mainClass   Class
-  mainSize    Size    @default(NORMAL)
+  mainSize    Size     @default(NORMAL)
 
   baseGrade    BaseGrade              @default(FOUR_STAR)
   fourStarType FourStarType?
-  rarity       Rarity?
+  colab        Boolean                @default(false) 
   teamBoost    TeamBoost
   tags         CharacterTagRelation[]
 
@@ -391,6 +369,7 @@ model Character {
   boostTrait            String[]
   inflictsStatusEffect  String[]
   nullifiesStatusEffect String[]
+  selfStatusEffect      String[]
 
   // character states - base and others (convert to giant, zoan version, switch character, element/class change, etc.. )
   characterStates CharacterState[]
@@ -435,8 +414,9 @@ model Skill {
   skillTransform Boolean @default(false)
   cooldown       Int
 
-  isPowerGage Boolean @default(false)
-  isTimeGated Boolean @default(false)
+  type                 String[]
+  inflictsStatusEffect String[]
+  selfStatusEffect     String[]
 
   @@unique([characterStateId, slot, skillTransform])
 }

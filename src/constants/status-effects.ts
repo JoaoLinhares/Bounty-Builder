@@ -35,7 +35,10 @@ export enum StatusEffect {
     MAX_HP_REDUCTION = "MAX_HP_REDUCTION",
     ENTRANCE = "ENTRANCE",
     INCINERATE = "INCINERATE",
-    SHADOWLESS = "SHADOWLESS"
+    SHADOWLESS = "SHADOWLESS",
+    STEADY_RECOVERY = "STEADY_RECOVERY",
+    INVISIBILITY = "INVISIBILITY",
+    INVINCIBLE = "INVINCIBLE"
 }
 
 export type StatusEffectType = keyof typeof StatusEffect;
