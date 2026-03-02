@@ -17022,7 +17022,7 @@
     ],
     "inflictsStatusEffect": ["RECOVERY_BLOCK"],
     "nullifiesStatusEffect": ["STUN"],
-    "type": ["IMIDIATE_KO", "SKILL_TRANSFORM", "STATE", "STATUS_EFFECT"],
+    "type": ["INSTANT_KO", "SKILL_TRANSFORM", "STATE", "STATUS_EFFECT"],
     "characterStates": [
       {
         "name": "Runner",
@@ -18934,7 +18934,7 @@
     "boostTrait": ["Increase Critical Damage dealt by 20%."],
     "inflictsStatusEffect": ["RECOVERY_BLOCK"],
     "nullifiesStatusEffect": [],
-    "type": ["POWER_GAGE", "IMIDIATE_KO", "STATUS_EFFECT", "STATE"],
+    "type": ["POWER_GAGE", "INSTANT_KO", "STATUS_EFFECT", "STATE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -20617,7 +20617,7 @@
     "boostTrait": ["When spawning: Boosts Power Gauge by 2."],
     "inflictsStatusEffect": ["MAX_HP_REDUCTION"],
     "nullifiesStatusEffect": [],
-    "type": ["CLASS_CHANGE", "STATUS_EFFECT", "POWER_GAGE", "IMIDIATE_KO"],
+    "type": ["CLASS_CHANGE", "STATUS_EFFECT", "POWER_GAGE", "INSTANT_KO"],
     "characterStates": [
       {
         "name": "Defender",

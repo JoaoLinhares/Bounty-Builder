@@ -22,7 +22,8 @@ export type MedalExcel = {
 
 } & Omit<Medal, 'id'>
 function stringFormatter(cell: ExcelJS.Cell): string {
-    return (cell.value as string).replaceAll('_', '-').replaceAll('``', '"');
+    const val = cell.value ? String(cell.value) : '';
+    return val.replaceAll('_', '-').replaceAll('``', '"');
 }
 
 
@@ -205,7 +206,7 @@ function save(output: string) {
             JSON.stringify(Object.values(eventMedals), null, 2),
             'utf-8'
         );
-        console.log('File medals_ranked.json saved successfully!');
+        console.log('File medals_event.json saved successfully!');
 
 
         const trimmedObject = Object.fromEntries(

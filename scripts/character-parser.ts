@@ -4,7 +4,7 @@ import path from 'path';
     Script used to parse data from an Excel Medal Data Set and store them in the correct folder with the types defined by the Prisma Schema at prisma/schema.prisma
 */
 import { CharacterTag as CharacterTagEnum, CharacterTagType } from '@/constants/character-tags';
-import { CharacterMechanics } from '@/constants/mechanics';
+import { CharacterMechanics, SkillMechanics } from '@/constants/mechanics';
 import { StatusEffect } from '@/constants/status-effects';
 import ExcelJS from 'exceljs';
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'fs';
@@ -89,6 +89,9 @@ function getGameId(cell: ExcelJS.Cell, findGameId: Record<string, string>): stri
 function getDate(cell: ExcelJS.Cell): string {
     const date = (cell.formula as string);
 
+    if (!date) {
+        return '2019-01-31';
+    }
 
     const matches = date.match(/"(\d{4}-\d{2}-\d{2})"/g);
     if (matches) {
@@ -267,6 +270,84 @@ async function determinePath(fullName: string, name: string, possiblePaths: Set<
 
 }
 
+function defaultSkill(slot: number): SkillExcell {
+
+    return {
+        name: '',
+        description: [],
+        effect: [],
+        asset: '',
+        slot,
+        skillTransform: false,
+        cooldown: 0,
+        inflictsStatusEffect: [],
+        selfStatusEffect: [],
+        type: []
+
+    }
+}
+
+function defaultCharacterState(name: string): CharacterStateExcel {
+
+
+    return {
+        name,
+        isBase: true,
+        sizeTraits: [],
+        overrideBaseClass: null,
+        overrideBaseElement: null,
+        overrideBaseSize: null,
+        stateTraits: [],
+        skills: [defaultSkill(1), defaultSkill(2)]
+    }
+}
+
+function getCharStateGameData(gameId: string, characterGameData: CharacterGameData): CharacterStateExcel[] {
+
+    if (!characterGameData.characterStates || characterGameData.characterStates.length === 0) {
+        addLog(gameId + ' not found character states.')
+        return [defaultCharacterState('Normal')]
+    }
+
+    for (const state of characterGameData.characterStates) {
+        for (const skill of state.skills) {
+            const inflictsStatusEffect: string[] = skill.inflictsStatusEffect || []
+            if (skill.inflictsStatusEffect) {
+                const temp = inflictsStatusEffect.filter(s => s in StatusEffect)
+
+                if (temp.length !== inflictsStatusEffect.length) {
+                    addLog(gameId + ' something wrong in game data skill ' + skill.name + ' in inflictsStatusEffect.')
+                }
+            }
+
+            const selfStatusEffect: string[] = skill.selfStatusEffect || []
+            if (skill.selfStatusEffect) {
+                const temp = selfStatusEffect.filter(s => s in StatusEffect)
+
+                if (temp.length !== selfStatusEffect.length) {
+                    addLog(gameId + ' something wrong in game data in ' + skill.name + ' selfStatusEffect.')
+                }
+            }
+
+
+            const type: string[] = skill.type || []
+            if (skill.type) {
+                const temp = type.filter(t => t in SkillMechanics)
+                if (temp.length !== type.length) {
+                    addLog(gameId + ' something wrong in ' + skill.name + ' game data in type.')
+                }
+
+                if ((!type.includes(CharacterMechanics.STATUS_EFFECT) && inflictsStatusEffect.length !== 0) || (type.includes(CharacterMechanics.STATUS_EFFECT) && inflictsStatusEffect.length === 0)) {
+                    addLog(gameId + '  ' + skill.name + ' inconsistency between status effect and status effect applied.')
+                }
+            }
+        }
+    }
+
+    return characterGameData.characterStates
+}
+
+
 function getGameData(gameId: string, characterGameData: CharacterGameData): {
     mainSize: Size,
     teamBoost: TeamBoost,
@@ -313,6 +394,16 @@ function getGameData(gameId: string, characterGameData: CharacterGameData): {
         }
     }
 
+    const selfStatusEffect: string[] = characterGameData.selfStatusEffect || []
+    if (characterGameData.selfStatusEffect) {
+        const temp = selfStatusEffect.filter(s => s in StatusEffect)
+
+        if (temp.length !== selfStatusEffect.length) {
+            addLog(gameId + ' something wrong in game data in selfStatusEffect.')
+        }
+    }
+
+
     const type: string[] = characterGameData.type || []
     if (characterGameData.type) {
         const temp = type.filter(t => t in CharacterMechanics)
@@ -336,9 +427,9 @@ function getGameData(gameId: string, characterGameData: CharacterGameData): {
         boostTrait: characterGameData.boostTrait || [],
         inflictsStatusEffect,
         nullifiesStatusEffect,
-        selfStatusEffect: [],
+        selfStatusEffect,
         type,
-        characterStates: characterGameData.characterStates || []
+        characterStates: getCharStateGameData(gameId, characterGameData)
 
     }
 
@@ -349,7 +440,7 @@ function getGameData(gameId: string, characterGameData: CharacterGameData): {
 async function characterRow(row: ExcelJS.Row, gameData: Record<string, CharacterGameData>, findGameId: Record<string, string>, knownPaths: Record<string, string>, possiblePaths: Set<string>, bountyColors: Record<string, string[]>): Promise<CharacterExcel> {
     const fullName = stringFormatter(row.getCell(4)).trim()
     const nameSplit = fullName.split('~')
-    const name = nameSplit?.[1].trim().replace('Vinsmoke Neji', 'Vinsmoke Niji')
+    const name = nameSplit?.[1]?.trim().replace('Vinsmoke Neji', 'Vinsmoke Niji') ?? fullName
     const charDescription = nameSplit?.[0].trim()
     if (nameRecord[name]) {
         nameRecord[name] += 1

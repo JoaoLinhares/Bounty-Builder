@@ -46,3 +46,6 @@ next-env.d.ts
 
 # original images
 images/original
+
+# scripts logs
+/scripts/*.txt

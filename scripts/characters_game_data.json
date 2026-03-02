@@ -19779,7 +19779,7 @@
     ],
     "selfStatusEffect": [],
     "type": [
-      "IMIDIATE_KO",
+      "INSTANT_KO",
       "SKILL_TRANSFORM",
       "STATE",
       "STATUS_EFFECT",
@@ -21980,7 +21980,7 @@
     "selfStatusEffect": [],
     "type": [
       "POWER_GAGE",
-      "IMIDIATE_KO",
+      "INSTANT_KO",
       "STATUS_EFFECT",
       "STATE",
       "ONE_HP_WILL_BE_LEFT",
@@ -23940,7 +23940,7 @@
       "CLASS_CHANGE",
       "STATUS_EFFECT",
       "POWER_GAGE",
-      "IMIDIATE_KO",
+      "INSTANT_KO",
       "RECOVER_HP_WHEN_KOED",
       "IGNORE_ENEMY_REFILL",
       "IGONORES_OBSTACLE"

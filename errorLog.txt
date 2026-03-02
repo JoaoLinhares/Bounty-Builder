@@ -1,4 +1,0 @@
-335 something wrong in game data in type.
-318 something wrong in game data in type.
-298 something wrong in game data in type.
-100 inconsistency between status effect and status effect applied.
