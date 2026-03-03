@@ -1,8 +1,5 @@
 import path from 'path';
 
-/*
-    Script used to parse data from an Excel Medal Data Set and store them in the correct folder with the types defined by the Prisma Schema at prisma/schema.prisma
-*/
 import { CharacterTag as CharacterTagEnum, CharacterTagType } from '@/constants/character-tags';
 import { CharacterMechanics, SkillMechanics } from '@/constants/mechanics';
 import { StatusEffect } from '@/constants/status-effects';
@@ -524,7 +521,7 @@ if (!input) {
 }
 
 if (!existsSync('scripts/characterId.json')) {
-    console.error(`Missing helper characterId.json file on scripts folder. Please generate the medal data first.`);
+    console.error(`Missing helper characterId.json file on scripts folder. Please generate the characterId data first.`);
     process.exit(1);
 }
 

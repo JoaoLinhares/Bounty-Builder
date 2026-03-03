@@ -1,8 +1,5 @@
 import path from "path";
 
-/*
-    Script used to parse data from an Excel Medal Data Set and store them in the correct folder with the types defined by the Prisma Schema at prisma/schema.prisma
-*/
 import { CharacterMechanics, SkillMechanics } from "@/constants/mechanics";
 import { StatusEffect } from "@/constants/status-effects";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
@@ -13,7 +10,7 @@ import {
   CharacterState,
   CharacterTag,
   Skill,
-} from "./../src/generated/prisma/client";
+} from "../src/generated/prisma/client";
 export type CharacterTagExcel = Omit<CharacterTag, "id">;
 export type SkillExcell = {
   isPowerGage?: boolean;
@@ -404,12 +401,12 @@ async function skillTUI(
   if (missingMechanics.length > 0) {
     console.log(
       "Missing Skill Mechanics Detected for " +
-        id +
-        " : " +
-        missingMechanics +
-        " skill: " +
-        skill.name +
-        "\n",
+      id +
+      " : " +
+      missingMechanics +
+      " skill: " +
+      skill.name +
+      "\n",
     );
 
     console.log(prettyPrint(skillDetails, regexSkillsOnly));
@@ -463,12 +460,12 @@ async function skillTUI(
   if (missingSE.length > 0) {
     console.log(
       "Missing Skill Statues Effect Detected for " +
-        id +
-        " : " +
-        missingSE +
-        " skill: " +
-        skill.name +
-        "\n",
+      id +
+      " : " +
+      missingSE +
+      " skill: " +
+      skill.name +
+      "\n",
     );
 
     console.log(prettyPrint(skillDetails, regexStatusOnly));
@@ -535,10 +532,10 @@ try {
     } else {
       console.log(
         "--------------------" +
-          character.gameId +
-          " " +
-          character.name +
-          "--------------------",
+        character.gameId +
+        " " +
+        character.name +
+        "--------------------",
       );
 
       if (!character.selfStatusEffect) {
@@ -620,10 +617,10 @@ try {
     backUpSave(output || defaultOutput, new_game_data);
     console.log(
       "--------------------" +
-        character.gameId +
-        " " +
-        character.name +
-        " Done --------------------",
+      character.gameId +
+      " " +
+      character.name +
+      " Done --------------------",
     );
   }
   save(output || defaultOutput, new_game_data);

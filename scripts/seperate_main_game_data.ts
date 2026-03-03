@@ -1,8 +1,5 @@
 import path from "path";
 
-/*
-    Script used to parse data from an Excel Medal Data Set and store them in the correct folder with the types defined by the Prisma Schema at prisma/schema.prisma
-*/
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { Character } from "../src/generated/prisma/browser";
 import {

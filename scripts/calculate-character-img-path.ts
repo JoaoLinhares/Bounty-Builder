@@ -1,7 +1,4 @@
 
-/*
-    Script used to parse data from an Excel Medal Data Set and store them in the correct folder with the types defined by the Prisma Schema at prisma/schema.prisma
-*/
 import ExcelJS from 'exceljs';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import path from 'path';
@@ -78,7 +75,7 @@ if (!input) {
 }
 
 if (!existsSync('scripts/characterId.json')) {
-    console.error(`Missing helper characterId.json file on scripts folder. Please generate the medal data first.`);
+    console.error(`Missing helper characterId.json file on scripts folder. Please generate the characterId data first.`);
     process.exit(1);
 }
 
