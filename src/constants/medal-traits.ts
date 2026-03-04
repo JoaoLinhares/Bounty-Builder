@@ -43,6 +43,10 @@ export enum MedalTrait {
     STATUS_REDUCTION = "STATUS_REDUCTION",
     STATUS_NULLIFY_CHANCE = "STATUS_NULLIFY_CHANCE",
     STATUS_INFLICT_CHANCE = "STATUS_INFLICT_CHANCE",
+
+
+    // --- SPECIAL ---
+    EXP_INCREASE = "EXP_INCREASE"
 }
 
 export type MedalTraitType = keyof typeof MedalTrait;

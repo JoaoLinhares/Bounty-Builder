@@ -1,0 +1,87 @@
+[
+  {
+    "gameId": "310210001",
+    "asset": "img_icon_medal_310210001.webp",
+    "characterId": null,
+    "name": "Straw Hat Pirates",
+    "type": "SPECIAL",
+    "tags": [
+      {
+        "name": "STRAW_HAT_PIRATES"
+      }
+    ],
+    "uniqueTraitDescription": "Increase the EXP Orbs you earn as Participation Rewards in League Battles by 25% when equipped to a Battle Character.",
+    "uniqueConstraints": [],
+    "uniqueTraits": [
+      {
+        "description": "Increase the EXP Orbs you earn as Participation Rewards in League Battles by 25% when equipped to a Battle Character",
+        "trait": "EXP_INCREASE",
+        "value": 25,
+        "time": null,
+        "statusEffect": null
+      }
+    ]
+  },
+  {
+    "gameId": "310210002",
+    "asset": "img_icon_medal_310210002.webp",
+    "characterId": null,
+    "name": "Roger Pirates",
+    "type": "SPECIAL",
+    "tags": [
+      {
+        "name": "ROGER_PIRATES_EX_ROGER_PIRATES"
+      }
+    ],
+    "uniqueTraitDescription": "When attacking a character type \"Whitebeard Pirates\" enemy: Increase damage dealt by 5%.",
+    "uniqueConstraints": [
+      {
+        "description": "When attacking a character type \"Whitebeard Pirates\" enemy",
+        "constraint": "ON_ATTACK_TAG",
+        "value": null,
+        "tag": "WHITEBEARD_PIRATES",
+        "statusEffect": null
+      }
+    ],
+    "uniqueTraits": [
+      {
+        "description": "Increase damage dealt by 5%",
+        "trait": "DMG_INCREASE",
+        "value": 5,
+        "time": null,
+        "statusEffect": null
+      }
+    ]
+  },
+  {
+    "gameId": "310210003",
+    "asset": "img_icon_medal_310210003.webp",
+    "characterId": null,
+    "name": "Whitebeard Pirates",
+    "type": "SPECIAL",
+    "tags": [
+      {
+        "name": "WHITEBEARD_PIRATES"
+      }
+    ],
+    "uniqueTraitDescription": "When attacking a character type \"Roger Pirates / Ex-Roger Pirates\" enemy: Increase damage dealt by 5%.",
+    "uniqueConstraints": [
+      {
+        "description": "When attacking a character type \"Roger Pirates / Ex-Roger Pirates\" enemy",
+        "constraint": "ON_ATTACK_TAG",
+        "value": null,
+        "tag": "ROGER_PIRATES_EX_ROGER_PIRATES",
+        "statusEffect": null
+      }
+    ],
+    "uniqueTraits": [
+      {
+        "description": "Increase damage dealt by 5%",
+        "trait": "DMG_INCREASE",
+        "value": 5,
+        "time": null,
+        "statusEffect": null
+      }
+    ]
+  }
+]

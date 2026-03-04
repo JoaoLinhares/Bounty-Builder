@@ -177,6 +177,13 @@ export const traitMap: Record<MedalTraitType,
     STATUS_REDUCTION: () => {
         return undefined
     },
+
+    // ---- SPECIAL -----
+    EXP_INCREASE: (trait: string) => {
+        const match = trait.match(/Increase the EXP Orbs you earn as Participation Rewards in League Battles by (\d+)% when equipped to a Battle Character$/i);
+        return match ? traitValue(trait, 'EXP_INCREASE', Number(match[1])) : undefined;
+    }
+
 };
 export function getUniqueTrait(trait: string): UniqueTraitExcel | undefined {
 

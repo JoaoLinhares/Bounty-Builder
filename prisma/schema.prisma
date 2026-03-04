@@ -74,6 +74,7 @@ enum MedalType {
   CHARACTER
   CHARACTER_RANKING
   EVENT
+  SPECIAL
 }
 
 // -------------------------------------------------------------------------------------
@@ -354,7 +355,7 @@ model Character {
 
   baseGrade    BaseGrade              @default(FOUR_STAR)
   fourStarType FourStarType?
-  colab        Boolean                @default(false) 
+  colab        Boolean                @default(false)
   teamBoost    TeamBoost
   tags         CharacterTagRelation[]
 
