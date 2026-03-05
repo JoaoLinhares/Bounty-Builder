@@ -2,25 +2,16 @@
     Script used to parse data from an Excel Medal Data Set and store them in the correct folder with the types defined by the Prisma Schema at prisma/schema.prisma
 */
 import { MedalTag as EnumMedalTag, MedalTagType } from '@/constants/medal-tags';
-import { Medal, MedalTag, MedalType, UniqueTrait, UniqueTraitConstraint } from '@/generated/prisma/client';
+import { MedalType } from '@/generated/prisma/client';
 import ExcelJS from 'exceljs';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
 
 import path from 'path';
 import { getUniqueTraitConstraint } from './constraint-helper';
 import { getUniqueTrait } from './trait-helper';
+import { MedalExcel, MedalTagExcel, UniqueTraitConstraintExcel, UniqueTraitExcel } from './type';
 
 
-export type UniqueTraitConstraintExcel = Omit<UniqueTraitConstraint, 'id'>
-export type UniqueTraitExcel = Omit<UniqueTrait, 'id'>
-type MedalTagExcel = Omit<MedalTag, 'id'>
-
-export type MedalExcel = {
-    tags: MedalTagExcel[],
-    uniqueConstraints: UniqueTraitConstraintExcel[],
-    uniqueTraits: UniqueTraitExcel[],
-
-} & Omit<Medal, 'id'>
 function stringFormatter(cell: ExcelJS.Cell): string {
     const val = cell.value ? String(cell.value) : '';
     return val.replaceAll('_', '-').replaceAll('``', '"');

@@ -293,8 +293,8 @@
       "COUNTER",
       "CREATE_SHIELD",
       "NULLIFY_ONE_HP_WILL_BE_LEFT",
-      "NULIFY_RECOVER_HP_WHEN_KOED",
-      "IGONORES_OBSTACLE"
+      "NULLIFY_RECOVER_HP_WHEN_KOED",
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -399,7 +399,7 @@
             "slot": 2,
             "skillTransform": true,
             "cooldown": 0,
-            "type": ["POWER_GAGE", "IGONORES_OBSTACLE"],
+            "type": ["POWER_GAGE", "IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -484,9 +484,9 @@
       "CLASS_CHANGE",
       "COUNTER",
       "IGNORE_ENEMY_CAPTURE",
-      "NULIFY_RECOVER_HP_WHEN_KOED",
+      "NULLIFY_RECOVER_HP_WHEN_KOED",
       "ONE_HP_WILL_BE_LEFT",
-      "IGONORES_OBSTACLE",
+      "IGNORES_OBSTACLE",
       "MOVABLE_SKILL"
     ],
     "characterStates": [
@@ -521,7 +521,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 27,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -678,7 +678,7 @@
       "IGNORE_ENEMY_CAPTURE",
       "ONE_HP_WILL_BE_LEFT",
       "NULLIFY_ONE_HP_WILL_BE_LEFT",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -737,7 +737,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 32,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -1095,10 +1095,10 @@
     "selfStatusEffect": [],
     "type": [
       "CHARACTER_SWAP",
-      "NULIFY_RECOVER_HP_WHEN_KOED",
+      "NULLIFY_RECOVER_HP_WHEN_KOED",
       "ONE_HP_WILL_BE_LEFT",
       "NULLIFY_ONE_HP_WILL_BE_LEFT",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -1133,7 +1133,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 27,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -1300,7 +1300,7 @@
       "STATUS_EFFECT",
       "TREASURE_AREA_EFFECT",
       "IGNORE_ENEMY_CAPTURE",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -1337,7 +1337,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 29,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["CONFUSE"],
             "selfStatusEffect": []
           },
@@ -1431,7 +1431,7 @@
     "type": [
       "STATUS_EFFECT",
       "NULLIFY_ONE_HP_WILL_BE_LEFT",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -1494,7 +1494,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 27,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -1565,7 +1565,7 @@
       "INSTANT_KO",
       "RECOVER_HP_WHEN_KOED",
       "IGNORE_ENEMY_REFILL",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -1633,7 +1633,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 28,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -2029,7 +2029,7 @@
       "ELEMENT_CHANGE",
       "STATE",
       "STATUS_EFFECT",
-      "IGONORES_OBSTACLE",
+      "IGNORES_OBSTACLE",
       "ONE_HP_WILL_BE_LEFT"
     ],
     "characterStates": [
@@ -2172,7 +2172,7 @@
       "ONE_HP_WILL_BE_LEFT",
       "IGNORE_ENEMY_CAPTURE",
       "CHARGE",
-      "IGONORES_OBSTACLE",
+      "IGNORES_OBSTACLE",
       "MOVABLE_SKILL"
     ],
     "characterStates": [
@@ -2245,7 +2245,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 37,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["STUN"],
             "selfStatusEffect": []
           }
@@ -2314,7 +2314,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 30,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -2507,7 +2507,7 @@
       "POWER_GAGE",
       "IGNORE_ENEMY_CAPTURE",
       "MOVABLE_SKILL",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -2543,7 +2543,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 35,
-            "type": ["MOVABLE_SKILL", "IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["MOVABLE_SKILL", "IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["SHOCK"],
             "selfStatusEffect": []
           },
@@ -2765,7 +2765,7 @@
     "inflictsStatusEffect": ["RECOVERY_BLOCK"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["TREASURE_AREA_EFFECT", "STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["TREASURE_AREA_EFFECT", "STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -2826,7 +2826,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 37,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["RECOVERY_BLOCK"],
             "selfStatusEffect": []
           }
@@ -2906,7 +2906,7 @@
       "ELEMENT_CHANGE",
       "SKILL_TRANSFORM",
       "NULLIFY_ONE_HP_WILL_BE_LEFT",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -2943,7 +2943,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 44,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -3439,7 +3439,7 @@
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["COUNTER", "IGONORES_OBSTACLE"],
+    "type": ["COUNTER", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -3467,7 +3467,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 22,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -3495,7 +3495,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 29,
-            "type": ["COUNTER", "IGONORES_OBSTACLE"],
+            "type": ["COUNTER", "IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -3799,7 +3799,7 @@
       "STATUS_EFFECT",
       "STATE",
       "ONE_HP_WILL_BE_LEFT",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -3838,7 +3838,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 20,
-            "type": ["STATE", "IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["STATE", "IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["RECOVERY_BLOCK"],
             "selfStatusEffect": []
           },
@@ -3929,7 +3929,7 @@
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["CREATE_SHIELD", "IGONORES_OBSTACLE"],
+    "type": ["CREATE_SHIELD", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -3959,7 +3959,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 20,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -4296,7 +4296,7 @@
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["DEFENSIVE_SHIELD", "STATE", "MOVABLE_SKILL", "IGONORES_OBSTACLE"],
+    "type": ["DEFENSIVE_SHIELD", "STATE", "MOVABLE_SKILL", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -4351,7 +4351,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 37,
-            "type": ["MOVABLE_SKILL", "IGONORES_OBSTACLE"],
+            "type": ["MOVABLE_SKILL", "IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -5042,8 +5042,8 @@
       "DEFENSIVE_SHIELD",
       "POWER_GAGE",
       "SKILL_TRANSFORM",
-      "NULIFY_RECOVER_HP_WHEN_KOED",
-      "IGONORES_OBSTACLE"
+      "NULLIFY_RECOVER_HP_WHEN_KOED",
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -5092,7 +5092,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 22,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -5115,7 +5115,7 @@
             "slot": 2,
             "skillTransform": true,
             "cooldown": 0,
-            "type": ["POWER_GAGE", "IGONORES_OBSTACLE"],
+            "type": ["POWER_GAGE", "IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -5784,10 +5784,10 @@
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
     "type": [
-      "NULIFY_RECOVER_HP_WHEN_KOED",
+      "NULLIFY_RECOVER_HP_WHEN_KOED",
       "NULLIFY_ONE_HP_WILL_BE_LEFT",
       "MOVABLE_SKILL",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -5838,7 +5838,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 24,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -5896,7 +5896,7 @@
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["IGONORES_OBSTACLE"],
+    "type": ["IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -5945,7 +5945,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 37,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -6536,7 +6536,7 @@
       "STATE",
       "STATUS_EFFECT",
       "ONE_HP_WILL_BE_LEFT",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -6567,7 +6567,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 28,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["RECOVERY_BLOCK"],
             "selfStatusEffect": []
           },
@@ -6801,7 +6801,7 @@
     "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -6834,7 +6834,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 31,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -6927,7 +6927,7 @@
       "CLASS_CHANGE",
       "TRANSFORM",
       "STATUS_EFFECT",
-      "NULIFY_RECOVER_HP_WHEN_KOED"
+      "NULLIFY_RECOVER_HP_WHEN_KOED"
     ],
     "characterStates": [
       {
@@ -7331,7 +7331,7 @@
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["IGONORES_OBSTACLE", "CHARGE"],
+    "type": ["IGNORES_OBSTACLE", "CHARGE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -7365,7 +7365,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 29,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -7457,7 +7457,7 @@
       "STATE",
       "STATUS_EFFECT",
       "IGNORE_ENEMY_CAPTURE",
-      "NULIFY_RECOVER_HP_WHEN_KOED"
+      "NULLIFY_RECOVER_HP_WHEN_KOED"
     ],
     "characterStates": [
       {
@@ -7828,7 +7828,7 @@
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["IGONORES_OBSTACLE"],
+    "type": ["IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -7856,7 +7856,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 23,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -7878,7 +7878,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 51,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -8267,7 +8267,7 @@
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
     "type": [
-      "NULIFY_RECOVER_HP_WHEN_KOED",
+      "NULLIFY_RECOVER_HP_WHEN_KOED",
       "ONE_HP_WILL_BE_LEFT",
       "MOVABLE_SKILL"
     ],
@@ -8609,7 +8609,7 @@
     "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": ["STUN"],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGNORE_ENEMY_CAPTURE", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORE_ENEMY_CAPTURE", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Runner",
@@ -8671,7 +8671,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 32,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["STUN"],
             "selfStatusEffect": []
           }
@@ -10108,7 +10108,7 @@
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["IGONORES_OBSTACLE", "ONE_HP_WILL_BE_LEFT"],
+    "type": ["IGNORES_OBSTACLE", "ONE_HP_WILL_BE_LEFT"],
     "characterStates": [
       {
         "name": "Runner",
@@ -10943,7 +10943,7 @@
       "STATUS_EFFECT",
       "COUNTER",
       "IGNORE_ENEMY_REFILL",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -10984,7 +10984,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 28,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["SHOCK"],
             "selfStatusEffect": []
           },
@@ -11009,7 +11009,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 0,
-            "type": ["TIME_GATED", "IGONORES_OBSTACLE"],
+            "type": ["TIME_GATED", "IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -11276,7 +11276,7 @@
     "inflictsStatusEffect": ["CAPTURE_BLOCK"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "ONE_HP_WILL_BE_LEFT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "ONE_HP_WILL_BE_LEFT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -11326,7 +11326,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 29,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -11390,7 +11390,7 @@
       "CHARACTER_SWAP",
       "STATUS_EFFECT",
       "IGNORE_ENEMY_CAPTURE",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -11502,7 +11502,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 39,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -12177,7 +12177,7 @@
       "STATUS_EFFECT",
       "SELF_STATUS_EFFECT",
       "ONE_HP_WILL_BE_LEFT",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -12234,7 +12234,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 39,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["SHOCK"],
             "selfStatusEffect": []
           }
@@ -12423,7 +12423,7 @@
     "inflictsStatusEffect": ["FREEZE"],
     "nullifiesStatusEffect": ["SHOCK", "STOLEN_HEART"],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "COUNTER", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "COUNTER", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -12777,7 +12777,7 @@
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
     "type": [
-      "NULIFY_RECOVER_HP_WHEN_KOED",
+      "NULLIFY_RECOVER_HP_WHEN_KOED",
       "NULLIFY_ONE_HP_WILL_BE_LEFT",
       "STATUS_EFFECT"
     ],
@@ -13845,7 +13845,7 @@
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["IGONORES_OBSTACLE"],
+    "type": ["IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -13876,7 +13876,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 22,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -14099,7 +14099,7 @@
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": ["STUN"],
     "selfStatusEffect": [],
-    "type": ["ELEMENT_CHANGE", "NULIFY_RECOVER_HP_WHEN_KOED", "CHARGE"],
+    "type": ["ELEMENT_CHANGE", "NULLIFY_RECOVER_HP_WHEN_KOED", "CHARGE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -14376,7 +14376,7 @@
       "STATUS_EFFECT",
       "IGNORE_ENEMY_REFILL",
       "IGNORE_ENEMY_CAPTURE",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -14441,7 +14441,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 31,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -15121,7 +15121,7 @@
     "inflictsStatusEffect": ["RECOVERY_BLOCK"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Runner",
@@ -15155,7 +15155,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 35,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["RECOVERY_BLOCK"],
             "selfStatusEffect": []
           },
@@ -16049,7 +16049,7 @@
     "inflictsStatusEffect": ["INTIMIDATE"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -16099,7 +16099,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 34,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -16539,7 +16539,7 @@
       "POWER_GAGE",
       "STATE",
       "IGNORE_ENEMY_REFILL",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -16631,7 +16631,7 @@
             "slot": 2,
             "skillTransform": true,
             "cooldown": 0,
-            "type": ["POWER_GAGE", "STATE", "IGONORES_OBSTACLE"],
+            "type": ["POWER_GAGE", "STATE", "IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -19457,7 +19457,7 @@
     "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Runner",
@@ -19510,7 +19510,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 32,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["STUN"],
             "selfStatusEffect": []
           }
@@ -20038,7 +20038,7 @@
     "inflictsStatusEffect": ["SHOCK"],
     "nullifiesStatusEffect": ["AFLAME", "INCINERATE"],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -20070,7 +20070,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 27,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["SHOCK"],
             "selfStatusEffect": []
           },
@@ -21205,7 +21205,7 @@
     "inflictsStatusEffect": ["FREEZE", "CONFUSE"],
     "nullifiesStatusEffect": ["SHOCK", "STOLEN_HEART"],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -21239,7 +21239,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 15,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["CONFUSE"],
             "selfStatusEffect": []
           },
@@ -23806,7 +23806,7 @@
     "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": ["STUN"],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -23837,7 +23837,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 29,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -25174,7 +25174,7 @@
     "inflictsStatusEffect": ["SHADOWLESS", "TREMOR"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -25205,7 +25205,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 38,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -25425,7 +25425,7 @@
     "inflictsStatusEffect": ["NEGATIVE"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -25480,7 +25480,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 39,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["NEGATIVE"],
             "selfStatusEffect": []
           }
@@ -25674,7 +25674,7 @@
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["ONE_HP_WILL_BE_LEFT", "CHARGE", "IGONORES_OBSTACLE"],
+    "type": ["ONE_HP_WILL_BE_LEFT", "CHARGE", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -25708,7 +25708,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 41,
-            "type": ["CHARGE", "IGONORES_OBSTACLE"],
+            "type": ["CHARGE", "IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -26157,7 +26157,7 @@
       "STATUS_EFFECT",
       "IGNORE_ENEMY_CAPTURE",
       "CHARGE",
-      "IGONORES_OBSTACLE"
+      "IGNORES_OBSTACLE"
     ],
     "characterStates": [
       {
@@ -26227,7 +26227,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 42,
-            "type": ["CHARGE", "IGONORES_OBSTACLE"],
+            "type": ["CHARGE", "IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -26752,7 +26752,7 @@
     "inflictsStatusEffect": ["AFLAME", "STUN"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "STATE", "TRANSFORM", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "STATE", "TRANSFORM", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Attacker",
@@ -26793,7 +26793,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 14,
-            "type": ["STATE", "IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["STATE", "IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["AFLAME"],
             "selfStatusEffect": []
           },
@@ -29145,7 +29145,7 @@
     "inflictsStatusEffect": ["GRAVITY"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -29209,7 +29209,7 @@
             "slot": 2,
             "skillTransform": false,
             "cooldown": 55,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           }
@@ -30614,7 +30614,7 @@
     "inflictsStatusEffect": [],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["IGONORES_OBSTACLE"],
+    "type": ["IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -30642,7 +30642,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 35,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -31683,7 +31683,7 @@
     "inflictsStatusEffect": ["SHOCK", "AFLAME"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -31711,7 +31711,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 37,
-            "type": ["IGONORES_OBSTACLE", "STATUS_EFFECT"],
+            "type": ["IGNORES_OBSTACLE", "STATUS_EFFECT"],
             "inflictsStatusEffect": ["SHOCK"],
             "selfStatusEffect": []
           },
@@ -32008,7 +32008,7 @@
     "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -32037,7 +32037,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 32,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },
@@ -34216,7 +34216,7 @@
     "inflictsStatusEffect": ["STUN"],
     "nullifiesStatusEffect": [],
     "selfStatusEffect": [],
-    "type": ["STATUS_EFFECT", "IGONORES_OBSTACLE"],
+    "type": ["STATUS_EFFECT", "IGNORES_OBSTACLE"],
     "characterStates": [
       {
         "name": "Defender",
@@ -34244,7 +34244,7 @@
             "slot": 1,
             "skillTransform": false,
             "cooldown": 24,
-            "type": ["IGONORES_OBSTACLE"],
+            "type": ["IGNORES_OBSTACLE"],
             "inflictsStatusEffect": [],
             "selfStatusEffect": []
           },

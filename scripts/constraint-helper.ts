@@ -1,7 +1,7 @@
 import { CharacterTag, CharacterTagType } from "@/constants/character-tags";
 import { MedalTraitConstraintType } from "@/constants/medal-traits";
 import { StatusEffect, StatusEffectType } from "@/constants/status-effects";
-import { UniqueTraitConstraintExcel } from "./medal-parser";
+import { UniqueTraitConstraintExcel } from './type';
 
 
 function constraintSimple(description: string, constraint: MedalTraitConstraintType): UniqueTraitConstraintExcel {

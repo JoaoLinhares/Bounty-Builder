@@ -3,7 +3,7 @@ import { CharacterTag, CharacterTagType } from '@/constants/character-tags';
 import ExcelJS from 'exceljs';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import path from 'path';
-import { CharacterExcel } from './character-parser';
+import { CharacterExcel } from './type';
 
 let errorLog: string = ''
 

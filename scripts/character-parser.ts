@@ -7,22 +7,10 @@ import ExcelJS from 'exceljs';
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'fs';
 import { stdin, stdout } from 'node:process';
 import readline from 'node:readline/promises';
-import { BaseGrade, Character, CharacterState, CharacterTag, Class, Element, FourStarType, Size, Skill, TeamBoost } from './../src/generated/prisma/client';
+import { BaseGrade, Class, Element, FourStarType, Size, TeamBoost } from './../src/generated/prisma/client';
 import { CharacterGameData } from './seperate_main_game_data';
+import { CharacterExcel, CharacterStateExcel, CharacterTagExcel, SkillExcell } from './type';
 
-export type CharacterTagExcel = Omit<CharacterTag, 'id'>
-export type SkillExcell = Omit<Skill, 'id' | 'characterStateId'>
-
-export type CharacterStateExcel = {
-    skills: SkillExcell[]
-} & Omit<CharacterState, 'id' | 'characterId'>
-
-export type CharacterExcel = {
-    tags: CharacterTagExcel[],
-    characterStates: CharacterStateExcel[]
-    medals: string[]
-}
-    & Omit<Character, 'id'>
 
 const rl = readline.createInterface({
     input: stdin,

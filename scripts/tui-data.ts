@@ -5,46 +5,7 @@ import { StatusEffect } from "@/constants/status-effects";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { stdin, stdout } from "node:process";
 import readline from "node:readline/promises";
-import { Character } from "../src/generated/prisma/browser";
-import {
-  CharacterState,
-  CharacterTag,
-  Skill,
-} from "../src/generated/prisma/client";
-export type CharacterTagExcel = Omit<CharacterTag, "id">;
-export type SkillExcell = {
-  isPowerGage?: boolean;
-  isTimeGated?: boolean;
-} & Omit<Skill, "id" | "characterStateId">;
-
-export type CharacterStateExcel = {
-  skills: SkillExcell[];
-} & Omit<CharacterState, "id" | "characterId">;
-
-export type CharacterExcel = {
-  tags: CharacterTagExcel[];
-  characterStates: CharacterStateExcel[];
-  medals: string[];
-} & Omit<Character, "id">;
-
-export type CharacterGameData = Pick<
-  CharacterExcel,
-  | "name"
-  | "gameId"
-  | "nameId"
-  | "mainSize"
-  | "teamBoost"
-  | "sizeTraits"
-  | "characterTraits"
-  | "traits1"
-  | "traits2"
-  | "boostTrait"
-  | "inflictsStatusEffect"
-  | "nullifiesStatusEffect"
-  | "selfStatusEffect"
-  | "type"
-  | "characterStates"
->;
+import { CharacterExcel, CharacterGameData, SkillExcell } from "./type";
 
 function save(output: string, characters: Record<string, CharacterGameData>) {
   if (!existsSync(output)) {
@@ -132,11 +93,11 @@ const charMechanicsMap: Record<string, CharacterMechanics[]> = {
   ],
   "RECOVER HP WHEN ENOUGH DAMAGE IS TAKEN TO KO CHARACTER": [
     CharacterMechanics.RECOVER_HP_WHEN_KOED,
-    CharacterMechanics.NULIFY_RECOVER_HP_WHEN_KOED,
+    CharacterMechanics.NULLIFY_RECOVER_HP_WHEN_KOED,
   ],
   "RECOVER 100% OF HP WHEN ENOUGH DAMAGE IS TAKEN TO KO CHARACTER": [
     CharacterMechanics.RECOVER_HP_WHEN_KOED,
-    CharacterMechanics.NULIFY_RECOVER_HP_WHEN_KOED,
+    CharacterMechanics.NULLIFY_RECOVER_HP_WHEN_KOED,
   ],
   "CAN IGNORE THE ENEMY AND CAPTURE THE TREASURE": [
     CharacterMechanics.IGNORE_ENEMY_CAPTURE,
@@ -144,8 +105,8 @@ const charMechanicsMap: Record<string, CharacterMechanics[]> = {
   "CAN IGNORE THE ENEMY AND REFILL THE TREASURE GAUGE": [
     CharacterMechanics.IGNORE_ENEMY_REFILL,
   ],
-  "IGNORES OBSTACLES": [CharacterMechanics.IGONORES_OBSTACLE],
-  "IGNORE OBSTACLES": [CharacterMechanics.IGONORES_OBSTACLE],
+  "IGNORES OBSTACLES": [CharacterMechanics.IGNORES_OBSTACLE],
+  "IGNORE OBSTACLES": [CharacterMechanics.IGNORES_OBSTACLE],
   COUNTER: [CharacterMechanics.COUNTER],
   CHARGE: [CharacterMechanics.CHARGE],
   CHARGED: [CharacterMechanics.CHARGE],
@@ -168,8 +129,8 @@ const charMechanicsMap: Record<string, CharacterMechanics[]> = {
 };
 
 const skillsMechanicsMap: Record<string, SkillMechanics[]> = {
-  "IGNORES OBSTACLES": [SkillMechanics.IGONORES_OBSTACLE],
-  "IGNORE OBSTACLES": [SkillMechanics.IGONORES_OBSTACLE],
+  "IGNORES OBSTACLES": [SkillMechanics.IGNORES_OBSTACLE],
+  "IGNORE OBSTACLES": [SkillMechanics.IGNORES_OBSTACLE],
   COUNTER: [SkillMechanics.COUNTER],
   CHARGE: [SkillMechanics.CHARGE],
   CHARGED: [SkillMechanics.CHARGE],

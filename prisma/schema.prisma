@@ -130,7 +130,7 @@ model UserCharacter {
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   characterId String
-  character   Character @relation(fields: [characterId], references: [id], onDelete: Restrict)
+  character   Character @relation(fields: [characterId], references: [gameId], onDelete: Restrict)
 
   level    Int @default(1)
   levelCap Int
@@ -220,7 +220,7 @@ model UserMedal {
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   medalId String
-  medal   Medal  @relation(fields: [medalId], references: [id], onDelete: Restrict)
+  medal   Medal  @relation(fields: [medalId], references: [gameId], onDelete: Restrict)
 
   // TRAITS
   traits MedalTrait[]
@@ -335,12 +335,10 @@ model MedalSetCharacter {
 // ------------------------------------------------------------------------------------- 
 
 model Character {
-  id String @id @default(cuid())
-
   // General Character information
   name            String
   charDescription String?
-  gameId          String   @unique
+  gameId          String   @id
   nameId          String
   dateAdded       DateTime
 
@@ -447,7 +445,7 @@ model CharacterState {
   skills Skill[]
 
   characterId String
-  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  character   Character @relation(fields: [characterId], references: [gameId], onDelete: Cascade)
 
   @@unique([characterId, name])
 }
@@ -461,18 +459,18 @@ model CharacterState {
 // ------------------------------------------------------------------------------------- 
 
 model CharacterTag {
-  id   String @id @default(cuid())
-  name String @unique
+  name String @id
 
   characters CharacterTagRelation[]
+  traits     UniqueTraitConstraint[]
 }
 
 model CharacterTagRelation {
   characterId String
   tagId       String
 
-  character Character    @relation(fields: [characterId], references: [id], onDelete: Cascade)
-  tag       CharacterTag @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  character Character    @relation(fields: [characterId], references: [gameId], onDelete: Cascade)
+  tag       CharacterTag @relation(fields: [tagId], references: [name], onDelete: Cascade)
 
   @@id([characterId, tagId])
   @@index([tagId])
@@ -494,9 +492,7 @@ model CharacterTagRelation {
 // ------------------------------------------------------------------------------------- 
 
 model Medal {
-  id String @id @default(cuid())
-
-  gameId String    @unique
+  gameId String    @id
   name   String
   type   MedalType
 
@@ -509,7 +505,7 @@ model Medal {
   tags MedalTagRelation[]
 
   characterId String?
-  character   Character? @relation(fields: [characterId], references: [id], onDelete: SetNull)
+  character   Character? @relation(fields: [characterId], references: [gameId], onDelete: SetNull)
 
   users UserMedal[]
 
@@ -528,10 +524,11 @@ model Medal {
 // ------------------------------------------------------------------------------------- 
 
 model UniqueTraitConstraint {
-  description  String  @id
+  description  String        @id
   constraint   String
   value        Float?
-  tag          String?
+  tagId        String?
+  tag          CharacterTag? @relation(fields: [tagId], references: [name], onDelete: Cascade)
   statusEffect String?
 
   medals UniqueTraitConstraintRelation[]
@@ -541,7 +538,7 @@ model UniqueTraitConstraintRelation {
   medalId      String
   constraintId String
 
-  medal      Medal                 @relation(fields: [medalId], references: [id], onDelete: Cascade)
+  medal      Medal                 @relation(fields: [medalId], references: [gameId], onDelete: Cascade)
   constraint UniqueTraitConstraint @relation(fields: [constraintId], references: [description], onDelete: Cascade)
 
   @@id([medalId, constraintId])
@@ -573,7 +570,7 @@ model UniqueTraitRelation {
   medalId       String
   uniqueTraitId String
 
-  medal       Medal       @relation(fields: [medalId], references: [id], onDelete: Cascade)
+  medal       Medal       @relation(fields: [medalId], references: [gameId], onDelete: Cascade)
   uniqueTrait UniqueTrait @relation(fields: [uniqueTraitId], references: [description], onDelete: Cascade)
 
   @@id([medalId, uniqueTraitId])
@@ -589,8 +586,7 @@ model UniqueTraitRelation {
 // ------------------------------------------------------------------------------------- 
 
 model MedalTag {
-  id   String @id @default(cuid())
-  name String @unique
+  name String @id
 
   medals MedalTagRelation[]
 }
@@ -599,8 +595,8 @@ model MedalTagRelation {
   medalId String
   tagId   String
 
-  medal Medal    @relation(fields: [medalId], references: [id], onDelete: Cascade)
-  tag   MedalTag @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  medal Medal    @relation(fields: [medalId], references: [gameId], onDelete: Cascade)
+  tag   MedalTag @relation(fields: [tagId], references: [name], onDelete: Cascade)
 
   @@id([medalId, tagId])
   @@index([tagId])

@@ -1,6 +1,6 @@
 import { MedalTraitType } from "@/constants/medal-traits";
 import { StatusEffect, StatusEffectType } from "@/constants/status-effects";
-import { UniqueTraitExcel } from "./medal-parser";
+import { UniqueTraitExcel } from './type';
 
 function traitSimple(description: string, trait: MedalTraitType): UniqueTraitExcel {
 
